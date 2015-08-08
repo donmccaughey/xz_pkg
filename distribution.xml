@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<installer-gui-script minSpecVersion="1">
+    <title>XZ Utils {{version}}</title>
+
+    <background alignment="center" file="background.png" mime-type="image/png" scaling="tofit"/>
+    <welcome file="welcome.html" mime-type="text/html"/>
+    <license file="license.html" mime-type="text/html"/>
+
+    <options customize="never"/>
+
+    <choices-outline>
+        <line choice="com.ablepear.xz"/>
+    </choices-outline>
+
+    <choice id="com.ablepear.xz">
+        <pkg-ref id="com.ablepear.xz"/>
+    </choice>
+    <pkg-ref id="com.ablepear.xz">xz-{{version}}.pkg</pkg-ref>
+
+</installer-gui-script>

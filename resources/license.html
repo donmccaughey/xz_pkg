@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html><head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <title>XZ Utils Licensing</title>
+ <style type="text/css">
+  html, body {
+      font: 11pt Helvetica, sans-serif;
+  }
+  pre {
+      font: 7pt Courier New, Courier, monospace;
+  }
+ </style>
+</head>
+<body>
+    <h3>XZ Utils Licensing</h3>
+    <p>
+    Different licenses apply to different files in this package. Here
+    is a rough summary of which licenses apply to which parts of this
+    package (but check the individual files to be sure!):
+    <ul>
+        <li>liblzma is in the public domain.
+
+        <li>xz, xzdec, and lzmadec command line tools are in the public
+        domain unless GNU getopt_long had to be compiled and linked
+        in from the lib directory. The getopt_long code is under
+        GNU LGPLv2.1+.
+
+        <li>The scripts to grep, diff, and view compressed files have been
+        adapted from gzip. These scripts and their documentation are
+        under GNU GPLv2+.
+
+        <li>All the documentation in the doc directory and most of the
+        XZ Utils specific documentation files in other directories
+        are in the public domain.
+
+        <li>Translated messages are in the public domain.
+
+        <li>The build system contains public domain files, and files that
+        are under GNU GPLv2+ or GNU GPLv3+. None of these files end up
+        in the binaries being built.
+
+        <li>Test files and test code in the tests directory, and debugging
+        utilities in the debug directory are in the public domain.
+
+        <li>The extra directory may contain public domain files, and files
+        that are under various free software licenses.
+    </ul>
+    <p></p>
+    <p>
+    You can do whatever you want with the files that have been put into
+    the public domain. If you find public domain legally problematic,
+    take the previous sentence as a license grant. If you still find
+    the lack of copyright legally problematic, you have too many
+    lawyers.
+    <p>
+    As usual, this software is provided "as is", without any warranty.
+    <p>
+    If you copy significant amounts of public domain code from XZ Utils
+    into your project, acknowledging this somewhere in your software is
+    polite (especially if it is proprietary, non-free software), but
+    naturally it is not legally required. Here is an example of a good
+    notice to put into "about box" or into documentation:
+    <pre>
+        This software includes code from XZ Utils <http://tukaani.org/xz/>.
+    </pre>
+    The following license texts are included in the following files:
+    <ul>
+        <li>COPYING.LGPLv2.1: GNU Lesser General Public License version 2.1
+        <li>COPYING.GPLv2: GNU General Public License version 2
+        <li>COPYING.GPLv3: GNU General Public License version 3
+    </ul>
+    <p>
+    Note that the toolchain (compiler, linker etc.) may add some code
+    pieces that are copyrighted. Thus, it is possible that e.g. liblzma
+    binary wouldn't actually be in the public domain in its entirety
+    even though it contains no copyrighted code from the XZ Utils source
+    package.
+    <p>
+    If you have questions, don't hesitate to ask the author(s) for more
+    information.
+</body>
+</html>
