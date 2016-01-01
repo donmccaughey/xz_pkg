@@ -180,9 +180,6 @@
 /* Define to 1 if getopt.h declares extern int optreset. */
 #undef HAVE_OPTRESET
 
-/* Define to 1 if you have the `pipe2' function. */
-#undef HAVE_PIPE2
-
 /* Define to 1 if you have the `posix_fadvise' function. */
 #undef HAVE_POSIX_FADVISE
 

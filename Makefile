@@ -1,7 +1,7 @@
 TMP ?= $(abspath tmp)
 
-version := 5.2.1
-installer_version := 1
+version := 5.2.2
+installer_version := 2
 configure_flags := 
 
 .SECONDEXPANSION :
@@ -35,6 +35,7 @@ $(TMP)/install :
 ##### pkg ##########
 
 $(TMP)/xz-$(version).pkg : \
+		Makefile \
 		$(TMP)/install/usr/local/bin/xz \
 		$(TMP)/install/etc/paths.d/xz.path
 	pkgbuild \
@@ -54,6 +55,7 @@ $(TMP)/install/etc/paths.d :
 ##### product ##########
 
 xz-$(version).pkg : \
+		Makefile \
 		$(TMP)/xz-$(version).pkg \
 		$(TMP)/distribution.xml \
 		$(TMP)/resources/background.png \
@@ -68,7 +70,7 @@ xz-$(version).pkg : \
 		$@
 
 $(TMP)/distribution.xml \
-$(TMP)/resources/welcome.html : $(TMP)/% : % | $$(dir $$@)
+$(TMP)/resources/welcome.html : $(TMP)/% : % Makefile | $$(dir $$@)
 	sed -e s/{{version}}/$(version)/g $< > $@
 
 $(TMP)/resources/background.png \

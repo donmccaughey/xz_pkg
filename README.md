@@ -1,8 +1,8 @@
-XZ Utils 5.2.1 for OS X
-========================
+XZ Utils 5.2.2 for OS X
+=======================
 
 This project build a standard OS X installer package for [XZ Utils][1]. 
-It contains the source distribution for XZ Utils 5.2.1.
+It contains the source distribution for XZ Utils 5.2.2.
 
 License
 -------
@@ -12,4 +12,3 @@ sources for the OS X installer package are distributed under GNU GPLv2.
 See the LICENSE file for details.
 
 [1]: http://tukaani.org/xz/ "XZ Utils"
-
