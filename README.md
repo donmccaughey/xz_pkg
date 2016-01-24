@@ -1,7 +1,7 @@
 XZ Utils 5.2.2 for OS X
 =======================
 
-This project build a standard OS X installer package for [XZ Utils][1]. 
+This project builds a standard OS X installer package for [XZ Utils][1]. 
 It contains the source distribution for XZ Utils 5.2.2.
 
 License
