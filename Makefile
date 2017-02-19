@@ -1,7 +1,7 @@
 TMP ?= $(abspath tmp)
 
-version := 5.2.2
-installer_version := 2
+version := 5.2.3
+installer_version := 3
 configure_flags := 
 
 .SECONDEXPANSION :
