@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xz 5.1.4\n"
 "Report-Msgid-Bugs-To: lasse.collin@tukaani.org\n"
-"POT-Creation-Date: 2016-12-30 13:27+0200\n"
+"POT-Creation-Date: 2018-04-29 18:19+0300\n"
 "PO-Revision-Date: 2014-10-15 20:53+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -150,7 +150,7 @@ msgstr "%s: poll() nie powiodło się: %s"
 msgid "%s: File seems to have been moved, not removing"
 msgstr "%s: Plik wygląda na przeniesiony, nie zostanie usunięty"
 
-#: src/xz/file_io.c:339 src/xz/file_io.c:872
+#: src/xz/file_io.c:339 src/xz/file_io.c:878
 #, c-format
 msgid "%s: Cannot remove: %s"
 msgstr "%s: Nie można usunąć: %s"
@@ -175,77 +175,77 @@ msgstr "%s: Nie można ustawić uprawnień pliku: %s"
 msgid "Error getting the file status flags from standard input: %s"
 msgstr "Błąd podczas pobierania flag stanu pliku ze standardowego wejścia: %s"
 
-#: src/xz/file_io.c:569 src/xz/file_io.c:631
+#: src/xz/file_io.c:572 src/xz/file_io.c:634
 #, c-format
 msgid "%s: Is a symbolic link, skipping"
 msgstr "%s: Jest dowiązaniem symbolicznym, pominięto"
 
-#: src/xz/file_io.c:660
+#: src/xz/file_io.c:663
 #, c-format
 msgid "%s: Is a directory, skipping"
 msgstr "%s: Jest katalogiem, pominięto"
 
-#: src/xz/file_io.c:666
+#: src/xz/file_io.c:669
 #, c-format
 msgid "%s: Not a regular file, skipping"
 msgstr "%s: Nie jest zwykłym plikiem, pominięto"
 
-#: src/xz/file_io.c:683
+#: src/xz/file_io.c:686
 #, c-format
 msgid "%s: File has setuid or setgid bit set, skipping"
 msgstr "%s: Plik ma ustawiony bit setuid lub setgid, pominięto"
 
-#: src/xz/file_io.c:690
+#: src/xz/file_io.c:693
 #, c-format
 msgid "%s: File has sticky bit set, skipping"
 msgstr "%s: Plik ma ustawiony bit sticky, pominięto"
 
-#: src/xz/file_io.c:697
+#: src/xz/file_io.c:700
 #, c-format
 msgid "%s: Input file has more than one hard link, skipping"
 msgstr "%s: Plik wejściowy ma więcej niż jedno dowiązanie zwykłe, pominięto"
 
-#: src/xz/file_io.c:782
+#: src/xz/file_io.c:788
 #, c-format
 msgid "Error restoring the status flags to standard input: %s"
 msgstr "Błąd podczas odtwarzania flag stanu dla standardowego wejścia: %s"
 
-#: src/xz/file_io.c:830
+#: src/xz/file_io.c:836
 #, c-format
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "Błąd podczas pobierania flag stanu pliku ze standardowego wyjścia: %s"
 
-#: src/xz/file_io.c:1008
+#: src/xz/file_io.c:1014
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "Błąd podczas odtwarzania flagi O_APPEND dla standardowego wyjścia: %s"
 
-#: src/xz/file_io.c:1020
+#: src/xz/file_io.c:1026
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s: Zamknięcie pliku nie powiodło się: %s"
 
-#: src/xz/file_io.c:1056 src/xz/file_io.c:1282
+#: src/xz/file_io.c:1062 src/xz/file_io.c:1288
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s: Zmiana pozycji nie powiodła się podczas próby utworzenia pliku rzadkiego: %s"
 
-#: src/xz/file_io.c:1151
+#: src/xz/file_io.c:1157
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s: Błąd odczytu: %s"
 
-#: src/xz/file_io.c:1171
+#: src/xz/file_io.c:1177
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s: Błąd podczas zmiany pozycji w pliku: %s"
 
-#: src/xz/file_io.c:1181
+#: src/xz/file_io.c:1187
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s: Nieoczekiwany koniec pliku"
 
-#: src/xz/file_io.c:1240
+#: src/xz/file_io.c:1246
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s: Błąd zapisu: %s"
@@ -342,41 +342,41 @@ msgstr "%s: Za mały na poprawny plik .xz"
 #. to Ratio, the columns are right aligned. Check and Filename
 #. are left aligned. If you need longer words, it's OK to
 #. use two lines here. Test with "xz -l foo.xz".
-#: src/xz/list.c:671
+#: src/xz/list.c:677
 msgid "Strms  Blocks   Compressed Uncompressed  Ratio  Check   Filename"
 msgstr "Strum.  Bloki    Spakowany  Rozpakowany  Wsp.  Kontrola Nazwa pliku"
 
-#: src/xz/list.c:711
+#: src/xz/list.c:717
 #, c-format
 msgid "  Streams:            %s\n"
 msgstr "  Strumienie:            %s\n"
 
-#: src/xz/list.c:713
+#: src/xz/list.c:719
 #, c-format
 msgid "  Blocks:             %s\n"
 msgstr "  Bloki:                 %s\n"
 
-#: src/xz/list.c:715
+#: src/xz/list.c:721
 #, c-format
 msgid "  Compressed size:    %s\n"
 msgstr "  Rozmiar spakowany:     %s\n"
 
-#: src/xz/list.c:718
+#: src/xz/list.c:724
 #, c-format
 msgid "  Uncompressed size:  %s\n"
 msgstr "  Rozmiar rozpakowany:   %s\n"
 
-#: src/xz/list.c:721
+#: src/xz/list.c:727
 #, c-format
 msgid "  Ratio:              %s\n"
 msgstr "  Współczynnik:          %s\n"
 
-#: src/xz/list.c:723
+#: src/xz/list.c:729
 #, c-format
 msgid "  Check:              %s\n"
 msgstr "  Kontrola spójności:    %s\n"
 
-#: src/xz/list.c:724
+#: src/xz/list.c:730
 #, c-format
 msgid "  Stream padding:     %s\n"
 msgstr "  Wyrównanie strumienia: %s\n"
@@ -384,7 +384,7 @@ msgstr "  Wyrównanie strumienia: %s\n"
 #. TRANSLATORS: The second line is column headings. All except
 #. Check are right aligned; Check is left aligned. Test with
 #. "xz -lv foo.xz".
-#: src/xz/list.c:752
+#: src/xz/list.c:758
 msgid ""
 "  Streams:\n"
 "    Stream    Blocks      CompOffset    UncompOffset        CompSize      UncompSize  Ratio  Check      Padding"
@@ -394,7 +394,7 @@ msgstr ""
 
 #. TRANSLATORS: The second line is column headings. All
 #. except Check are right aligned; Check is left aligned.
-#: src/xz/list.c:807
+#: src/xz/list.c:813
 #, c-format
 msgid ""
 "  Blocks:\n"
@@ -410,37 +410,37 @@ msgstr ""
 #. are right aligned. %*s is replaced with 0-120
 #. spaces to make the CheckVal column wide enough.
 #. Test with "xz -lvv foo.xz".
-#: src/xz/list.c:819
+#: src/xz/list.c:825
 #, c-format
 msgid "      CheckVal %*s Header  Flags        CompSize    MemUsage  Filters"
 msgstr "   S.kontr. %*sNagłówek Flagi     Rozm. spak.  Uż.pamięci  Filtry"
 
-#: src/xz/list.c:897 src/xz/list.c:1072
+#: src/xz/list.c:903 src/xz/list.c:1078
 #, c-format
 msgid "  Memory needed:      %s MiB\n"
 msgstr "  Wymagana pamięć:       %s MiB\n"
 
-#: src/xz/list.c:899 src/xz/list.c:1074
+#: src/xz/list.c:905 src/xz/list.c:1080
 #, c-format
 msgid "  Sizes in headers:   %s\n"
 msgstr "  Rozmiar w nagłówkach:  %s\n"
 
-#: src/xz/list.c:900 src/xz/list.c:1075
+#: src/xz/list.c:906 src/xz/list.c:1081
 msgid "Yes"
 msgstr "Tak"
 
-#: src/xz/list.c:900 src/xz/list.c:1075
+#: src/xz/list.c:906 src/xz/list.c:1081
 msgid "No"
 msgstr "Nie"
 
-#: src/xz/list.c:901 src/xz/list.c:1076
+#: src/xz/list.c:907 src/xz/list.c:1082
 #, c-format
 msgid "  Minimum XZ Utils version: %s\n"
 msgstr "  Minimalna wersja XZ Utils: %s\n"
 
 #. TRANSLATORS: %s is an integer. Only the plural form of this
 #. message is used (e.g. "2 files"). Test with "xz -l foo.xz bar.xz".
-#: src/xz/list.c:1051
+#: src/xz/list.c:1057
 #, c-format
 msgid "%s file\n"
 msgid_plural "%s files\n"
@@ -448,20 +448,20 @@ msgstr[0] "%s plik\n"
 msgstr[1] "%s pliki\n"
 msgstr[2] "%s plików\n"
 
-#: src/xz/list.c:1064
+#: src/xz/list.c:1070
 msgid "Totals:"
 msgstr "Sumarycznie:"
 
-#: src/xz/list.c:1065
+#: src/xz/list.c:1071
 #, c-format
 msgid "  Number of files:    %s\n"
 msgstr "  Liczba plików:         %s\n"
 
-#: src/xz/list.c:1140
+#: src/xz/list.c:1146
 msgid "--list works only on .xz files (--format=xz or --format=auto)"
 msgstr "--list działa tylko z plikami .xz (--format=xz lub --format=auto)"
 
-#: src/xz/list.c:1146
+#: src/xz/list.c:1152
 msgid "--list does not support reading from standard input"
 msgstr "--list nie obsługuje odczytu ze standardowego wejścia"
 

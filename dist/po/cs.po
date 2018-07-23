@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xz-utils\n"
 "Report-Msgid-Bugs-To: lasse.collin@tukaani.org\n"
-"POT-Creation-Date: 2016-12-30 13:27+0200\n"
+"POT-Creation-Date: 2018-04-29 18:19+0300\n"
 "PO-Revision-Date: 2010-12-03 11:32+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <diskuze@lists.l10n.cz>\n"
@@ -152,7 +152,7 @@ msgstr "%s: Selhalo zavření souboru: %s"
 msgid "%s: File seems to have been moved, not removing"
 msgstr "%s: Vypadá to, že soubor byl přesunut, proto nebude odstraněn"
 
-#: src/xz/file_io.c:339 src/xz/file_io.c:872
+#: src/xz/file_io.c:339 src/xz/file_io.c:878
 #, c-format
 msgid "%s: Cannot remove: %s"
 msgstr "%s: Nelze odstranit: %s"
@@ -177,77 +177,77 @@ msgstr "%s: Nelze nastavit oprávnění souboru: %s"
 msgid "Error getting the file status flags from standard input: %s"
 msgstr "Chyba při obnovení příznaku O_APPEND na standardní výstup: %s"
 
-#: src/xz/file_io.c:569 src/xz/file_io.c:631
+#: src/xz/file_io.c:572 src/xz/file_io.c:634
 #, c-format
 msgid "%s: Is a symbolic link, skipping"
 msgstr "%s: Jedná se o symbolický odkaz, vynechává se"
 
-#: src/xz/file_io.c:660
+#: src/xz/file_io.c:663
 #, c-format
 msgid "%s: Is a directory, skipping"
 msgstr "%s: Jedná se o složku, vynechává se"
 
-#: src/xz/file_io.c:666
+#: src/xz/file_io.c:669
 #, c-format
 msgid "%s: Not a regular file, skipping"
 msgstr "%s: Nejedná se o běžný soubor, vynechává se"
 
-#: src/xz/file_io.c:683
+#: src/xz/file_io.c:686
 #, c-format
 msgid "%s: File has setuid or setgid bit set, skipping"
 msgstr "%s: Soubor má nastavený bit setuid nebo setgid, vynechává se"
 
-#: src/xz/file_io.c:690
+#: src/xz/file_io.c:693
 #, c-format
 msgid "%s: File has sticky bit set, skipping"
 msgstr "%s: Soubor má nastavený bit sticky, vynechává se"
 
-#: src/xz/file_io.c:697
+#: src/xz/file_io.c:700
 #, c-format
 msgid "%s: Input file has more than one hard link, skipping"
 msgstr "%s: Vstupní soubor má více než jeden pevný odkaz, vynechává se"
 
-#: src/xz/file_io.c:782
+#: src/xz/file_io.c:788
 #, fuzzy, c-format
 msgid "Error restoring the status flags to standard input: %s"
 msgstr "Chyba při obnovení příznaku O_APPEND na standardní výstup: %s"
 
-#: src/xz/file_io.c:830
+#: src/xz/file_io.c:836
 #, fuzzy, c-format
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "Chyba při obnovení příznaku O_APPEND na standardní výstup: %s"
 
-#: src/xz/file_io.c:1008
+#: src/xz/file_io.c:1014
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "Chyba při obnovení příznaku O_APPEND na standardní výstup: %s"
 
-#: src/xz/file_io.c:1020
+#: src/xz/file_io.c:1026
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s: Selhalo zavření souboru: %s"
 
-#: src/xz/file_io.c:1056 src/xz/file_io.c:1282
+#: src/xz/file_io.c:1062 src/xz/file_io.c:1288
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s: Selhalo nastavení pozice při pokusu o vytvoření souboru řídké matice: %s"
 
-#: src/xz/file_io.c:1151
+#: src/xz/file_io.c:1157
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s: Chyba čtení: %s"
 
-#: src/xz/file_io.c:1171
+#: src/xz/file_io.c:1177
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s: Chyba při posunu v rámci souboru: %s"
 
-#: src/xz/file_io.c:1181
+#: src/xz/file_io.c:1187
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s: Neočekávaný konec souboru"
 
-#: src/xz/file_io.c:1240
+#: src/xz/file_io.c:1246
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s: Chyba zápisu: %s"
@@ -344,41 +344,41 @@ msgstr "%s: Je příliš malý na to, aby to mohl být platný soubor .xz"
 #. to Ratio, the columns are right aligned. Check and Filename
 #. are left aligned. If you need longer words, it's OK to
 #. use two lines here. Test with "xz -l foo.xz".
-#: src/xz/list.c:671
+#: src/xz/list.c:677
 msgid "Strms  Blocks   Compressed Uncompressed  Ratio  Check   Filename"
 msgstr "Proud   Bloky      Komprim    Nekomprim  Poměr  Kontrl  Název souboru"
 
-#: src/xz/list.c:711
+#: src/xz/list.c:717
 #, c-format
 msgid "  Streams:            %s\n"
 msgstr "  Proudů:                  %s\n"
 
-#: src/xz/list.c:713
+#: src/xz/list.c:719
 #, c-format
 msgid "  Blocks:             %s\n"
 msgstr "  Bloků:                   %s\n"
 
-#: src/xz/list.c:715
+#: src/xz/list.c:721
 #, c-format
 msgid "  Compressed size:    %s\n"
 msgstr "  Komprimovaná velikost:   %s\n"
 
-#: src/xz/list.c:718
+#: src/xz/list.c:724
 #, c-format
 msgid "  Uncompressed size:  %s\n"
 msgstr "  Nekomprimovaná velikost: %s\n"
 
-#: src/xz/list.c:721
+#: src/xz/list.c:727
 #, c-format
 msgid "  Ratio:              %s\n"
 msgstr "  Poměr komprimace:        %s\n"
 
-#: src/xz/list.c:723
+#: src/xz/list.c:729
 #, c-format
 msgid "  Check:              %s\n"
 msgstr "  Typ kontroly:            %s\n"
 
-#: src/xz/list.c:724
+#: src/xz/list.c:730
 #, c-format
 msgid "  Stream padding:     %s\n"
 msgstr "  Zarovnání proudu:        %s\n"
@@ -386,7 +386,7 @@ msgstr "  Zarovnání proudu:        %s\n"
 #. TRANSLATORS: The second line is column headings. All except
 #. Check are right aligned; Check is left aligned. Test with
 #. "xz -lv foo.xz".
-#: src/xz/list.c:752
+#: src/xz/list.c:758
 msgid ""
 "  Streams:\n"
 "    Stream    Blocks      CompOffset    UncompOffset        CompSize      UncompSize  Ratio  Check      Padding"
@@ -396,7 +396,7 @@ msgstr ""
 
 #. TRANSLATORS: The second line is column headings. All
 #. except Check are right aligned; Check is left aligned.
-#: src/xz/list.c:807
+#: src/xz/list.c:813
 #, c-format
 msgid ""
 "  Blocks:\n"
@@ -412,37 +412,37 @@ msgstr ""
 #. are right aligned. %*s is replaced with 0-120
 #. spaces to make the CheckVal column wide enough.
 #. Test with "xz -lvv foo.xz".
-#: src/xz/list.c:819
+#: src/xz/list.c:825
 #, c-format
 msgid "      CheckVal %*s Header  Flags        CompSize    MemUsage  Filters"
 msgstr "   KontrHod %*s Hlavič  Příznaky     KomprVel    PoužiPam  Filtry"
 
-#: src/xz/list.c:897 src/xz/list.c:1072
+#: src/xz/list.c:903 src/xz/list.c:1078
 #, c-format
 msgid "  Memory needed:      %s MiB\n"
 msgstr "  Potřebná paměť:          %s MiB\n"
 
-#: src/xz/list.c:899 src/xz/list.c:1074
+#: src/xz/list.c:905 src/xz/list.c:1080
 #, c-format
 msgid "  Sizes in headers:   %s\n"
 msgstr "  Velikosti v hlavičkách:  %s\n"
 
-#: src/xz/list.c:900 src/xz/list.c:1075
+#: src/xz/list.c:906 src/xz/list.c:1081
 msgid "Yes"
 msgstr "Ano"
 
-#: src/xz/list.c:900 src/xz/list.c:1075
+#: src/xz/list.c:906 src/xz/list.c:1081
 msgid "No"
 msgstr "Ne"
 
-#: src/xz/list.c:901 src/xz/list.c:1076
+#: src/xz/list.c:907 src/xz/list.c:1082
 #, c-format
 msgid "  Minimum XZ Utils version: %s\n"
 msgstr ""
 
 #. TRANSLATORS: %s is an integer. Only the plural form of this
 #. message is used (e.g. "2 files"). Test with "xz -l foo.xz bar.xz".
-#: src/xz/list.c:1051
+#: src/xz/list.c:1057
 #, c-format
 msgid "%s file\n"
 msgid_plural "%s files\n"
@@ -450,20 +450,20 @@ msgstr[0] "%s soubor\n"
 msgstr[1] "%s soubory\n"
 msgstr[2] "%s souborů\n"
 
-#: src/xz/list.c:1064
+#: src/xz/list.c:1070
 msgid "Totals:"
 msgstr "Celkem:"
 
-#: src/xz/list.c:1065
+#: src/xz/list.c:1071
 #, c-format
 msgid "  Number of files:    %s\n"
 msgstr "  Počet souborů:           %s\n"
 
-#: src/xz/list.c:1140
+#: src/xz/list.c:1146
 msgid "--list works only on .xz files (--format=xz or --format=auto)"
 msgstr "--list pracuje pouze se soubory .xz (--format=xz nebo --format=auto)"
 
-#: src/xz/list.c:1146
+#: src/xz/list.c:1152
 msgid "--list does not support reading from standard input"
 msgstr "--list nepodporuje čtení ze standardního vstupu"
 

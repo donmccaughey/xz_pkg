@@ -73,8 +73,8 @@ NOTES
 SEE ALSO
        xz(1)
 
-       XZ Embedded: <http://tukaani.org/xz/embedded.html>
+       XZ Embedded: <https://tukaani.org/xz/embedded.html>
 
 
 
-Tukaani                           2013-06-30                          XZDEC(1)
+Tukaani                           2017-04-19                          XZDEC(1)

@@ -1474,10 +1474,10 @@ SEE ALSO
        xzdec(1),  xzdiff(1),   xzgrep(1),   xzless(1),   xzmore(1),   gzip(1),
        bzip2(1), 7z(1)
 
-       XZ Utils: <http://tukaani.org/xz/>
-       XZ Embedded: <http://tukaani.org/xz/embedded.html>
+       XZ Utils: <https://tukaani.org/xz/>
+       XZ Embedded: <https://tukaani.org/xz/embedded.html>
        LZMA SDK: <http://7-zip.org/sdk.html>
 
 
 
-Tukaani                           2015-05-11                             XZ(1)
+Tukaani                           2017-04-19                             XZ(1)
