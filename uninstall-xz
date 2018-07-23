@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if (( EUID != 0 ))
+then
+    printf '\nYou need administrative privileges to run this script.\n' 1>&2
+    printf 'Try\n\tsudo %s\n\n' "$0" 1>&2
+    exit 1
+fi
+

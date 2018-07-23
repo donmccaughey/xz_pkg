@@ -9,12 +9,12 @@
     <options customize="never"/>
 
     <choices-outline>
-        <line choice="com.ablepear.xz"/>
+        <line choice="cc.donm.pkg.xz"/>
     </choices-outline>
 
-    <choice id="com.ablepear.xz">
-        <pkg-ref id="com.ablepear.xz"/>
+    <choice id="cc.donm.pkg.xz">
+        <pkg-ref id="cc.donm.pkg.xz"/>
     </choice>
-    <pkg-ref id="com.ablepear.xz">xz-{{version}}.pkg</pkg-ref>
+    <pkg-ref id="cc.donm.pkg.xz">xz.pkg</pkg-ref>
 
 </installer-gui-script>

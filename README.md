@@ -1,14 +1,16 @@
-XZ Utils 5.2.3 for OS X
-=======================
+XZ Utils 5.2.3 for macOS
+========================
 
-This project builds a standard OS X installer package for [XZ Utils][1]. 
-It contains the source distribution for XZ Utils 5.2.3.
+This project builds a signed macOS installer package for [XZ Utils][1], a
+general-purpose data compression tool and library.  It contains the source 
+distribution for XZ Utils 5.2.3.
+
+[1]: http://tukaani.org/xz/ "XZ Utils"
 
 License
 -------
-The installer and related scripts are copyright (c) 2015 Able Pear Software.
+The installer and related scripts are copyright (c) 2018 Don McCaughey.
 Different parts of XZ Utils are distributed under different licenses.  The
-sources for the OS X installer package are distributed under GNU GPLv2.
+sources for the macOS installer package are distributed under GNU GPLv2.
 See the LICENSE file for details.
 
-[1]: http://tukaani.org/xz/ "XZ Utils"
