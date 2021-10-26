@@ -1,3 +1,4 @@
+INSTALLER_SIGNING_ID ?= Developer ID Installer: Donald McCaughey
 TMP ?= $(abspath tmp)
 
 version := 5.2.5
@@ -15,6 +16,21 @@ all : xz-$(version).pkg
 clean :
 	-rm -f xz-*.pkg
 	-rm -rf $(TMP)
+
+
+.PHONY : check
+check :
+	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/lzmadec)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/lzmainfo)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xz)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xzdec)" = "x86_64 arm64"
+	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmadec
+	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmainfo
+	codesign --verify --strict $(TMP)/install/usr/local/bin/xz
+	codesign --verify --strict $(TMP)/install/usr/local/bin/xzdec
+	pkgutil --check-signature xz-$(version).pkg
+	spctl --assess --type install xz-$(version).pkg
+	xcrun stapler validate xz-$(version).pkg
 
 
 ##### dist ##########
@@ -91,7 +107,7 @@ xz-$(version).pkg : \
 		--resources $(TMP)/resources \
 		--package-path $(TMP) \
 		--version v$(version)-r$(revision) \
-		--sign 'Donald McCaughey' \
+		--sign '$(INSTALLER_SIGNING_ID)' \
 		$@
 
 $(TMP)/build-report.txt : | $$(dir $$@)
