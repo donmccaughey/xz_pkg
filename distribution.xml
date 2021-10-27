@@ -3,6 +3,7 @@
     <title>XZ Utils {{version}}</title>
 
     <background alignment="center" file="background.png" mime-type="image/png" scaling="tofit"/>
+    <background-darkAqua alignment="center" file="background-darkAqua.png" mime-type="image/png" scaling="tofit"/>
     <welcome file="welcome.html" mime-type="text/html"/>
     <license file="license.html" mime-type="text/html"/>
 
