@@ -1,3 +1,4 @@
+APP_SIGNING_ID ?= Developer ID Application: Donald McCaughey
 INSTALLER_SIGNING_ID ?= Developer ID Installer: Donald McCaughey
 TMP ?= $(abspath tmp)
 
@@ -61,10 +62,47 @@ $(TMP)/install :
 
 ##### pkg ##########
 
+# sign executable
+
+$(TMP)/lzmadec-signed.stamp.txt :  $(TMP)/install/usr/local/bin/lzmadec | $$(dir $$@)
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$<
+	date > $@
+
+$(TMP)/lzmainfo-signed.stamp.txt :  $(TMP)/install/usr/local/bin/lzmainfo | $$(dir $$@)
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$<
+	date > $@
+
+$(TMP)/xz-signed.stamp.txt :  $(TMP)/install/usr/local/bin/xz | $$(dir $$@)
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$<
+	date > $@
+
+$(TMP)/xzdec-signed.stamp.txt :  $(TMP)/install/usr/local/bin/xzdec | $$(dir $$@)
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$<
+	date > $@
+
 $(TMP)/xz.pkg : \
 		$(TMP)/install/etc/paths.d/xz.path \
 		$(TMP)/install/usr/local/bin/uninstall-xz \
-		$(TMP)/install/usr/local/bin/xz
+		$(TMP)/install/usr/local/bin/lzmadec \
+		$(TMP)/install/usr/local/bin/lzmainfo \
+		$(TMP)/install/usr/local/bin/xz \
+		$(TMP)/install/usr/local/bin/xzdec \
+		$(TMP)/lzmadec-signed.stamp.txt \
+		$(TMP)/lzmainfo-signed.stamp.txt \
+		$(TMP)/xz-signed.stamp.txt \
+		$(TMP)/xzdec-signed.stamp.txt
 	pkgbuild \
 		--root $(TMP)/install \
 		--identifier cc.donm.pkg.xz \
@@ -123,6 +161,7 @@ $(TMP)/build-report.txt : | $$(dir $$@)
 	printf 'Build Date: %s\n' "$(date)" > $@
 	printf 'Software Version: %s\n' "$(version)" >> $@
 	printf 'Installer Revision: %s\n' "$(revision)" >> $@
+	printf 'Architectures: %s\n' "$(arch_list)" >> $@
 	printf 'macOS Version: %s\n' "$(macos)" >> $@
 	printf 'Xcode Version: %s\n' "$(xcode)" >> $@
 	printf 'Tag Version: v%s-r%s\n' "$(version)" "$(revision)" >> $@
