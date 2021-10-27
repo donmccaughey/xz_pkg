@@ -1,9 +1,9 @@
 XZ Utils 5.2.5 for macOS
 ========================
 
-This project builds a signed macOS installer package for [XZ Utils][1], a
-general-purpose data compression tool and library.  It contains the source 
-distribution for XZ Utils 5.2.5.
+This project builds a signed universal macOS installer package for [XZ
+Utils][1], a general-purpose data compression tool and library.  It contains
+the source distribution for XZ Utils 5.2.5.
 
 [1]: http://tukaani.org/xz/ "XZ Utils"
 
