@@ -1,5 +1,6 @@
 APP_SIGNING_ID ?= Developer ID Application: Donald McCaughey
 INSTALLER_SIGNING_ID ?= Developer ID Installer: Donald McCaughey
+NOTARIZATION_KEYCHAIN_PROFILE ?= Donald McCaughey
 TMP ?= $(abspath tmp)
 
 version := 5.2.5
@@ -14,6 +15,10 @@ archs := arm64 x86_64
 all : xz-$(version).pkg
 
 
+.PHONY : notarize
+notarize : $(TMP)/stapled.stamp.txt
+
+
 .PHONY : clean
 clean :
 	-rm -f xz-*.pkg
@@ -26,10 +31,14 @@ check :
 	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/lzmainfo)" = "x86_64 arm64"
 	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xz)" = "x86_64 arm64"
 	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xzdec)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/lib/liblzma.a)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/lib/liblzma.5.dylib)" = "x86_64 arm64"
 	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmadec
 	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmainfo
 	codesign --verify --strict $(TMP)/install/usr/local/bin/xz
 	codesign --verify --strict $(TMP)/install/usr/local/bin/xzdec
+	codesign --verify --strict $(TMP)/install/usr/local/lib/liblzma.a
+	codesign --verify --strict $(TMP)/install/usr/local/lib/liblzma.5.dylib
 	pkgutil --check-signature xz-$(version).pkg
 	spctl --assess --type install xz-$(version).pkg
 	xcrun stapler validate xz-$(version).pkg
@@ -92,6 +101,20 @@ $(TMP)/xzdec-signed.stamp.txt :  $(TMP)/install/usr/local/bin/xzdec | $$(dir $$@
 		$<
 	date > $@
 
+$(TMP)/liblzma.a-signed.stamp.txt :  $(TMP)/install/usr/local/lib/liblzma.a | $$(dir $$@)
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$<
+	date > $@
+
+$(TMP)/liblzma.5.dylib-signed.stamp.txt :  $(TMP)/install/usr/local/lib/liblzma.5.dylib | $$(dir $$@)
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$<
+	date > $@
+
 $(TMP)/xz.pkg : \
 		$(TMP)/install/etc/paths.d/xz.path \
 		$(TMP)/install/usr/local/bin/uninstall-xz \
@@ -102,7 +125,9 @@ $(TMP)/xz.pkg : \
 		$(TMP)/lzmadec-signed.stamp.txt \
 		$(TMP)/lzmainfo-signed.stamp.txt \
 		$(TMP)/xz-signed.stamp.txt \
-		$(TMP)/xzdec-signed.stamp.txt
+		$(TMP)/xzdec-signed.stamp.txt \
+		$(TMP)/liblzma.a-signed.stamp.txt \
+		$(TMP)/liblzma.5.dylib-signed.stamp.txt
 	pkgbuild \
 		--root $(TMP)/install \
 		--identifier cc.donm.pkg.xz \
@@ -191,4 +216,30 @@ $(TMP)/resources/license.html : $(TMP)/% : % | $(TMP)/resources
 $(TMP) \
 $(TMP)/resources :
 	mkdir -p $@
+
+
+##### notarization ##########
+
+$(TMP)/submit-log.json : xz-$(version).pkg | $$(dir $$@)
+	xcrun notarytool submit $< \
+		--keychain-profile "$(NOTARIZATION_KEYCHAIN_PROFILE)" \
+		--output-format json \
+		--wait \
+		> $@
+
+$(TMP)/submission-id.txt : $(TMP)/submit-log.json | $$(dir $$@)
+	jq --raw-output '.id' < $< > $@
+
+$(TMP)/notarization-log.json : $(TMP)/submission-id.txt | $$(dir $$@)
+	xcrun notarytool log "$$(<$<)" \
+		--keychain-profile "$(NOTARIZATION_KEYCHAIN_PROFILE)" \
+		$@
+
+$(TMP)/notarized.stamp.txt : $(TMP)/notarization-log.json | $$(dir $$@)
+	test "$$(jq --raw-output '.status' < $<)" = "Accepted"
+	date > $@
+
+$(TMP)/stapled.stamp.txt : xz-$(version).pkg $(TMP)/notarized.stamp.txt
+	xcrun stapler staple $<
+	date > $@
 
