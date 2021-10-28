@@ -11,8 +11,8 @@ archs := arm64 x86_64
 .SECONDEXPANSION :
 
 
-.PHONY : all
-all : xz-$(version).pkg
+.PHONY : signed-package
+signed-package : xz-$(version).pkg
 
 
 .PHONY : notarize
