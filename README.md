@@ -26,7 +26,7 @@ The following makefile variables can be set from the command line:
 
 - `APP_SIGNING_ID`: The name of the 
     [Apple _Developer ID Application_ certificate][5] used to sign the 
-    `nginx` executable.  The certificate must be installed on the build 
+    `xz` executable.  The certificate must be installed on the build 
     machine's Keychain.  Defaults to "Developer ID Application: Donald 
     McCaughey" if not specified.
 - `INSTALLER_SIGNING_ID`: The name of the 
@@ -71,7 +71,7 @@ To remove all generated files (including the signed installer), run:
 ## Signing and Notarizing Credentials
 
 Three sets of credentials are needed to sign and notarize this package:
-- A "Developer ID Application" certificate (for signing the `nginx` executable)
+- A "Developer ID Application" certificate (for signing the `xz` executable)
 - A "Developer ID Installer" certificate (for signing the installer package)
 - An App Store Connect API key (for notarizing the signed installer)
 
