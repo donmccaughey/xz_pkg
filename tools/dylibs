@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import subprocess
+import sys
+
+
+SYS_LIBS = [
+    'libSystem.B.dylib',
+    'Carbon.framework',
+    'CoreFoundation.framework',
+    'CoreServices.framework',
+    'Foundation.framework',
+]
+
+
+def is_sys_lib(dylib):
+    for sys_lib in SYS_LIBS:
+        if sys_lib in dylib:
+            return True
+    return False
+
+
+def get_args():
+    arg_parser = argparse.ArgumentParser(
+            description='Show dylibs used by an executable.')
+    arg_parser.add_argument('--count', action='store_true', 
+            help='Print the count of dylibs only')
+    arg_parser.add_argument('--no-sys-libs', action='store_true', 
+            help='Skip any system dylibs')
+    arg_parser.add_argument('exe', metavar='EXECUTABLE', type=str, 
+            help='The executable to examine')
+    return arg_parser.parse_args()
+
+
+def get_exe_path(exe):
+    exe_path = os.path.abspath(exe)
+    if not os.path.exists(exe_path):
+        print(f'ERROR: {exe} does not exist')
+        sys.exit(1)
+    return exe_path
+
+
+def get_all_dylibs(exe_path):
+    command = [
+        'otool',
+        '-L', # Display the shared libraries that the object file uses
+        '-X', # Don't print leading addresses or headers
+        exe_path,
+    ]
+    result = subprocess.run(command, capture_output=True, check=True, text=True)
+    return set(
+        [line.strip() for line in result.stdout.splitlines()]
+    )
+
+
+def remove_sys_libs(dylibs):
+    return list(
+        filter(lambda dylib: not is_sys_lib(dylib), dylibs)
+    )   
+    
+
+def main():
+    args = get_args()
+    exe_path = get_exe_path(args.exe)
+    dylibs = get_all_dylibs(exe_path)
+    if args.no_sys_libs:
+        dylibs = remove_sys_libs(dylibs)
+    if args.count:
+        print(len(dylibs))
+    else:
+        for dylib in dylibs:
+            print(dylib)
+
+
+if __name__ == "__main__":
+    main()
+

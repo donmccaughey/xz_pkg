@@ -4,15 +4,18 @@ NOTARIZATION_KEYCHAIN_PROFILE ?= Donald McCaughey
 TMP ?= $(abspath tmp)
 
 version := 5.2.5
-revision := 1
+revision := 2
 archs := arm64 x86_64
+
+rev := $(if $(patsubst 1,,$(revision)),-r$(revision),)
+ver := $(version)$(rev)
 
 
 .SECONDEXPANSION :
 
 
 .PHONY : signed-package
-signed-package : xz-$(version).pkg
+signed-package : xz-$(ver).pkg
 
 
 .PHONY : notarize
@@ -33,15 +36,19 @@ check :
 	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xzdec)" = "x86_64 arm64"
 	test "$(shell lipo -archs $(TMP)/install/usr/local/lib/liblzma.a)" = "x86_64 arm64"
 	test "$(shell lipo -archs $(TMP)/install/usr/local/lib/liblzma.5.dylib)" = "x86_64 arm64"
+	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/lzmadec) dylibs" = "0 dylibs"
+	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/lzmainfo) dylibs" = "0 dylibs"
+	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/xz) dylibs" = "0 dylibs"
+	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/xzdec) dylibs" = "0 dylibs"
 	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmadec
 	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmainfo
 	codesign --verify --strict $(TMP)/install/usr/local/bin/xz
 	codesign --verify --strict $(TMP)/install/usr/local/bin/xzdec
 	codesign --verify --strict $(TMP)/install/usr/local/lib/liblzma.a
 	codesign --verify --strict $(TMP)/install/usr/local/lib/liblzma.5.dylib
-	pkgutil --check-signature xz-$(version).pkg
-	spctl --assess --type install xz-$(version).pkg
-	xcrun stapler validate xz-$(version).pkg
+	pkgutil --check-signature xz-$(ver).pkg
+	spctl --assess --type install xz-$(ver).pkg
+	xcrun stapler validate xz-$(ver).pkg
 
 
 ##### compilation flags ##########
@@ -167,7 +174,7 @@ xcode:=$(shell \
 	| awk -F ' ' '{print $$2}' \
 	)
  
-xz-$(version).pkg : \
+xz-$(ver).pkg : \
 		$(TMP)/xz.pkg \
 		$(TMP)/build-report.txt \
 		$(TMP)/distribution.xml \
@@ -222,7 +229,7 @@ $(TMP)/resources :
 
 ##### notarization ##########
 
-$(TMP)/submit-log.json : xz-$(version).pkg | $$(dir $$@)
+$(TMP)/submit-log.json : xz-$(ver).pkg | $$(dir $$@)
 	xcrun notarytool submit $< \
 		--keychain-profile "$(NOTARIZATION_KEYCHAIN_PROFILE)" \
 		--output-format json \
@@ -241,7 +248,7 @@ $(TMP)/notarized.stamp.txt : $(TMP)/notarization-log.json | $$(dir $$@)
 	test "$$(jq --raw-output '.status' < $<)" = "Accepted"
 	date > $@
 
-$(TMP)/stapled.stamp.txt : xz-$(version).pkg $(TMP)/notarized.stamp.txt
+$(TMP)/stapled.stamp.txt : xz-$(ver).pkg $(TMP)/notarized.stamp.txt
 	xcrun stapler staple $<
 	date > $@
 
