@@ -62,79 +62,96 @@ CFLAGS += $(arch_flags)
 
 dist_sources := $(shell find dist -type f \! -name .DS_Store)
 
-$(TMP)/install/usr/local/bin/xz : $(TMP)/build/src/xz/xz | $(TMP)/install
-	cd $(TMP)/build && $(MAKE) DESTDIR=$(TMP)/install install
 
-$(TMP)/build/src/xz/xz : $(TMP)/build/config.status $(dist_sources)
-	cd $(TMP)/build && $(MAKE)
+##### build xz and lzmainfo, statically linked ##########
 
-$(TMP)/build/config.status : dist/configure | $(TMP)/build
-	cd $(TMP)/build && sh $(abspath $<) CFLAGS='$(CFLAGS)'
+xz_options := --disable-shared
 
-$(TMP)/build \
-$(TMP)/install :
+$(TMP)/build_xz/src/xz/xz : $(TMP)/build_xz/config.status $(dist_sources)
+	cd $(TMP)/build_xz && $(MAKE)
+
+$(TMP)/build_xz/config.status : dist/configure | $(TMP)/build_xz
+	cd $(TMP)/build_xz && sh $(abspath $<) $(xz_options) CFLAGS='$(CFLAGS)'
+
+$(TMP)/build_xz :
+	mkdir -p $@
+
+##### build xzdec and lzmadec, optimized for size ##########
+
+dec_options := \
+		--disable-encoders \
+		--disable-nls \
+		--disable-shared \
+		--disable-threads \
+		--enable-small
+dec_CFLAGS := $(CFLAGS) -Os
+
+$(TMP)/build_decs/src/xzdec/xzdec : $(TMP)/build_decs/config.status $(dist_sources)
+	cd $(TMP)/build_decs && $(MAKE)
+
+$(TMP)/build_decs/config.status : dist/configure | $(TMP)/build_decs
+	cd $(TMP)/build_decs && sh $(abspath $<) $(dec_options) CFLAGS='$(dec_CFLAGS)'
+
+$(TMP)/build_decs :
+	mkdir -p $@
+
+##### build liblzma, static and dynamic ##########
+
+lib_options := 
+
+$(TMP)/build_libs/src/liblzma/.libs/liblzma.a : $(TMP)/build_libs/config.status $(dist_sources)
+	cd $(TMP)/build_libs && $(MAKE)
+
+$(TMP)/build_libs/config.status : dist/configure | $(TMP)/build_libs
+	cd $(TMP)/build_libs && sh $(abspath $<) $(lib_options) CFLAGS='$(CFLAGS)'
+
+$(TMP)/build_libs :
 	mkdir -p $@
 
 
+##### assemble installed distribution and sign binaries ##########
+
+$(TMP)/installed-and-signed.stamp.txt : \
+		$(TMP)/build_xz/src/xz/xz \
+		$(TMP)/build_decs/src/xzdec/xzdec \
+		$(TMP)/build_libs/src/liblzma/.libs/liblzma.a
+	-rm -rf $(TMP)/install
+	mkdir -p $(TMP)/install
+	cd $(TMP)/build_xz && $(MAKE) DESTDIR=$(TMP)/install install
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$(TMP)/install/usr/local/bin/xz
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$(TMP)/install/usr/local/bin/lzmainfo
+	cd $(TMP)/build_decs/src/xzdec && $(MAKE) DESTDIR=$(TMP)/install install
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$(TMP)/install/usr/local/bin/xzdec
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$(TMP)/install/usr/local/bin/lzmadec
+	cd $(TMP)/build_libs/src/liblzma && $(MAKE) DESTDIR=$(TMP)/install install
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$(TMP)/install/usr/local/lib/liblzma.a
+	xcrun codesign \
+		--sign "$(APP_SIGNING_ID)" \
+		--options runtime \
+		$(TMP)/install/usr/local/lib/liblzma.5.dylib
+	date > $@
+
 ##### pkg ##########
-
-# sign executable
-
-$(TMP)/lzmadec-signed.stamp.txt :  $(TMP)/install/usr/local/bin/lzmadec | $$(dir $$@)
-	xcrun codesign \
-		--sign "$(APP_SIGNING_ID)" \
-		--options runtime \
-		$<
-	date > $@
-
-$(TMP)/lzmainfo-signed.stamp.txt :  $(TMP)/install/usr/local/bin/lzmainfo | $$(dir $$@)
-	xcrun codesign \
-		--sign "$(APP_SIGNING_ID)" \
-		--options runtime \
-		$<
-	date > $@
-
-$(TMP)/xz-signed.stamp.txt :  $(TMP)/install/usr/local/bin/xz | $$(dir $$@)
-	xcrun codesign \
-		--sign "$(APP_SIGNING_ID)" \
-		--options runtime \
-		$<
-	date > $@
-
-$(TMP)/xzdec-signed.stamp.txt :  $(TMP)/install/usr/local/bin/xzdec | $$(dir $$@)
-	xcrun codesign \
-		--sign "$(APP_SIGNING_ID)" \
-		--options runtime \
-		$<
-	date > $@
-
-$(TMP)/liblzma.a-signed.stamp.txt :  $(TMP)/install/usr/local/lib/liblzma.a | $$(dir $$@)
-	xcrun codesign \
-		--sign "$(APP_SIGNING_ID)" \
-		--options runtime \
-		$<
-	date > $@
-
-$(TMP)/liblzma.5.dylib-signed.stamp.txt :  $(TMP)/install/usr/local/lib/liblzma.5.dylib | $$(dir $$@)
-	xcrun codesign \
-		--sign "$(APP_SIGNING_ID)" \
-		--options runtime \
-		$<
-	date > $@
 
 $(TMP)/xz.pkg : \
 		$(TMP)/install/etc/paths.d/xz.path \
 		$(TMP)/install/usr/local/bin/uninstall-xz \
-		$(TMP)/install/usr/local/bin/lzmadec \
-		$(TMP)/install/usr/local/bin/lzmainfo \
-		$(TMP)/install/usr/local/bin/xz \
-		$(TMP)/install/usr/local/bin/xzdec \
-		$(TMP)/lzmadec-signed.stamp.txt \
-		$(TMP)/lzmainfo-signed.stamp.txt \
-		$(TMP)/xz-signed.stamp.txt \
-		$(TMP)/xzdec-signed.stamp.txt \
-		$(TMP)/liblzma.a-signed.stamp.txt \
-		$(TMP)/liblzma.5.dylib-signed.stamp.txt
+		$(TMP)/installed-and-signed.stamp.txt
 	pkgbuild \
 		--root $(TMP)/install \
 		--identifier cc.donm.pkg.xz \
@@ -147,7 +164,7 @@ $(TMP)/install/etc/paths.d/xz.path : xz.path | $$(dir $$@)
 
 $(TMP)/install/usr/local/bin/uninstall-xz : \
 		uninstall-xz \
-		$(TMP)/install/usr/local/bin/xz \
+		$(TMP)/installed-and-signed.stamp.txt \
 		| $$(dir $$@)
 	cp $< $@
 	cd $(TMP)/install && find . -type f \! -name .DS_STORE | sort >> $@
