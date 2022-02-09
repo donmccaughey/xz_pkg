@@ -99,7 +99,7 @@ The `--sync` option adds the credentials to the user's iCloud Keychain.
 
 ## License
 
-The installer and related scripts are copyright (c) 2021 Don McCaughey.
+The installer and related scripts are copyright (c) 2022 Don McCaughey.
 Different parts of XZ Utils are distributed under different licenses.  The
 sources for the macOS installer package are distributed under GNU GPLv2.
 See the LICENSE file for details.
