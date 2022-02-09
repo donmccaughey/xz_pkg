@@ -114,9 +114,8 @@ $(TMP)/build_libs :
 $(TMP)/installed-and-signed.stamp.txt : \
 		$(TMP)/build_xz/src/xz/xz \
 		$(TMP)/build_decs/src/xzdec/xzdec \
-		$(TMP)/build_libs/src/liblzma/.libs/liblzma.a
-	-rm -rf $(TMP)/install
-	mkdir -p $(TMP)/install
+		$(TMP)/build_libs/src/liblzma/.libs/liblzma.a \
+		| $(TMP)/install
 	cd $(TMP)/build_xz && $(MAKE) DESTDIR=$(TMP)/install install
 	xcrun codesign \
 		--sign "$(APP_SIGNING_ID)" \
@@ -146,12 +145,14 @@ $(TMP)/installed-and-signed.stamp.txt : \
 		$(TMP)/install/usr/local/lib/liblzma.5.dylib
 	date > $@
 
+$(TMP)/install :
+	mkdir -p $@
+
+
 ##### pkg ##########
 
 $(TMP)/xz.pkg : \
-		$(TMP)/install/etc/paths.d/xz.path \
-		$(TMP)/install/usr/local/bin/uninstall-xz \
-		$(TMP)/installed-and-signed.stamp.txt
+		$(TMP)/install/usr/local/bin/uninstall-xz
 	pkgbuild \
 		--root $(TMP)/install \
 		--identifier cc.donm.pkg.xz \
@@ -159,12 +160,15 @@ $(TMP)/xz.pkg : \
 		--version $(version) \
 		$@
 
-$(TMP)/install/etc/paths.d/xz.path : xz.path | $$(dir $$@)
+$(TMP)/install/etc/paths.d/xz.path : \
+		xz.path \
+		$(TMP)/installed-and-signed.stamp.txt \
+		| $$(dir $$@)
 	cp $< $@
 
 $(TMP)/install/usr/local/bin/uninstall-xz : \
 		uninstall-xz \
-		$(TMP)/installed-and-signed.stamp.txt \
+		$(TMP)/install/etc/paths.d/xz.path \
 		| $$(dir $$@)
 	cp $< $@
 	cd $(TMP)/install && find . -type f \! -name .DS_STORE | sort >> $@
