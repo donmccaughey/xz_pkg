@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xz 5.2.4\n"
-"Report-Msgid-Bugs-To: lasse.collin@tukaani.org\n"
-"POT-Creation-Date: 2020-03-17 16:29+0200\n"
+"Report-Msgid-Bugs-To: xz@tukaani.org\n"
+"POT-Creation-Date: 2022-11-30 18:45+0200\n"
 "PO-Revision-Date: 2019-03-05 05:30+0100\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -143,7 +143,7 @@ msgstr "%s: poll() nie powiodło się: %s"
 msgid "%s: File seems to have been moved, not removing"
 msgstr "%s: Plik wygląda na przeniesiony, nie zostanie usunięty"
 
-#: src/xz/file_io.c:340 src/xz/file_io.c:882
+#: src/xz/file_io.c:340 src/xz/file_io.c:894
 #, c-format
 msgid "%s: Cannot remove: %s"
 msgstr "%s: Nie można usunąć: %s"
@@ -153,111 +153,111 @@ msgstr "%s: Nie można usunąć: %s"
 msgid "%s: Cannot set the file owner: %s"
 msgstr "%s: Nie można ustawić właściciela pliku: %s"
 
-#: src/xz/file_io.c:372
+#: src/xz/file_io.c:379
 #, c-format
 msgid "%s: Cannot set the file group: %s"
 msgstr "%s: Nie można ustawić grupy pliku: %s"
 
-#: src/xz/file_io.c:391
+#: src/xz/file_io.c:398
 #, c-format
 msgid "%s: Cannot set the file permissions: %s"
 msgstr "%s: Nie można ustawić uprawnień pliku: %s"
 
-#: src/xz/file_io.c:517
+#: src/xz/file_io.c:524
 #, c-format
 msgid "Error getting the file status flags from standard input: %s"
 msgstr "Błąd podczas pobierania flag stanu pliku ze standardowego wejścia: %s"
 
-#: src/xz/file_io.c:574 src/xz/file_io.c:636
+#: src/xz/file_io.c:582 src/xz/file_io.c:644
 #, c-format
 msgid "%s: Is a symbolic link, skipping"
 msgstr "%s: Jest dowiązaniem symbolicznym, pominięto"
 
-#: src/xz/file_io.c:665
+#: src/xz/file_io.c:673
 #, c-format
 msgid "%s: Is a directory, skipping"
 msgstr "%s: Jest katalogiem, pominięto"
 
-#: src/xz/file_io.c:671
+#: src/xz/file_io.c:679
 #, c-format
 msgid "%s: Not a regular file, skipping"
 msgstr "%s: Nie jest zwykłym plikiem, pominięto"
 
-#: src/xz/file_io.c:688
+#: src/xz/file_io.c:696
 #, c-format
 msgid "%s: File has setuid or setgid bit set, skipping"
 msgstr "%s: Plik ma ustawiony bit setuid lub setgid, pominięto"
 
-#: src/xz/file_io.c:695
+#: src/xz/file_io.c:703
 #, c-format
 msgid "%s: File has sticky bit set, skipping"
 msgstr "%s: Plik ma ustawiony bit sticky, pominięto"
 
-#: src/xz/file_io.c:702
+#: src/xz/file_io.c:710
 #, c-format
 msgid "%s: Input file has more than one hard link, skipping"
 msgstr "%s: Plik wejściowy ma więcej niż jedno dowiązanie zwykłe, pominięto"
 
-#: src/xz/file_io.c:792
+#: src/xz/file_io.c:804
 #, c-format
 msgid "Error restoring the status flags to standard input: %s"
 msgstr "Błąd podczas odtwarzania flag stanu dla standardowego wejścia: %s"
 
-#: src/xz/file_io.c:840
+#: src/xz/file_io.c:852
 #, c-format
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "Błąd podczas pobierania flag stanu pliku ze standardowego wyjścia: %s"
 
-#: src/xz/file_io.c:1018
+#: src/xz/file_io.c:1030
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "Błąd podczas odtwarzania flagi O_APPEND dla standardowego wyjścia: %s"
 
-#: src/xz/file_io.c:1030
+#: src/xz/file_io.c:1042
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s: Zamknięcie pliku nie powiodło się: %s"
 
-#: src/xz/file_io.c:1066 src/xz/file_io.c:1309
+#: src/xz/file_io.c:1078 src/xz/file_io.c:1321
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s: Zmiana pozycji nie powiodła się podczas próby utworzenia pliku rzadkiego: %s"
 
-#: src/xz/file_io.c:1167
+#: src/xz/file_io.c:1179
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s: Błąd odczytu: %s"
 
-#: src/xz/file_io.c:1191
+#: src/xz/file_io.c:1203
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s: Błąd podczas zmiany pozycji w pliku: %s"
 
-#: src/xz/file_io.c:1201
+#: src/xz/file_io.c:1213
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s: Nieoczekiwany koniec pliku"
 
-#: src/xz/file_io.c:1260
+#: src/xz/file_io.c:1272
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s: Błąd zapisu: %s"
 
-#: src/xz/hardware.c:137
+#: src/xz/hardware.c:143
 msgid "Disabled"
 msgstr "Wyłączony"
 
 #. TRANSLATORS: Test with "xz --info-memory" to see if
 #. the alignment looks nice.
-#: src/xz/hardware.c:156
+#: src/xz/hardware.c:162
 msgid "Total amount of physical memory (RAM): "
 msgstr "Całkowita ilość pamięci fizycznej (RAM): "
 
-#: src/xz/hardware.c:158
+#: src/xz/hardware.c:164
 msgid "Memory usage limit for compression:    "
 msgstr "Limit użycia pamięci dla kompresji:      "
 
-#: src/xz/hardware.c:160
+#: src/xz/hardware.c:166
 msgid "Memory usage limit for decompression:  "
 msgstr "Limit użycia pamięci dla dekompresji:    "
 
@@ -485,68 +485,68 @@ msgstr "Nie można odczytać danych ze standardowego wejścia przy czytaniu nazw
 #. of the line in messages. Usually it becomes "xz: ".
 #. This is a translatable string because French needs
 #. a space before a colon.
-#: src/xz/message.c:728
+#: src/xz/message.c:725
 #, c-format
 msgid "%s: "
 msgstr "%s: "
 
-#: src/xz/message.c:791 src/xz/message.c:841
+#: src/xz/message.c:788 src/xz/message.c:838
 msgid "Internal error (bug)"
 msgstr "Błąd wewnętrzny"
 
-#: src/xz/message.c:798
+#: src/xz/message.c:795
 msgid "Cannot establish signal handlers"
 msgstr "Nie można ustawić obsługi sygnałów"
 
-#: src/xz/message.c:807
+#: src/xz/message.c:804
 msgid "No integrity check; not verifying file integrity"
 msgstr "Brak kontroli spójności; poprawność plików nie będzie weryfikowana"
 
-#: src/xz/message.c:810
+#: src/xz/message.c:807
 msgid "Unsupported type of integrity check; not verifying file integrity"
 msgstr "Nieobsługiwany typ kontroli spójności; poprawność plików nie będzie weryfikowana"
 
-#: src/xz/message.c:817
+#: src/xz/message.c:814
 msgid "Memory usage limit reached"
 msgstr "Osiągnięto limit użycia pamięci"
 
-#: src/xz/message.c:820
+#: src/xz/message.c:817
 msgid "File format not recognized"
 msgstr "Nie rozpoznany format pliku"
 
-#: src/xz/message.c:823
+#: src/xz/message.c:820
 msgid "Unsupported options"
 msgstr "Nieobsługiwane opcje"
 
-#: src/xz/message.c:826
+#: src/xz/message.c:823
 msgid "Compressed data is corrupt"
 msgstr "Dane skompresowane są uszkodzone"
 
-#: src/xz/message.c:829
+#: src/xz/message.c:826
 msgid "Unexpected end of input"
 msgstr "Nieoczekiwany koniec wejścia"
 
-#: src/xz/message.c:862
+#: src/xz/message.c:859
 #, c-format
 msgid "%s MiB of memory is required. The limiter is disabled."
 msgstr "Wymagane jest %s MiB pamięci. Limit jest wyłączony."
 
-#: src/xz/message.c:890
+#: src/xz/message.c:887
 #, c-format
 msgid "%s MiB of memory is required. The limit is %s."
 msgstr "Wymagane jest %s MiB pamięci. Limit to %s."
 
-#: src/xz/message.c:1057
+#: src/xz/message.c:1054
 #, c-format
 msgid "%s: Filter chain: %s\n"
 msgstr "%s: Łańcuch filtrów: %s\n"
 
-#: src/xz/message.c:1067
+#: src/xz/message.c:1064
 #, c-format
 msgid "Try `%s --help' for more information."
 msgstr "Polecenie `%s --help' pokaże więcej informacji."
 
-#: src/xz/message.c:1093
+#: src/xz/message.c:1090
 #, c-format
 msgid ""
 "Usage: %s [OPTION]... [FILE]...\n"
@@ -557,17 +557,17 @@ msgstr ""
 "Kompresja lub dekompresja PLIKÓW w formacie .xz.\n"
 "\n"
 
-#: src/xz/message.c:1100
+#: src/xz/message.c:1097
 msgid "Mandatory arguments to long options are mandatory for short options too.\n"
 msgstr ""
 "Argumenty obowiązkowe dla opcji długich są obowiązkowe również dla opcji\n"
 "krótkich.\n"
 
-#: src/xz/message.c:1104
+#: src/xz/message.c:1101
 msgid " Operation mode:\n"
 msgstr " Tryb pracy:\n"
 
-#: src/xz/message.c:1107
+#: src/xz/message.c:1104
 msgid ""
 "  -z, --compress      force compression\n"
 "  -d, --decompress    force decompression\n"
@@ -579,7 +579,7 @@ msgstr ""
 "  -t, --test          sprawdzenie spójności plików skompresowanych\n"
 "  -l, --list          wypisanie informacji o plikach .xz"
 
-#: src/xz/message.c:1113
+#: src/xz/message.c:1110
 msgid ""
 "\n"
 " Operation modifiers:\n"
@@ -587,7 +587,7 @@ msgstr ""
 "\n"
 " Modyfikatory operacji:\n"
 
-#: src/xz/message.c:1116
+#: src/xz/message.c:1113
 msgid ""
 "  -k, --keep          keep (don't delete) input files\n"
 "  -f, --force         force overwrite of output file and (de)compress links\n"

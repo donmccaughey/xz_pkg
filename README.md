@@ -1,9 +1,9 @@
-XZ Utils 5.2.5 for macOS
+XZ Utils 5.2.9 for macOS
 ========================
 
 This project builds a signed universal macOS installer package for [XZ
 Utils][1], a general-purpose data compression tool and library.  It contains
-the source distribution for XZ Utils 5.2.5.
+the source distribution for XZ Utils 5.2.9.
 
 [1]: http://tukaani.org/xz/ "XZ Utils"
 
@@ -13,14 +13,15 @@ A recent version of Xcode and the [`jq`][2] command are needed to build and
 notarize this installer package.  An [Apple Developer][3] account is required
 to generate the credentials needed to sign and notarize.
 
-Building was last tested on an Apple Silicon Mac with macOS Monterey 12.1 and
-Xcode 13.2.1.  Installation was last tested on both Intel and Apple Silicon
-Macs running Monterey.
+Building was last tested on an Apple Silicon Mac with macOS Ventura 13.0.1 and
+Xcode 14.1.  Installation was last tested on both Intel and Apple Silicon Macs
+running Ventura.
 
 [2]: https://stedolan.github.io/jq/
 [3]: https://developer.apple.com
 
 ## Building
+
 The [`Makefile`][4] in the project root directory builds the installer package.
 The following makefile variables can be set from the command line:
 
@@ -49,7 +50,7 @@ To build and sign the executable and installer, run:
         $ make [APP_SIGNING_ID="<cert name 1>"] [INSTALLER_SIGNING_ID="<cert name 2>"] [TMP="<build dir>"]
 
 Intermediate files are generated in the temp directory; the signed installer 
-package is written into the project root with the name `xz-5.2.5-r2.pkg`.  
+package is written into the project root with the name `xz-5.2.9.pkg`.  
 
 To notarize the signed installer package, run:
 
@@ -60,7 +61,7 @@ success.  Check the file `$(TMP)/notarization-log.json` for detailed
 information if notarization fails.  The signed installer is stapled in place
 if notarization succeeds.  Use the command:
 
-        $ xcrun stapler validate --verbose xz-5.2.5-r2.pkg
+        $ xcrun stapler validate --verbose xz-5.2.9.pkg
 
 to check the notarization state of the installer package.
 
