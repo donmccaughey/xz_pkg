@@ -145,7 +145,7 @@ lzma_index_hash_append(lzma_index_hash *index_hash, lzma_vli unpadded_size,
 		lzma_vli uncompressed_size)
 {
 	// Validate the arguments.
-	if (index_hash->sequence != SEQ_BLOCK
+	if (index_hash == NULL || index_hash->sequence != SEQ_BLOCK
 			|| unpadded_size < UNPADDED_SIZE_MIN
 			|| unpadded_size > UNPADDED_SIZE_MAX
 			|| uncompressed_size > LZMA_VLI_MAX)
@@ -190,7 +190,7 @@ lzma_index_hash_decode(lzma_index_hash *index_hash, const uint8_t *in,
 	switch (index_hash->sequence) {
 	case SEQ_BLOCK:
 		// Check the Index Indicator is present.
-		if (in[(*in_pos)++] != 0x00)
+		if (in[(*in_pos)++] != INDEX_INDICATOR)
 			return LZMA_DATA_ERROR;
 
 		index_hash->sequence = SEQ_COUNT;
@@ -312,8 +312,11 @@ lzma_index_hash_decode(lzma_index_hash *index_hash, const uint8_t *in,
 				return LZMA_OK;
 
 			if (((index_hash->crc32 >> (index_hash->pos * 8))
-					& 0xFF) != in[(*in_pos)++])
+					& 0xFF) != in[(*in_pos)++]) {
+#ifndef FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION
 				return LZMA_DATA_ERROR;
+#endif
+			}
 
 		} while (++index_hash->pos < 4);
 

@@ -2,9 +2,9 @@
 #
 # Very limited CMake support for building some parts of XZ Utils
 #
-# Building static liblzma with MSVC should work. Building shared liblzma.dll
-# with MSVC may or may not work (building liblzma_w32res.rc might be broken).
-# Building liblzma on a few other platforms should work too but it
+# For now, this is indented to be useful to build static or shared liblzma
+# on Windows with MSVC (to avoid the need to maintain Visual Studio project
+# files). Building liblzma on a few other platforms should work too but it
 # is somewhat experimental and not as portable as using ./configure.
 #
 # On some platforms this builds also xz and xzdec, but these are
@@ -16,7 +16,7 @@
 #
 # Other missing things:
 #   - No xzgrep or other scripts or their symlinks
-#   - No tests (no test failures either!)
+#   - No xz tests (liblzma tests only)
 #
 # NOTE: Even if the code compiles without warnings, the end result may be
 # different than via ./configure. Specifically, the list of #defines
@@ -46,10 +46,13 @@
 #
 #############################################################################
 
-cmake_minimum_required(VERSION 3.13...3.16 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.13...3.25 FATAL_ERROR)
 
+include(CMakePushCheckState)
+include(CheckIncludeFile)
 include(CheckSymbolExists)
 include(CheckStructHasMember)
+include(CheckCSourceCompiles)
 include(cmake/tuklib_integer.cmake)
 include(cmake/tuklib_cpucores.cmake)
 include(cmake/tuklib_physmem.cmake)
@@ -72,10 +75,40 @@ project(xz VERSION "${XZ_VERSION}" LANGUAGES C)
 # On Apple OSes, don't build executables as bundles:
 set(CMAKE_MACOSX_BUNDLE OFF)
 
+# windres from GNU binutils can be tricky with command line arguments
+# that contain spaces or other funny characters. Unfortunately we need
+# a space in PACKAGE_NAME. Using \x20 to encode the US-ASCII space seems
+# to work in both cmd.exe and /bin/sh.
+#
+# However, even \x20 isn't enough in all situations, resulting in
+# "syntax error" from windres. Using --use-temp-file prevents windres
+# from using popen() and this seems to fix the problem.
+#
+# llvm-windres claims to be compatible with GNU windres but with that
+# the \x20 results in "XZx20Utils" in the compiled binary. (At the
+# same time it works correctly with clang (the C compiler).) The option
+# --use-temp-file makes no difference.
+#
+# CMake 3.25 doesn't have CMAKE_RC_COMPILER_ID so we rely on
+# CMAKE_C_COMPILER_ID. If Clang is used together with GNU windres
+# then it will fail, but this way the risk of a bad string in
+# the binary should be fairly low.
+if(WIN32 AND CMAKE_C_COMPILER_ID STREQUAL "GNU")
+    # Use workarounds with GNU windres. The \x20 in PACKAGE_NAME works
+    # with gcc too so we don't need to worry how to pass different flags
+    # to windres and gcc.
+    string(APPEND CMAKE_RC_FLAGS " --use-temp-file")
+    set(PACKAGE_NAME "XZ\\x20Utils")
+else()
+    # Elsewhere a space is safe. This also keeps things compatible with
+    # EBCDIC in case CMake-based build is ever done on such a system.
+    set(PACKAGE_NAME "XZ Utils")
+endif()
+
 # Definitions common to all targets:
 add_compile_definitions(
     # Package info:
-    PACKAGE_NAME="XZ Utils"
+    PACKAGE_NAME="${PACKAGE_NAME}"
     PACKAGE_BUGREPORT="xz@tukaani.org"
     PACKAGE_URL="https://tukaani.org/xz/"
 
@@ -86,6 +119,7 @@ add_compile_definitions(
     HAVE_DECODERS
     HAVE_DECODER_ARM
     HAVE_DECODER_ARMTHUMB
+    HAVE_DECODER_ARM64
     HAVE_DECODER_DELTA
     HAVE_DECODER_IA64
     HAVE_DECODER_LZMA1
@@ -96,6 +130,7 @@ add_compile_definitions(
     HAVE_ENCODERS
     HAVE_ENCODER_ARM
     HAVE_ENCODER_ARMTHUMB
+    HAVE_ENCODER_ARM64
     HAVE_ENCODER_DELTA
     HAVE_ENCODER_IA64
     HAVE_ENCODER_LZMA1
@@ -108,6 +143,7 @@ add_compile_definitions(
     HAVE_MF_BT4
     HAVE_MF_HC3
     HAVE_MF_HC4
+    HAVE_LZIP_DECODER
 
     # Standard headers and types are available:
     HAVE_STDBOOL_H
@@ -148,13 +184,11 @@ if(NOT WIN32 AND NOT DEFINED HAVE_CLOCK_GETTIME)
     endif()
     if(HAVE_CLOCK_GETTIME)
         # Check if CLOCK_MONOTONIC is available for clock_gettime().
-        check_symbol_exists(CLOCK_MONOTONIC time.h HAVE_DECL_CLOCK_MONOTONIC)
+        check_symbol_exists(CLOCK_MONOTONIC time.h HAVE_CLOCK_MONOTONIC)
 
-        # HAVE_DECL_CLOCK_MONOTONIC should always be defined to 0 or 1
-        # when clock_gettime is available.
         add_compile_definitions(
             HAVE_CLOCK_GETTIME
-            HAVE_DECL_CLOCK_MONOTONIC=$<BOOL:"${HAVE_DECL_CLOCK_MONOTONIC}">
+            HAVE_CLOCK_MONOTONIC
         )
     endif()
 endif()
@@ -178,7 +212,7 @@ else()
     add_compile_definitions(MYTHREAD_POSIX)
 
     # Check if pthread_condattr_setclock() exists to use CLOCK_MONOTONIC.
-    if(HAVE_DECL_CLOCK_MONOTONIC)
+    if(HAVE_CLOCK_MONOTONIC)
         list(INSERT CMAKE_REQUIRED_LIBRARIES 0 "${CMAKE_THREAD_LIBS_INIT}")
         check_symbol_exists(pthread_condattr_setclock pthread.h
                             HAVE_PTHREAD_CONDATTR_SETCLOCK)
@@ -258,6 +292,7 @@ add_library(liblzma
     src/liblzma/common/easy_encoder_memusage.c
     src/liblzma/common/easy_preset.c
     src/liblzma/common/easy_preset.h
+    src/liblzma/common/file_info.c
     src/liblzma/common/filter_buffer_decoder.c
     src/liblzma/common/filter_buffer_encoder.c
     src/liblzma/common/filter_common.c
@@ -273,15 +308,19 @@ add_library(liblzma
     src/liblzma/common/index.c
     src/liblzma/common/index.h
     src/liblzma/common/index_decoder.c
+    src/liblzma/common/index_decoder.h
     src/liblzma/common/index_encoder.c
     src/liblzma/common/index_encoder.h
     src/liblzma/common/index_hash.c
+    src/liblzma/common/lzip_decoder.c
+    src/liblzma/common/lzip_decoder.h
     src/liblzma/common/memcmplen.h
     src/liblzma/common/outqueue.c
     src/liblzma/common/outqueue.h
     src/liblzma/common/stream_buffer_decoder.c
     src/liblzma/common/stream_buffer_encoder.c
     src/liblzma/common/stream_decoder.c
+    src/liblzma/common/stream_decoder_mt.c
     src/liblzma/common/stream_decoder.h
     src/liblzma/common/stream_encoder.c
     src/liblzma/common/stream_encoder_mt.c
@@ -289,6 +328,7 @@ add_library(liblzma
     src/liblzma/common/stream_flags_common.h
     src/liblzma/common/stream_flags_decoder.c
     src/liblzma/common/stream_flags_encoder.c
+    src/liblzma/common/string_conversion.c
     src/liblzma/common/vli_decoder.c
     src/liblzma/common/vli_encoder.c
     src/liblzma/common/vli_size.c
@@ -328,6 +368,7 @@ add_library(liblzma
     src/liblzma/rangecoder/range_encoder.h
     src/liblzma/simple/arm.c
     src/liblzma/simple/armthumb.c
+    src/liblzma/simple/arm64.c
     src/liblzma/simple/ia64.c
     src/liblzma/simple/powerpc.c
     src/liblzma/simple/simple_coder.c
@@ -378,14 +419,30 @@ if(NOT TUKLIB_CPUCORES_FOUND OR NOT TUKLIB_PHYSMEM_FOUND)
             "To build anyway, edit this CMakeLists.txt to ignore this error.")
 endif()
 
+# Check for __attribute__((__constructor__)) support.
+# This needs -Werror because some compilers just warn
+# about this being unsupported.
+cmake_push_check_state()
+set(CMAKE_REQUIRED_FLAGS "-Werror")
+check_c_source_compiles("
+        __attribute__((__constructor__))
+        static void my_constructor_func(void) { return; }
+        int main(void) { return 0; }
+    "
+    HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR)
+cmake_pop_check_state()
+tuklib_add_definition_if(liblzma HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR)
+
+# cpuid.h
+check_include_file(cpuid.h HAVE_CPUID_H)
+tuklib_add_definition_if(liblzma HAVE_CPUID_H)
+
 # immintrin.h:
-include(CheckIncludeFile)
 check_include_file(immintrin.h HAVE_IMMINTRIN_H)
 if(HAVE_IMMINTRIN_H)
     target_compile_definitions(liblzma PRIVATE HAVE_IMMINTRIN_H)
 
     # SSE2 intrinsics:
-    include(CheckCSourceCompiles)
     check_c_source_compiles("
             #include <immintrin.h>
             int main(void)
@@ -397,6 +454,25 @@ if(HAVE_IMMINTRIN_H)
         "
         HAVE__MM_MOVEMASK_EPI8)
     tuklib_add_definition_if(liblzma HAVE__MM_MOVEMASK_EPI8)
+
+    # CLMUL intrinsic:
+    check_c_source_compiles("
+            #include <immintrin.h>
+            #if defined(__e2k__) && __iset__ < 6
+            #   error
+            #endif
+            #if (defined(__GNUC__) || defined(__clang__)) && !defined(__EDG__)
+            __attribute__((__target__(\"ssse3,sse4.1,pclmul\")))
+            #endif
+            __m128i my_clmul(__m128i a)
+            {
+                const __m128i b = _mm_set_epi64x(1, 2);
+                return _mm_clmulepi64_si128(a, b, 0);
+            }
+            int main(void) { return 0; }
+    "
+    HAVE_USABLE_CLMUL)
+    tuklib_add_definition_if(liblzma HAVE_USABLE_CLMUL)
 endif()
 
 # Support -fvisiblity=hidden when building shared liblzma.
@@ -565,6 +641,14 @@ if(HAVE_GETOPT_LONG)
 
     target_link_libraries(xzdec PRIVATE liblzma)
 
+    if(WIN32)
+        # Add the Windows resource file for xzdec.exe.
+        target_sources(xzdec PRIVATE src/xzdec/xzdec_w32res.rc)
+        set_target_properties(xzdec PROPERTIES
+            LINK_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/common/common_w32res.rc"
+        )
+    endif()
+
     tuklib_progname(xzdec)
 
     install(TARGETS xzdec
@@ -635,6 +719,14 @@ if(NOT MSVC AND HAVE_GETOPT_LONG)
     target_link_libraries(xz PRIVATE liblzma)
 
     target_compile_definitions(xz PRIVATE ASSUME_RAM=128)
+
+    if(WIN32)
+        # Add the Windows resource file for xz.exe.
+        target_sources(xz PRIVATE src/xz/xz_w32res.rc)
+        set_target_properties(xz PROPERTIES
+            LINK_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/src/common/common_w32res.rc"
+        )
+    endif()
 
     tuklib_progname(xz)
     tuklib_mbstr(xz)
@@ -739,4 +831,58 @@ if(NOT MSVC AND HAVE_GETOPT_LONG)
                     COMPONENT xz)
         endforeach()
     endif()
+endif()
+
+
+#############################################################################
+# Tests
+#############################################################################
+
+include(CTest)
+
+if(BUILD_TESTING)
+    set(LIBLZMA_TESTS
+        test_bcj_exact_size
+        test_block_header
+        test_check
+        test_filter_flags
+        test_hardware
+        test_index
+        test_index_hash
+        test_memlimit
+        test_stream_flags
+        test_vli
+    )
+
+    foreach(TEST IN LISTS LIBLZMA_TESTS)
+        add_executable("${TEST}" "tests/${TEST}.c")
+
+        target_include_directories("${TEST}" PRIVATE
+            src/common
+            src/liblzma/api
+            src/liblzma
+            lib
+        )
+
+        target_link_libraries("${TEST}" PRIVATE liblzma)
+
+        # Put the test programs into their own subdirectory so they don't
+        # pollute the top-level dir which might contain xz and xzdec.
+        set_target_properties("${TEST}" PROPERTIES
+            RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/tests_bin"
+        )
+
+        add_test(NAME "${TEST}"
+                 COMMAND "${CMAKE_CURRENT_BINARY_DIR}/tests_bin/${TEST}"
+        )
+
+        # Set srcdir environment variable so that the tests find their
+        # input files from the source tree.
+        #
+        # Set the return code for skipped tests to match Automake convention.
+        set_tests_properties("${TEST}" PROPERTIES
+            ENVIRONMENT "srcdir=${CMAKE_CURRENT_LIST_DIR}/tests"
+            SKIP_RETURN_CODE 77
+        )
+    endforeach()
 endif()

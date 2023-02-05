@@ -1,9 +1,9 @@
-XZ Utils 5.2.9 for macOS
+XZ Utils 5.4.1 for macOS
 ========================
 
 This project builds a signed universal macOS installer package for [XZ
 Utils][1], a general-purpose data compression tool and library.  It contains
-the source distribution for XZ Utils 5.2.9.
+the source distribution for XZ Utils 5.4.1.
 
 [1]: http://tukaani.org/xz/ "XZ Utils"
 
@@ -13,8 +13,8 @@ A recent version of Xcode and the [`jq`][2] command are needed to build and
 notarize this installer package.  An [Apple Developer][3] account is required
 to generate the credentials needed to sign and notarize.
 
-Building was last tested on an Apple Silicon Mac with macOS Ventura 13.0.1 and
-Xcode 14.1.  Installation was last tested on both Intel and Apple Silicon Macs
+Building was last tested on an Apple Silicon Mac with macOS Ventura 13.1 and
+Xcode 14.2.  Installation was last tested on both Intel and Apple Silicon Macs
 running Ventura.
 
 [2]: https://stedolan.github.io/jq/
@@ -50,7 +50,7 @@ To build and sign the executable and installer, run:
         $ make [APP_SIGNING_ID="<cert name 1>"] [INSTALLER_SIGNING_ID="<cert name 2>"] [TMP="<build dir>"]
 
 Intermediate files are generated in the temp directory; the signed installer 
-package is written into the project root with the name `xz-5.2.9.pkg`.  
+package is written into the project root with the name `xz-5.4.1.pkg`.  
 
 To notarize the signed installer package, run:
 
@@ -61,7 +61,7 @@ success.  Check the file `$(TMP)/notarization-log.json` for detailed
 information if notarization fails.  The signed installer is stapled in place
 if notarization succeeds.  Use the command:
 
-        $ xcrun stapler validate --verbose xz-5.2.9.pkg
+        $ xcrun stapler validate --verbose xz-5.4.1.pkg
 
 to check the notarization state of the installer package.
 
@@ -100,7 +100,7 @@ The `--sync` option adds the credentials to the user's iCloud Keychain.
 
 ## License
 
-The installer and related scripts are copyright (c) 2022 Don McCaughey.
+The installer and related scripts are copyright (c) 2023 Don McCaughey.
 Different parts of XZ Utils are distributed under different licenses.  The
 sources for the macOS installer package are distributed under GNU GPLv2.
 See the LICENSE file for details.
