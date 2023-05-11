@@ -90,16 +90,17 @@ host_triplet = @host@
 @COND_GNULIB_TRUE@am__append_1 = $(top_builddir)/lib/libgnu.a
 check_PROGRAMS = create_compress_files$(EXEEXT) test_check$(EXEEXT) \
 	test_hardware$(EXEEXT) test_stream_flags$(EXEEXT) \
-	test_filter_flags$(EXEEXT) test_block_header$(EXEEXT) \
-	test_index$(EXEEXT) test_index_hash$(EXEEXT) \
-	test_bcj_exact_size$(EXEEXT) test_memlimit$(EXEEXT) \
-	test_lzip_decoder$(EXEEXT) test_vli$(EXEEXT)
-TESTS = test_check$(EXEEXT) test_hardware$(EXEEXT) \
-	test_stream_flags$(EXEEXT) test_filter_flags$(EXEEXT) \
+	test_filter_flags$(EXEEXT) test_filter_str$(EXEEXT) \
 	test_block_header$(EXEEXT) test_index$(EXEEXT) \
 	test_index_hash$(EXEEXT) test_bcj_exact_size$(EXEEXT) \
 	test_memlimit$(EXEEXT) test_lzip_decoder$(EXEEXT) \
-	test_vli$(EXEEXT) test_files.sh \
+	test_vli$(EXEEXT)
+TESTS = test_check$(EXEEXT) test_hardware$(EXEEXT) \
+	test_stream_flags$(EXEEXT) test_filter_flags$(EXEEXT) \
+	test_filter_str$(EXEEXT) test_block_header$(EXEEXT) \
+	test_index$(EXEEXT) test_index_hash$(EXEEXT) \
+	test_bcj_exact_size$(EXEEXT) test_memlimit$(EXEEXT) \
+	test_lzip_decoder$(EXEEXT) test_vli$(EXEEXT) test_files.sh \
 	test_compress_prepared_bcj_sparc \
 	test_compress_prepared_bcj_x86 test_compress_generated_abc \
 	test_compress_generated_random test_compress_generated_text \
@@ -165,6 +166,11 @@ test_filter_flags_LDADD = $(LDADD)
 test_filter_flags_DEPENDENCIES =  \
 	$(top_builddir)/src/liblzma/liblzma.la $(am__append_1) \
 	$(am__DEPENDENCIES_1)
+test_filter_str_SOURCES = test_filter_str.c
+test_filter_str_OBJECTS = test_filter_str.$(OBJEXT)
+test_filter_str_LDADD = $(LDADD)
+test_filter_str_DEPENDENCIES = $(top_builddir)/src/liblzma/liblzma.la \
+	$(am__append_1) $(am__DEPENDENCIES_1)
 test_hardware_SOURCES = test_hardware.c
 test_hardware_OBJECTS = test_hardware.$(OBJEXT)
 test_hardware_LDADD = $(LDADD)
@@ -220,7 +226,8 @@ am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ./$(DEPDIR)/create_compress_files.Po \
 	./$(DEPDIR)/test_bcj_exact_size.Po \
 	./$(DEPDIR)/test_block_header.Po ./$(DEPDIR)/test_check.Po \
-	./$(DEPDIR)/test_filter_flags.Po ./$(DEPDIR)/test_hardware.Po \
+	./$(DEPDIR)/test_filter_flags.Po \
+	./$(DEPDIR)/test_filter_str.Po ./$(DEPDIR)/test_hardware.Po \
 	./$(DEPDIR)/test_index.Po ./$(DEPDIR)/test_index_hash.Po \
 	./$(DEPDIR)/test_lzip_decoder.Po ./$(DEPDIR)/test_memlimit.Po \
 	./$(DEPDIR)/test_stream_flags.Po ./$(DEPDIR)/test_vli.Po
@@ -245,14 +252,14 @@ am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
 SOURCES = create_compress_files.c test_bcj_exact_size.c \
 	test_block_header.c test_check.c test_filter_flags.c \
-	test_hardware.c test_index.c test_index_hash.c \
-	test_lzip_decoder.c test_memlimit.c test_stream_flags.c \
-	test_vli.c
+	test_filter_str.c test_hardware.c test_index.c \
+	test_index_hash.c test_lzip_decoder.c test_memlimit.c \
+	test_stream_flags.c test_vli.c
 DIST_SOURCES = create_compress_files.c test_bcj_exact_size.c \
 	test_block_header.c test_check.c test_filter_flags.c \
-	test_hardware.c test_index.c test_index_hash.c \
-	test_lzip_decoder.c test_memlimit.c test_stream_flags.c \
-	test_vli.c
+	test_filter_str.c test_hardware.c test_index.c \
+	test_index_hash.c test_lzip_decoder.c test_memlimit.c \
+	test_stream_flags.c test_vli.c
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -730,6 +737,10 @@ test_filter_flags$(EXEEXT): $(test_filter_flags_OBJECTS) $(test_filter_flags_DEP
 	@rm -f test_filter_flags$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_filter_flags_OBJECTS) $(test_filter_flags_LDADD) $(LIBS)
 
+test_filter_str$(EXEEXT): $(test_filter_str_OBJECTS) $(test_filter_str_DEPENDENCIES) $(EXTRA_test_filter_str_DEPENDENCIES) 
+	@rm -f test_filter_str$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(test_filter_str_OBJECTS) $(test_filter_str_LDADD) $(LIBS)
+
 test_hardware$(EXEEXT): $(test_hardware_OBJECTS) $(test_hardware_DEPENDENCIES) $(EXTRA_test_hardware_DEPENDENCIES) 
 	@rm -f test_hardware$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(test_hardware_OBJECTS) $(test_hardware_LDADD) $(LIBS)
@@ -769,6 +780,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_block_header.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_check.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_filter_flags.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_filter_str.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_hardware.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_index.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test_index_hash.Po@am__quote@ # am--include-marker
@@ -1031,6 +1043,13 @@ test_filter_flags.log: test_filter_flags$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
+test_filter_str.log: test_filter_str$(EXEEXT)
+	@p='test_filter_str$(EXEEXT)'; \
+	b='test_filter_str'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 test_block_header.log: test_block_header$(EXEEXT)
 	@p='test_block_header$(EXEEXT)'; \
 	b='test_block_header'; \
@@ -1226,6 +1245,7 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/test_block_header.Po
 	-rm -f ./$(DEPDIR)/test_check.Po
 	-rm -f ./$(DEPDIR)/test_filter_flags.Po
+	-rm -f ./$(DEPDIR)/test_filter_str.Po
 	-rm -f ./$(DEPDIR)/test_hardware.Po
 	-rm -f ./$(DEPDIR)/test_index.Po
 	-rm -f ./$(DEPDIR)/test_index_hash.Po
@@ -1283,6 +1303,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/test_block_header.Po
 	-rm -f ./$(DEPDIR)/test_check.Po
 	-rm -f ./$(DEPDIR)/test_filter_flags.Po
+	-rm -f ./$(DEPDIR)/test_filter_str.Po
 	-rm -f ./$(DEPDIR)/test_hardware.Po
 	-rm -f ./$(DEPDIR)/test_index.Po
 	-rm -f ./$(DEPDIR)/test_index_hash.Po

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xz-5.2.4\n"
 "Report-Msgid-Bugs-To: xz@tukaani.org\n"
-"POT-Creation-Date: 2023-01-11 19:01+0200\n"
+"POT-Creation-Date: 2023-03-18 18:09+0200\n"
 "PO-Revision-Date: 2019-05-12 05:46+0200\n"
 "Last-Translator: Stéphane Aulery <lkppo@free.fr>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -62,6 +62,12 @@ msgstr "Le support de la décompression a été désactivé lors de la compilati
 #: src/xz/args.c:701
 msgid "Compression of lzip files (.lz) is not supported"
 msgstr ""
+
+#: src/xz/args.c:732
+#, fuzzy
+#| msgid "%s: With --format=raw, --suffix=.SUF is required unless writing to stdout"
+msgid "With --format=raw, --suffix=.SUF is required unless writing to stdout"
+msgstr "%s : Avec --format=raw, --suffix=.SUF est nécessaire sauf lors de l'écriture vers stdout"
 
 #: src/xz/coder.c:115
 msgid "Maximum number of filters is four"
@@ -136,11 +142,11 @@ msgstr "Taille du dictionnaire LZMA%c réduite de %s MiB à %s MiB pour ne pas d
 msgid "Error creating a pipe: %s"
 msgstr "Impossible de créer un tube anonyme (pipe) : %s"
 
-#: src/xz/file_io.c:235
+#: src/xz/file_io.c:252
 msgid "Failed to enable the sandbox"
 msgstr "Echec de l'activation de la sandboxe"
 
-#: src/xz/file_io.c:277
+#: src/xz/file_io.c:294
 #, c-format
 msgid "%s: poll() failed: %s"
 msgstr "%s : L'appel à la fonction poll() a échoué : %s"
@@ -155,27 +161,27 @@ msgstr "%s : L'appel à la fonction poll() a échoué : %s"
 #. it is possible that the user has put a new file in place
 #. of the original file, and in that case it obviously
 #. shouldn't be removed.
-#: src/xz/file_io.c:344
+#: src/xz/file_io.c:361
 #, c-format
 msgid "%s: File seems to have been moved, not removing"
 msgstr "%s : Le fichier a apparemment été déplacé, suppression annulée"
 
-#: src/xz/file_io.c:351 src/xz/file_io.c:907
+#: src/xz/file_io.c:368 src/xz/file_io.c:924
 #, c-format
 msgid "%s: Cannot remove: %s"
 msgstr "%s : Impossible de supprimer : %s"
 
-#: src/xz/file_io.c:377
+#: src/xz/file_io.c:394
 #, c-format
 msgid "%s: Cannot set the file owner: %s"
 msgstr "%s : Impossible de modifier le propriétaire du fichier : %s"
 
-#: src/xz/file_io.c:390
+#: src/xz/file_io.c:407
 #, c-format
 msgid "%s: Cannot set the file group: %s"
 msgstr "%s : Impossible de modifier le groupe propriétaire du fichier : %s"
 
-#: src/xz/file_io.c:409
+#: src/xz/file_io.c:426
 #, c-format
 msgid "%s: Cannot set the file permissions: %s"
 msgstr "%s : Impossible de modifier les permissions du fichier : %s"
@@ -188,88 +194,88 @@ msgstr "%s : Impossible de modifier les permissions du fichier : %s"
 # - make it more difficult to look up in search engines; it might happen one in
 # a million times, if we dilute the error message in 20 languages, it will be
 # almost impossible to find an explanation and support for the error.
-#: src/xz/file_io.c:535
+#: src/xz/file_io.c:552
 #, c-format
 msgid "Error getting the file status flags from standard input: %s"
 msgstr "Echec de la lecture du drapeau d'état du fichier depuis la sortie standard : %s"
 
-#: src/xz/file_io.c:593 src/xz/file_io.c:655
+#: src/xz/file_io.c:610 src/xz/file_io.c:672
 #, c-format
 msgid "%s: Is a symbolic link, skipping"
 msgstr "%s est un lien symbolique : ignoré"
 
-#: src/xz/file_io.c:684
+#: src/xz/file_io.c:701
 #, c-format
 msgid "%s: Is a directory, skipping"
 msgstr "%s est un répertoire : ignoré"
 
-#: src/xz/file_io.c:690
+#: src/xz/file_io.c:707
 #, c-format
 msgid "%s: Not a regular file, skipping"
 msgstr "%s n'est pas un fichier régulier : ignoré"
 
-#: src/xz/file_io.c:707
+#: src/xz/file_io.c:724
 #, c-format
 msgid "%s: File has setuid or setgid bit set, skipping"
 msgstr "%s : Le fichier possède les bits `setuid' ou `setgid' : ignoré"
 
-#: src/xz/file_io.c:714
+#: src/xz/file_io.c:731
 #, c-format
 msgid "%s: File has sticky bit set, skipping"
 msgstr "%s : Le fichier possède le bit `sticky' : ignoré"
 
-#: src/xz/file_io.c:721
+#: src/xz/file_io.c:738
 #, c-format
 msgid "%s: Input file has more than one hard link, skipping"
 msgstr "%s : Le fichier d'entrée a plus d'un lien matériel : ignoré"
 
-#: src/xz/file_io.c:763
+#: src/xz/file_io.c:780
 msgid "Empty filename, skipping"
 msgstr "Nom de fichier vide, ignoré"
 
 # See note from translator above titled "file status flags".
-#: src/xz/file_io.c:817
+#: src/xz/file_io.c:834
 #, c-format
 msgid "Error restoring the status flags to standard input: %s"
 msgstr "Erreur de restauration du drapeau d'état de l'entrée standard : %s"
 
 # See note from translator above titled "file status flags".
-#: src/xz/file_io.c:865
+#: src/xz/file_io.c:882
 #, c-format
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "Erreur de lecture du drapeau d'état du fichier depuis la sortie standard : %s"
 
-#: src/xz/file_io.c:1043
+#: src/xz/file_io.c:1060
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "Impossible de rétablir le drapeau O_APPEND sur la sortie standard : %s"
 
-#: src/xz/file_io.c:1055
+#: src/xz/file_io.c:1072
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s : Impossible de fermer le fichier : %s"
 
-#: src/xz/file_io.c:1091 src/xz/file_io.c:1354
+#: src/xz/file_io.c:1108 src/xz/file_io.c:1371
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s : Impossible de se déplacer dans le fichier pour créer un 'sparse file' : %s"
 
-#: src/xz/file_io.c:1192
+#: src/xz/file_io.c:1209
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s : Erreur d'écriture : %s"
 
-#: src/xz/file_io.c:1222
+#: src/xz/file_io.c:1239
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s : Impossible de se déplacer dans le fichier : %s"
 
-#: src/xz/file_io.c:1246
+#: src/xz/file_io.c:1263
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s : Fin de fichier inattendue"
 
-#: src/xz/file_io.c:1305
+#: src/xz/file_io.c:1322
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s : Erreur d'écriture : %s"
@@ -1025,22 +1031,17 @@ msgstr "Préréglage LZMA1/LZMA2 non reconnu : %s"
 msgid "The sum of lc and lp must not exceed 4"
 msgstr "La somme de lc et lp ne doit pas dépasser 4"
 
-#: src/xz/suffix.c:137 src/xz/suffix.c:268
-#, c-format
-msgid "%s: With --format=raw, --suffix=.SUF is required unless writing to stdout"
-msgstr "%s : Avec --format=raw, --suffix=.SUF est nécessaire sauf lors de l'écriture vers stdout"
-
-#: src/xz/suffix.c:168
+#: src/xz/suffix.c:160
 #, c-format
 msgid "%s: Filename has an unknown suffix, skipping"
 msgstr "%s : Le fichier a un suffixe inconnu, ignoré"
 
-#: src/xz/suffix.c:189
+#: src/xz/suffix.c:181
 #, c-format
 msgid "%s: File already has `%s' suffix, skipping"
 msgstr "%s : Le fichier a déjà le suffixe '%s', ignoré"
 
-#: src/xz/suffix.c:405
+#: src/xz/suffix.c:388
 #, c-format
 msgid "%s: Invalid filename suffix"
 msgstr "%s: Suffixe de nom de fichier invalide"

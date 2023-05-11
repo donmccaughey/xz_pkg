@@ -118,7 +118,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = config.h
-CONFIG_CLEAN_FILES = Doxyfile
+CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -212,8 +212,8 @@ am__define_uniq_tagged_files = \
   unique=`for i in $$list; do \
     if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
   done | $(am__uniquify_input)`
-am__DIST_COMMON = $(srcdir)/Doxyfile.in $(srcdir)/Makefile.in \
-	$(srcdir)/config.h.in $(top_srcdir)/build-aux/compile \
+am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
+	$(top_srcdir)/build-aux/compile \
 	$(top_srcdir)/build-aux/config.guess \
 	$(top_srcdir)/build-aux/config.rpath \
 	$(top_srcdir)/build-aux/config.sub \
@@ -460,12 +460,12 @@ EXTRA_DIST = \
 	po4a \
 	extra \
 	dos \
+	doxygen \
 	windows \
 	macosx \
 	cmake \
 	CMakeLists.txt \
 	autogen.sh \
-	Doxyfile.in \
 	COPYING.GPLv2 \
 	COPYING.GPLv3 \
 	COPYING.LGPLv2.1 \
@@ -538,8 +538,6 @@ $(srcdir)/config.h.in:  $(am__configure_deps)
 
 distclean-hdr:
 	-rm -f config.h stamp-h1
-Doxyfile: $(top_builddir)/config.status $(srcdir)/Doxyfile.in
-	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -961,6 +959,8 @@ distclean-generic:
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
+@COND_DOC_FALSE@install-data-local:
+@COND_DOC_FALSE@uninstall-local:
 clean: clean-recursive
 
 clean-am: clean-generic clean-libtool mostlyclean-am
@@ -983,8 +983,8 @@ info: info-recursive
 
 info-am:
 
-install-data-am: install-dist_docDATA install-dist_examplesDATA \
-	install-dist_examplesoldDATA
+install-data-am: install-data-local install-dist_docDATA \
+	install-dist_examplesDATA install-dist_examplesoldDATA
 
 install-dvi: install-dvi-recursive
 
@@ -1031,7 +1031,7 @@ ps: ps-recursive
 ps-am:
 
 uninstall-am: uninstall-dist_docDATA uninstall-dist_examplesDATA \
-	uninstall-dist_examplesoldDATA
+	uninstall-dist_examplesoldDATA uninstall-local
 
 .MAKE: $(am__recursive_targets) all install-am install-strip
 
@@ -1043,20 +1043,33 @@ uninstall-am: uninstall-dist_docDATA uninstall-dist_examplesDATA \
 	distclean-generic distclean-hdr distclean-libtool \
 	distclean-tags distcleancheck distdir distuninstallcheck dvi \
 	dvi-am html html-am info info-am install install-am \
-	install-data install-data-am install-dist_docDATA \
-	install-dist_examplesDATA install-dist_examplesoldDATA \
-	install-dvi install-dvi-am install-exec install-exec-am \
-	install-html install-html-am install-info install-info-am \
-	install-man install-pdf install-pdf-am install-ps \
-	install-ps-am install-strip installcheck installcheck-am \
-	installdirs installdirs-am maintainer-clean \
-	maintainer-clean-generic mostlyclean mostlyclean-generic \
-	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-am uninstall \
-	uninstall-am uninstall-dist_docDATA \
-	uninstall-dist_examplesDATA uninstall-dist_examplesoldDATA
+	install-data install-data-am install-data-local \
+	install-dist_docDATA install-dist_examplesDATA \
+	install-dist_examplesoldDATA install-dvi install-dvi-am \
+	install-exec install-exec-am install-html install-html-am \
+	install-info install-info-am install-man install-pdf \
+	install-pdf-am install-ps install-ps-am install-strip \
+	installcheck installcheck-am installdirs installdirs-am \
+	maintainer-clean maintainer-clean-generic mostlyclean \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	tags tags-am uninstall uninstall-am uninstall-dist_docDATA \
+	uninstall-dist_examplesDATA uninstall-dist_examplesoldDATA \
+	uninstall-local
 
 .PRECIOUS: Makefile
 
+
+# Install the Doxygen generated documentation if they were built.
+@COND_DOC_TRUE@install-data-local:
+@COND_DOC_TRUE@	if test -d "$(srcdir)/doc/api" ; then \
+@COND_DOC_TRUE@		$(MKDIR_P) "$(DESTDIR)$(docdir)/api" && \
+@COND_DOC_TRUE@		$(INSTALL_DATA) "$(srcdir)"/doc/api/* \
+@COND_DOC_TRUE@			"$(DESTDIR)$(docdir)/api"; \
+@COND_DOC_TRUE@	fi
+
+# Remove the Doxygen generated documentation when uninstalling.
+@COND_DOC_TRUE@uninstall-local:
+@COND_DOC_TRUE@	rm -rf "$(DESTDIR)$(docdir)/api"
 
 # Create ChangeLog from output of "git log --date=iso --stat".
 # Convert the man pages to PDF and plain text (ASCII only) formats.
@@ -1082,6 +1095,11 @@ dist-hook:
 				> "$$dest/txt/$$BASE.txt"; \
 		done; \
 	fi
+	if test -d "$(srcdir)/doc/api" ; then \
+		$(MKDIR_P) "$(distdir)/doc/api" && \
+		$(INSTALL_DATA) "$(srcdir)"/doc/api/* \
+			"$(distdir)/doc/api"; \
+	fi
 
 # This works with GNU tar and gives cleaner package than normal 'make dist'.
 # This also ensures that the man page translations are up to date (dist-hook
@@ -1089,6 +1107,7 @@ dist-hook:
 mydist:
 	sh "$(srcdir)/src/liblzma/validate_map.sh"
 	cd "$(srcdir)/po4a" && sh update-po
+	cd "$(srcdir)/doxygen" && sh update-doxygen
 	VERSION=$(VERSION); \
 	if test -d "$(srcdir)/.git" && type git > /dev/null 2>&1; then \
 		SNAPSHOT=`cd "$(srcdir)" && git describe --abbrev=4 | cut -b2-`; \

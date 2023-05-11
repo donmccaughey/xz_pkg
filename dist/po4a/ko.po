@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xz-man 5.4.0-pre2\n"
-"POT-Creation-Date: 2023-01-03 20:53+0800\n"
+"POT-Creation-Date: 2023-03-18 18:08+0200\n"
 "PO-Revision-Date: 2023-01-01 22:37+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <translation-team-ko@googlegroups.com>\n"
@@ -4916,7 +4916,9 @@ msgstr "XZ 임베디드: E<lt>https://tukaani.org/xz/embedded.htmlE<gt>"
 
 #. type: Plain text
 #: ../src/xz/xz.1:3020
-msgid "LZMA SDK: E<lt>http://7-zip.org/sdk.htmlE<gt>"
+#, fuzzy
+#| msgid "LZMA SDK: E<lt>http://7-zip.org/sdk.htmlE<gt>"
+msgid "LZMA SDK: E<lt>https://7-zip.org/sdk.htmlE<gt>"
 msgstr "LZMA SDK: E<lt>http://7-zip.org/sdk.htmlE<gt>"
 
 #. type: TH
