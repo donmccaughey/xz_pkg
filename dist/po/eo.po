@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xz 5.4.0-pre2\n"
+"Project-Id-Version: xz 5.4.3\n"
 "Report-Msgid-Bugs-To: xz@tukaani.org\n"
-"POT-Creation-Date: 2023-03-18 18:09+0200\n"
-"PO-Revision-Date: 2023-01-02 12:16-0500\n"
+"POT-Creation-Date: 2023-08-02 20:42+0800\n"
+"PO-Revision-Date: 2023-05-27 18:21-0400\n"
 "Last-Translator: Keith Bowes <zooplah@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
 "Language: eo\n"
@@ -45,28 +45,38 @@ msgstr "%s: Nekomprenata tipo de integra kontrolo"
 msgid "Only one file can be specified with `--files' or `--files0'."
 msgstr "Nur oni dosiero estas specifebla per `--files' aŭ `--files0'."
 
-#: src/xz/args.c:586
+#. TRANSLATORS: This is a translatable
+#. string because French needs a space
+#. before the colon ("%s : %s").
+#: src/xz/args.c:533 src/xz/coder.c:691 src/xz/coder.c:707 src/xz/coder.c:967
+#: src/xz/coder.c:970 src/xz/file_io.c:605 src/xz/file_io.c:679
+#: src/xz/file_io.c:769 src/xz/file_io.c:940 src/xz/list.c:369
+#: src/xz/list.c:415 src/xz/list.c:477 src/xz/list.c:581 src/xz/list.c:590
+#, fuzzy, c-format
+#| msgid "%s: "
+msgid "%s: %s"
+msgstr "%s: "
+
+#: src/xz/args.c:589
 #, c-format
 msgid "The environment variable %s contains too many arguments"
 msgstr "La medivariablo %s enhavas troajn argumentojn"
 
-#: src/xz/args.c:688
+#: src/xz/args.c:691
 msgid "Compression support was disabled at build time"
 msgstr "Rego de kunpremado estas malaktivigita dum muntotempo"
 
-#: src/xz/args.c:695
+#: src/xz/args.c:698
 msgid "Decompression support was disabled at build time"
 msgstr "Rego de malkunpremado estas malaktivigita dum muntotempo"
 
-#: src/xz/args.c:701
+#: src/xz/args.c:704
 msgid "Compression of lzip files (.lz) is not supported"
 msgstr "Ne povas kunpremi lzip-dosierojn (.lz)"
 
-#: src/xz/args.c:732
-#, fuzzy
-#| msgid "%s: With --format=raw, --suffix=.SUF is required unless writing to stdout"
+#: src/xz/args.c:735
 msgid "With --format=raw, --suffix=.SUF is required unless writing to stdout"
-msgstr "%s: Kun --format=raw, --suffix=.SUF estas postulata se ne skribi al la ĉefeligujo"
+msgstr "Kun --format=raw, --suffix=.SUF estas postulata se ne skribi al la ĉefeligujo"
 
 #: src/xz/coder.c:115
 msgid "Maximum number of filters is four"
@@ -321,7 +331,7 @@ msgstr "Nekunpremita grando:"
 
 #: src/xz/list.c:72
 msgid "Ratio:"
-msgstr "Proporcio"
+msgstr "Proporcio:"
 
 #: src/xz/list.c:73
 msgid "Check:"
@@ -353,7 +363,7 @@ msgstr "Bloko"
 
 #: src/xz/list.c:124
 msgid "Blocks"
-msgstr "Floko"
+msgstr "Blokoj"
 
 #: src/xz/list.c:125
 msgid "CompOffset"
@@ -401,7 +411,7 @@ msgstr "Flago"
 
 #: src/xz/list.c:136
 msgid "MemUsage"
-msgstr "Mumazado"
+msgstr "Memuzado"
 
 #: src/xz/list.c:137
 msgid "Filters"
@@ -481,41 +491,41 @@ msgstr "%s: Tro malgranda por esti valida .xz-dosiero"
 #. to Ratio, the columns are right aligned. Check and Filename
 #. are left aligned. If you need longer words, it's OK to
 #. use two lines here. Test with "xz -l foo.xz".
-#: src/xz/list.c:730
+#: src/xz/list.c:731
 msgid "Strms  Blocks   Compressed Uncompressed  Ratio  Check   Filename"
 msgstr "Fluoj  Blokoj   Kunpremita Nekunpremita Propor  Kontrol Dosiernomo"
 
-#: src/xz/list.c:1025 src/xz/list.c:1203
+#: src/xz/list.c:1026 src/xz/list.c:1204
 msgid "Yes"
 msgstr "Jes"
 
-#: src/xz/list.c:1025 src/xz/list.c:1203
+#: src/xz/list.c:1026 src/xz/list.c:1204
 msgid "No"
 msgstr "Ne"
 
-#: src/xz/list.c:1027 src/xz/list.c:1205
+#: src/xz/list.c:1028 src/xz/list.c:1206
 #, c-format
 msgid "  Minimum XZ Utils version: %s\n"
 msgstr "  Minimuma eldono de XZ Utils: %s\n"
 
 #. TRANSLATORS: %s is an integer. Only the plural form of this
 #. message is used (e.g. "2 files"). Test with "xz -l foo.xz bar.xz".
-#: src/xz/list.c:1178
+#: src/xz/list.c:1179
 #, c-format
 msgid "%s file\n"
 msgid_plural "%s files\n"
 msgstr[0] "%s dosiero\n"
 msgstr[1] "%s dosieroj\n"
 
-#: src/xz/list.c:1191
+#: src/xz/list.c:1192
 msgid "Totals:"
 msgstr "Sumoj:"
 
-#: src/xz/list.c:1269
+#: src/xz/list.c:1270
 msgid "--list works only on .xz files (--format=xz or --format=auto)"
 msgstr "--list funkcias nur por .xz-dosierojn (--format=xz aŭ --format=auto)"
 
-#: src/xz/list.c:1275
+#: src/xz/list.c:1276
 msgid "--list does not support reading from standard input"
 msgstr "--list ne regas legadon el la ĉefenigujo"
 
@@ -546,7 +556,7 @@ msgstr "Ne eblas legi datumojn el la ĉefenigujo dum legi dosiernomojn el la ĉe
 #. of the line in messages. Usually it becomes "xz: ".
 #. This is a translatable string because French needs
 #. a space before a colon.
-#: src/xz/message.c:725
+#: src/xz/message.c:670 src/xz/message.c:725
 #, c-format
 msgid "%s: "
 msgstr "%s: "
@@ -943,7 +953,7 @@ msgstr ""
 #: src/xz/message.c:1136
 #, c-format
 msgid "Report bugs to <%s> (in English or Finnish).\n"
-msgstr "Raporti cimojn al <%s> (en la angla aŭ la suoma).\n"
+msgstr "Raporti programerarojn al <%s> (en la angla aŭ la suoma).\n"
 
 #: src/xz/message.c:1138
 #, c-format
@@ -957,7 +967,7 @@ msgstr "ĈI TIU ESTAS DISVOLVA REDAKCIO, NE CELATA POR ĈIUTAGA UZADO."
 #: src/xz/options.c:86
 #, c-format
 msgid "%s: Options must be `name=value' pairs separated with commas"
-msgstr "%s: Elektoj devas esti paroj de `name=value`, apartigitaj de komoj"
+msgstr "%s: Elektoj devas esti paroj de `name=value`, apartigitaj per komoj"
 
 #: src/xz/options.c:93
 #, c-format

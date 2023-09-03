@@ -1081,8 +1081,8 @@ ROBOT MODE
        will be supported for compression and decompression in the future.
 
    Version
-       xz --robot --version will print the version number of xz and liblzma in
-       the following format:
+       xz --robot --version prints the version number of xz and liblzma in the
+       following format:
 
        XZ_VERSION=XYYYZZZS
        LIBLZMA_VERSION=XYYYZZZS
@@ -1104,8 +1104,8 @@ ROBOT MODE
        Examples: 4.999.9beta is 49990091 and 5.0.0 is 50000002.
 
    Memory limit information
-       xz  --robot --info-memory prints a single line with three tab-separated
-       columns:
+       xz  --robot  --info-memory prints a single line with multiple tab-sepa-
+       rated columns:
 
        1.  Total amount of physical memory (RAM) in bytes.
 
@@ -1586,4 +1586,4 @@ SEE ALSO
 
 
 
-Tukaani                           2022-12-01                             XZ(1)
+Tukaani                           2023-07-17                             XZ(1)
