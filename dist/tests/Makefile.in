@@ -87,7 +87,6 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@COND_GNULIB_TRUE@am__append_1 = $(top_builddir)/lib/libgnu.a
 check_PROGRAMS = create_compress_files$(EXEEXT) test_check$(EXEEXT) \
 	test_hardware$(EXEEXT) test_stream_flags$(EXEEXT) \
 	test_filter_flags$(EXEEXT) test_filter_str$(EXEEXT) \
@@ -104,8 +103,8 @@ TESTS = test_check$(EXEEXT) test_hardware$(EXEEXT) \
 	test_compress_prepared_bcj_sparc \
 	test_compress_prepared_bcj_x86 test_compress_generated_abc \
 	test_compress_generated_random test_compress_generated_text \
-	$(am__append_2)
-@COND_SCRIPTS_TRUE@am__append_2 = test_scripts.sh
+	$(am__append_1)
+@COND_SCRIPTS_TRUE@am__append_1 = test_scripts.sh
 subdir = tests
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_capsicum.m4 \
@@ -137,8 +136,7 @@ create_compress_files_OBJECTS = create_compress_files.$(OBJEXT)
 create_compress_files_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
 create_compress_files_DEPENDENCIES =  \
-	$(top_builddir)/src/liblzma/liblzma.la $(am__append_1) \
-	$(am__DEPENDENCIES_1)
+	$(top_builddir)/src/liblzma/liblzma.la $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
@@ -147,67 +145,62 @@ test_bcj_exact_size_SOURCES = test_bcj_exact_size.c
 test_bcj_exact_size_OBJECTS = test_bcj_exact_size.$(OBJEXT)
 test_bcj_exact_size_LDADD = $(LDADD)
 test_bcj_exact_size_DEPENDENCIES =  \
-	$(top_builddir)/src/liblzma/liblzma.la $(am__append_1) \
-	$(am__DEPENDENCIES_1)
+	$(top_builddir)/src/liblzma/liblzma.la $(am__DEPENDENCIES_1)
 test_block_header_SOURCES = test_block_header.c
 test_block_header_OBJECTS = test_block_header.$(OBJEXT)
 test_block_header_LDADD = $(LDADD)
 test_block_header_DEPENDENCIES =  \
-	$(top_builddir)/src/liblzma/liblzma.la $(am__append_1) \
-	$(am__DEPENDENCIES_1)
+	$(top_builddir)/src/liblzma/liblzma.la $(am__DEPENDENCIES_1)
 test_check_SOURCES = test_check.c
 test_check_OBJECTS = test_check.$(OBJEXT)
 test_check_LDADD = $(LDADD)
 test_check_DEPENDENCIES = $(top_builddir)/src/liblzma/liblzma.la \
-	$(am__append_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1)
 test_filter_flags_SOURCES = test_filter_flags.c
 test_filter_flags_OBJECTS = test_filter_flags.$(OBJEXT)
 test_filter_flags_LDADD = $(LDADD)
 test_filter_flags_DEPENDENCIES =  \
-	$(top_builddir)/src/liblzma/liblzma.la $(am__append_1) \
-	$(am__DEPENDENCIES_1)
+	$(top_builddir)/src/liblzma/liblzma.la $(am__DEPENDENCIES_1)
 test_filter_str_SOURCES = test_filter_str.c
 test_filter_str_OBJECTS = test_filter_str.$(OBJEXT)
 test_filter_str_LDADD = $(LDADD)
 test_filter_str_DEPENDENCIES = $(top_builddir)/src/liblzma/liblzma.la \
-	$(am__append_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1)
 test_hardware_SOURCES = test_hardware.c
 test_hardware_OBJECTS = test_hardware.$(OBJEXT)
 test_hardware_LDADD = $(LDADD)
 test_hardware_DEPENDENCIES = $(top_builddir)/src/liblzma/liblzma.la \
-	$(am__append_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1)
 test_index_SOURCES = test_index.c
 test_index_OBJECTS = test_index.$(OBJEXT)
 test_index_LDADD = $(LDADD)
 test_index_DEPENDENCIES = $(top_builddir)/src/liblzma/liblzma.la \
-	$(am__append_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1)
 test_index_hash_SOURCES = test_index_hash.c
 test_index_hash_OBJECTS = test_index_hash.$(OBJEXT)
 test_index_hash_LDADD = $(LDADD)
 test_index_hash_DEPENDENCIES = $(top_builddir)/src/liblzma/liblzma.la \
-	$(am__append_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1)
 test_lzip_decoder_SOURCES = test_lzip_decoder.c
 test_lzip_decoder_OBJECTS = test_lzip_decoder.$(OBJEXT)
 test_lzip_decoder_LDADD = $(LDADD)
 test_lzip_decoder_DEPENDENCIES =  \
-	$(top_builddir)/src/liblzma/liblzma.la $(am__append_1) \
-	$(am__DEPENDENCIES_1)
+	$(top_builddir)/src/liblzma/liblzma.la $(am__DEPENDENCIES_1)
 test_memlimit_SOURCES = test_memlimit.c
 test_memlimit_OBJECTS = test_memlimit.$(OBJEXT)
 test_memlimit_LDADD = $(LDADD)
 test_memlimit_DEPENDENCIES = $(top_builddir)/src/liblzma/liblzma.la \
-	$(am__append_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1)
 test_stream_flags_SOURCES = test_stream_flags.c
 test_stream_flags_OBJECTS = test_stream_flags.$(OBJEXT)
 test_stream_flags_LDADD = $(LDADD)
 test_stream_flags_DEPENDENCIES =  \
-	$(top_builddir)/src/liblzma/liblzma.la $(am__append_1) \
-	$(am__DEPENDENCIES_1)
+	$(top_builddir)/src/liblzma/liblzma.la $(am__DEPENDENCIES_1)
 test_vli_SOURCES = test_vli.c
 test_vli_OBJECTS = test_vli.$(OBJEXT)
 test_vli_LDADD = $(LDADD)
 test_vli_DEPENDENCIES = $(top_builddir)/src/liblzma/liblzma.la \
-	$(am__append_1) $(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -669,11 +662,9 @@ EXTRA_DIST = \
 AM_CPPFLAGS = \
 	-I$(top_srcdir)/src/common \
 	-I$(top_srcdir)/src/liblzma/api \
-	-I$(top_srcdir)/src/liblzma \
-	-I$(top_builddir)/lib
+	-I$(top_srcdir)/src/liblzma
 
-LDADD = $(top_builddir)/src/liblzma/liblzma.la $(am__append_1) \
-	$(LTLIBINTL)
+LDADD = $(top_builddir)/src/liblzma/liblzma.la $(LTLIBINTL)
 all: all-am
 
 .SUFFIXES:

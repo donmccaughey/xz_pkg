@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xz-man 5.4.0-pre2\n"
-"POT-Creation-Date: 2023-08-02 20:41+0800\n"
+"POT-Creation-Date: 2023-11-01 20:27+0800\n"
 "PO-Revision-Date: 2023-01-26 13:29-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge."
@@ -177,9 +177,9 @@ msgstr ""
 #: ../src/xz/xz.1:425 ../src/xz/xz.1:432 ../src/xz/xz.1:677 ../src/xz/xz.1:679
 #: ../src/xz/xz.1:778 ../src/xz/xz.1:789 ../src/xz/xz.1:798 ../src/xz/xz.1:806
 #: ../src/xz/xz.1:1034 ../src/xz/xz.1:1043 ../src/xz/xz.1:1055
-#: ../src/xz/xz.1:1730 ../src/xz/xz.1:1736 ../src/xz/xz.1:1854
-#: ../src/xz/xz.1:1858 ../src/xz/xz.1:1861 ../src/xz/xz.1:1864
-#: ../src/xz/xz.1:1868 ../src/xz/xz.1:1875 ../src/xz/xz.1:1877
+#: ../src/xz/xz.1:1729 ../src/xz/xz.1:1735 ../src/xz/xz.1:1853
+#: ../src/xz/xz.1:1857 ../src/xz/xz.1:1860 ../src/xz/xz.1:1863
+#: ../src/xz/xz.1:1867 ../src/xz/xz.1:1874 ../src/xz/xz.1:1876
 #, no-wrap
 msgid "\\(bu"
 msgstr "\\(bu"
@@ -1245,7 +1245,7 @@ msgid "The following table summarises the features of the presets:"
 msgstr "A tabela a seguir resume os recursos das predefinições:"
 
 #. type: tbl table
-#: ../src/xz/xz.1:761 ../src/xz/xz.1:842 ../src/xz/xz.1:2840
+#: ../src/xz/xz.1:761 ../src/xz/xz.1:842 ../src/xz/xz.1:2839
 #, no-wrap
 msgid "Preset"
 msgstr "Predefinição"
@@ -1257,7 +1257,7 @@ msgid "DictSize"
 msgstr "DicTam"
 
 #. type: tbl table
-#: ../src/xz/xz.1:761 ../src/xz/xz.1:842 ../src/xz/xz.1:2840
+#: ../src/xz/xz.1:761 ../src/xz/xz.1:842 ../src/xz/xz.1:2839
 #, no-wrap
 msgid "CompCPU"
 msgstr "CompCPU"
@@ -1275,46 +1275,46 @@ msgid "DecMem"
 msgstr "DecMem"
 
 #. type: tbl table
-#: ../src/xz/xz.1:762 ../src/xz/xz.1:2451 ../src/xz/xz.1:2476
-#: ../src/xz/xz.1:2841
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:2450 ../src/xz/xz.1:2475
+#: ../src/xz/xz.1:2840
 #, no-wrap
 msgid "-0"
 msgstr "-0"
 
 #. type: tbl table
-#: ../src/xz/xz.1:762 ../src/xz/xz.1:843 ../src/xz/xz.1:2451
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:843 ../src/xz/xz.1:2450
 #, no-wrap
 msgid "256 KiB"
 msgstr "256 KiB"
 
 #. type: TP
-#: ../src/xz/xz.1:762 ../src/xz/xz.1:2841 ../src/scripts/xzgrep.1:82
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:2840 ../src/scripts/xzgrep.1:82
 #, no-wrap
 msgid "0"
 msgstr "0"
 
 #. type: tbl table
-#: ../src/xz/xz.1:762 ../src/xz/xz.1:764 ../src/xz/xz.1:845 ../src/xz/xz.1:2476
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:764 ../src/xz/xz.1:845 ../src/xz/xz.1:2475
 #, no-wrap
 msgid "3 MiB"
 msgstr "3 MiB"
 
 #. type: tbl table
 #: ../src/xz/xz.1:762 ../src/xz/xz.1:763 ../src/xz/xz.1:843 ../src/xz/xz.1:844
-#: ../src/xz/xz.1:2452 ../src/xz/xz.1:2453 ../src/xz/xz.1:2455
+#: ../src/xz/xz.1:2451 ../src/xz/xz.1:2452 ../src/xz/xz.1:2454
 #, no-wrap
 msgid "1 MiB"
 msgstr "1 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:763 ../src/xz/xz.1:2452 ../src/xz/xz.1:2477
-#: ../src/xz/xz.1:2842
+#: ../src/xz/xz.1:763 ../src/xz/xz.1:2451 ../src/xz/xz.1:2476
+#: ../src/xz/xz.1:2841
 #, no-wrap
 msgid "-1"
 msgstr "-1"
 
 #. type: TP
-#: ../src/xz/xz.1:763 ../src/xz/xz.1:1759 ../src/xz/xz.1:2842
+#: ../src/xz/xz.1:763 ../src/xz/xz.1:1758 ../src/xz/xz.1:2841
 #: ../src/scripts/xzgrep.1:86
 #, no-wrap
 msgid "1"
@@ -1322,61 +1322,61 @@ msgstr "1"
 
 #. type: tbl table
 #: ../src/xz/xz.1:763 ../src/xz/xz.1:767 ../src/xz/xz.1:768 ../src/xz/xz.1:848
-#: ../src/xz/xz.1:849 ../src/xz/xz.1:2477
+#: ../src/xz/xz.1:849 ../src/xz/xz.1:2476
 #, no-wrap
 msgid "9 MiB"
 msgstr "9 MiB"
 
 #. type: tbl table
 #: ../src/xz/xz.1:763 ../src/xz/xz.1:764 ../src/xz/xz.1:844 ../src/xz/xz.1:845
-#: ../src/xz/xz.1:2453 ../src/xz/xz.1:2456 ../src/xz/xz.1:2477
+#: ../src/xz/xz.1:2452 ../src/xz/xz.1:2455 ../src/xz/xz.1:2476
 #, no-wrap
 msgid "2 MiB"
 msgstr "2 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:764 ../src/xz/xz.1:2453 ../src/xz/xz.1:2478
-#: ../src/xz/xz.1:2843
+#: ../src/xz/xz.1:764 ../src/xz/xz.1:2452 ../src/xz/xz.1:2477
+#: ../src/xz/xz.1:2842
 #, no-wrap
 msgid "-2"
 msgstr "-2"
 
 #. type: tbl table
-#: ../src/xz/xz.1:764 ../src/xz/xz.1:1761 ../src/xz/xz.1:2843
+#: ../src/xz/xz.1:764 ../src/xz/xz.1:1760 ../src/xz/xz.1:2842
 #, no-wrap
 msgid "2"
 msgstr "2"
 
 #. type: tbl table
-#: ../src/xz/xz.1:764 ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2478
+#: ../src/xz/xz.1:764 ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2477
 #, no-wrap
 msgid "17 MiB"
 msgstr "17 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:765 ../src/xz/xz.1:2454 ../src/xz/xz.1:2479
-#: ../src/xz/xz.1:2844
+#: ../src/xz/xz.1:765 ../src/xz/xz.1:2453 ../src/xz/xz.1:2478
+#: ../src/xz/xz.1:2843
 #, no-wrap
 msgid "-3"
 msgstr "-3"
 
 #. type: tbl table
 #: ../src/xz/xz.1:765 ../src/xz/xz.1:766 ../src/xz/xz.1:843 ../src/xz/xz.1:846
-#: ../src/xz/xz.1:847 ../src/xz/xz.1:2454 ../src/xz/xz.1:2455
-#: ../src/xz/xz.1:2457
+#: ../src/xz/xz.1:847 ../src/xz/xz.1:2453 ../src/xz/xz.1:2454
+#: ../src/xz/xz.1:2456
 #, no-wrap
 msgid "4 MiB"
 msgstr "4 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:765 ../src/xz/xz.1:2844
+#: ../src/xz/xz.1:765 ../src/xz/xz.1:2843
 #, no-wrap
 msgid "3"
 msgstr "3"
 
 #. type: tbl table
-#: ../src/xz/xz.1:765 ../src/xz/xz.1:770 ../src/xz/xz.1:851 ../src/xz/xz.1:2459
-#: ../src/xz/xz.1:2460 ../src/xz/xz.1:2479
+#: ../src/xz/xz.1:765 ../src/xz/xz.1:770 ../src/xz/xz.1:851 ../src/xz/xz.1:2458
+#: ../src/xz/xz.1:2459 ../src/xz/xz.1:2478
 #, no-wrap
 msgid "32 MiB"
 msgstr "32 MiB"
@@ -1388,93 +1388,93 @@ msgid "5 MiB"
 msgstr "5 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:766 ../src/xz/xz.1:2455 ../src/xz/xz.1:2480
-#: ../src/xz/xz.1:2845
+#: ../src/xz/xz.1:766 ../src/xz/xz.1:2454 ../src/xz/xz.1:2479
+#: ../src/xz/xz.1:2844
 #, no-wrap
 msgid "-4"
 msgstr "-4"
 
 #. type: tbl table
-#: ../src/xz/xz.1:766 ../src/xz/xz.1:1760 ../src/xz/xz.1:1762
-#: ../src/xz/xz.1:1763 ../src/xz/xz.1:1765 ../src/xz/xz.1:2845
+#: ../src/xz/xz.1:766 ../src/xz/xz.1:1759 ../src/xz/xz.1:1761
+#: ../src/xz/xz.1:1762 ../src/xz/xz.1:1764 ../src/xz/xz.1:2844
 #, no-wrap
 msgid "4"
 msgstr "4"
 
 #. type: tbl table
-#: ../src/xz/xz.1:766 ../src/xz/xz.1:846 ../src/xz/xz.1:847 ../src/xz/xz.1:2480
+#: ../src/xz/xz.1:766 ../src/xz/xz.1:846 ../src/xz/xz.1:847 ../src/xz/xz.1:2479
 #, no-wrap
 msgid "48 MiB"
 msgstr "48 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:767 ../src/xz/xz.1:2456 ../src/xz/xz.1:2481
-#: ../src/xz/xz.1:2846
+#: ../src/xz/xz.1:767 ../src/xz/xz.1:2455 ../src/xz/xz.1:2480
+#: ../src/xz/xz.1:2845
 #, no-wrap
 msgid "-5"
 msgstr "-5"
 
 #. type: tbl table
 #: ../src/xz/xz.1:767 ../src/xz/xz.1:768 ../src/xz/xz.1:848 ../src/xz/xz.1:849
-#: ../src/xz/xz.1:2456 ../src/xz/xz.1:2457 ../src/xz/xz.1:2458
+#: ../src/xz/xz.1:2455 ../src/xz/xz.1:2456 ../src/xz/xz.1:2457
 #, no-wrap
 msgid "8 MiB"
 msgstr "8 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:767 ../src/xz/xz.1:2846
+#: ../src/xz/xz.1:767 ../src/xz/xz.1:2845
 #, no-wrap
 msgid "5"
 msgstr "5"
 
 #. type: tbl table
 #: ../src/xz/xz.1:767 ../src/xz/xz.1:768 ../src/xz/xz.1:848 ../src/xz/xz.1:849
-#: ../src/xz/xz.1:2481 ../src/xz/xz.1:2482
+#: ../src/xz/xz.1:2480 ../src/xz/xz.1:2481
 #, no-wrap
 msgid "94 MiB"
 msgstr "94 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:768 ../src/xz/xz.1:2457 ../src/xz/xz.1:2482
-#: ../src/xz/xz.1:2847
+#: ../src/xz/xz.1:768 ../src/xz/xz.1:2456 ../src/xz/xz.1:2481
+#: ../src/xz/xz.1:2846
 #, no-wrap
 msgid "-6"
 msgstr "-6"
 
 #. type: tbl table
 #: ../src/xz/xz.1:768 ../src/xz/xz.1:769 ../src/xz/xz.1:770 ../src/xz/xz.1:771
-#: ../src/xz/xz.1:2847
+#: ../src/xz/xz.1:2846
 #, no-wrap
 msgid "6"
 msgstr "6"
 
 #. type: tbl table
-#: ../src/xz/xz.1:769 ../src/xz/xz.1:2458 ../src/xz/xz.1:2483
+#: ../src/xz/xz.1:769 ../src/xz/xz.1:2457 ../src/xz/xz.1:2482
 #, no-wrap
 msgid "-7"
 msgstr "-7"
 
 #. type: tbl table
-#: ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2458
-#: ../src/xz/xz.1:2459 ../src/xz/xz.1:2480
+#: ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2457
+#: ../src/xz/xz.1:2458 ../src/xz/xz.1:2479
 #, no-wrap
 msgid "16 MiB"
 msgstr "16 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2483
+#: ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2482
 #, no-wrap
 msgid "186 MiB"
 msgstr "186 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:770 ../src/xz/xz.1:2459 ../src/xz/xz.1:2484
+#: ../src/xz/xz.1:770 ../src/xz/xz.1:2458 ../src/xz/xz.1:2483
 #, no-wrap
 msgid "-8"
 msgstr "-8"
 
 #. type: tbl table
-#: ../src/xz/xz.1:770 ../src/xz/xz.1:851 ../src/xz/xz.1:2484
+#: ../src/xz/xz.1:770 ../src/xz/xz.1:851 ../src/xz/xz.1:2483
 #, no-wrap
 msgid "370 MiB"
 msgstr "370 MiB"
@@ -1486,19 +1486,19 @@ msgid "33 MiB"
 msgstr "33 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:771 ../src/xz/xz.1:2460 ../src/xz/xz.1:2485
+#: ../src/xz/xz.1:771 ../src/xz/xz.1:2459 ../src/xz/xz.1:2484
 #, no-wrap
 msgid "-9"
 msgstr "-9"
 
 #. type: tbl table
-#: ../src/xz/xz.1:771 ../src/xz/xz.1:852 ../src/xz/xz.1:2460
+#: ../src/xz/xz.1:771 ../src/xz/xz.1:852 ../src/xz/xz.1:2459
 #, no-wrap
 msgid "64 MiB"
 msgstr "64 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:771 ../src/xz/xz.1:852 ../src/xz/xz.1:2485
+#: ../src/xz/xz.1:771 ../src/xz/xz.1:852 ../src/xz/xz.1:2484
 #, no-wrap
 msgid "674 MiB"
 msgstr "674 MiB"
@@ -1615,7 +1615,7 @@ msgstr "-0e"
 #. type: tbl table
 #: ../src/xz/xz.1:843 ../src/xz/xz.1:844 ../src/xz/xz.1:845 ../src/xz/xz.1:847
 #: ../src/xz/xz.1:849 ../src/xz/xz.1:850 ../src/xz/xz.1:851 ../src/xz/xz.1:852
-#: ../src/xz/xz.1:2849
+#: ../src/xz/xz.1:2848
 #, no-wrap
 msgid "8"
 msgstr "8"
@@ -1651,7 +1651,7 @@ msgid "-3e"
 msgstr "-3e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:846 ../src/xz/xz.1:848 ../src/xz/xz.1:2848
+#: ../src/xz/xz.1:846 ../src/xz/xz.1:848 ../src/xz/xz.1:2847
 #, no-wrap
 msgid "7"
 msgstr "7"
@@ -1663,13 +1663,13 @@ msgid "-4e"
 msgstr "-4e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:848 ../src/xz/xz.1:2848
+#: ../src/xz/xz.1:848 ../src/xz/xz.1:2847
 #, no-wrap
 msgid "-5e"
 msgstr "-5e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:849 ../src/xz/xz.1:2849
+#: ../src/xz/xz.1:849 ../src/xz/xz.1:2848
 #, no-wrap
 msgid "-6e"
 msgstr "-6e"
@@ -2113,13 +2113,13 @@ msgstr ""
 "o valor padrão específico do sistema."
 
 #. type: TP
-#: ../src/xz/xz.1:1164
+#: ../src/xz/xz.1:1163
 #, no-wrap
 msgid "B<-M> I<limit>, B<--memlimit=>I<limit>, B<--memory=>I<limit>"
 msgstr "B<-M> I<limite>, B<--memlimit=>I<limite>, B<--memory=>I<limite>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1170
+#: ../src/xz/xz.1:1169
 msgid ""
 "This is equivalent to specifying B<--memlimit-compress=>I<limit> B<--"
 "memlimit-decompress=>I<limit> B<--memlimit-mt-decompress=>I<limit>."
@@ -2128,13 +2128,13 @@ msgstr ""
 "memlimit-decompress=>I<limite> B<--memlimit-mt-decompress=>I<limite>."
 
 #. type: TP
-#: ../src/xz/xz.1:1170
+#: ../src/xz/xz.1:1169
 #, no-wrap
 msgid "B<--no-adjust>"
 msgstr "B<--no-adjust>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1180
+#: ../src/xz/xz.1:1179
 msgid ""
 "Display an error and exit if the memory usage limit cannot be met without "
 "adjusting settings that affect the compressed output.  That is, this "
@@ -2151,7 +2151,7 @@ msgstr ""
 "de uso de memória, pois isso não afetará a saída compactada."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1183
+#: ../src/xz/xz.1:1182
 msgid ""
 "Automatic adjusting is always disabled when creating raw streams (B<--"
 "format=raw>)."
@@ -2160,13 +2160,13 @@ msgstr ""
 "format=raw>)."
 
 #. type: TP
-#: ../src/xz/xz.1:1183
+#: ../src/xz/xz.1:1182
 #, no-wrap
 msgid "B<-T> I<threads>, B<--threads=>I<threads>"
 msgstr "B<-T> I<threads>, B<--threads=>I<threads>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1198
+#: ../src/xz/xz.1:1197
 msgid ""
 "Specify the number of worker threads to use.  Setting I<threads> to a "
 "special value B<0> makes B<xz> use up to as many threads as the processor(s) "
@@ -2182,7 +2182,7 @@ msgstr ""
 "fornecidas ou se o uso de mais threads exceder o limite de uso de memória."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1217
+#: ../src/xz/xz.1:1216
 msgid ""
 "The single-threaded and multi-threaded compressors produce different "
 "output.  Single-threaded compressor will give the smallest file size but "
@@ -2202,7 +2202,7 @@ msgstr ""
 "thread única nesta situação.)"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1236
+#: ../src/xz/xz.1:1235
 msgid ""
 "To use multi-threaded mode with only one thread, set I<threads> to B<+1>.  "
 "The B<+> prefix has no effect with values other than B<1>.  A memory usage "
@@ -2216,7 +2216,7 @@ msgstr ""
 "prefixo B<+> foi adicionado no B<xz> 5.4.0."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1251
+#: ../src/xz/xz.1:1250
 msgid ""
 "If an automatic number of threads has been requested and no memory usage "
 "limit has been specified, then a system-specific default soft limit will be "
@@ -2236,7 +2236,7 @@ msgstr ""
 "ser vistos com B<xz --info-memory>."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1258
+#: ../src/xz/xz.1:1257
 msgid ""
 "Currently the only threading method is to split the input into blocks and "
 "compress them independently from each other.  The default block size depends "
@@ -2249,7 +2249,7 @@ msgstr ""
 "size=>I<tamanho>."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1266
+#: ../src/xz/xz.1:1265
 msgid ""
 "Threaded decompression only works on files that contain multiple blocks with "
 "size information in block headers.  All large enough files compressed in "
@@ -2263,13 +2263,13 @@ msgstr ""
 "atendem, mesmo se B<--block-size=>I<tamanho> tiver sido usado."
 
 #. type: SS
-#: ../src/xz/xz.1:1267 ../src/xz/xz.1:2820
+#: ../src/xz/xz.1:1266 ../src/xz/xz.1:2819
 #, no-wrap
 msgid "Custom compressor filter chains"
 msgstr "Cadeias de filtro de compressor personalizadas"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1283
+#: ../src/xz/xz.1:1282
 msgid ""
 "A custom filter chain allows specifying the compression settings in detail "
 "instead of relying on the settings associated to the presets.  When a custom "
@@ -2289,7 +2289,7 @@ msgstr ""
 "personalizados especificadas anteriormente serão esquecidas."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1290
+#: ../src/xz/xz.1:1289
 msgid ""
 "A filter chain is comparable to piping on the command line.  When "
 "compressing, the uncompressed input goes to the first filter, whose output "
@@ -2304,7 +2304,7 @@ msgstr ""
 "normalmente uma cadeia de filtros tem apenas um ou dois filtros."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1298
+#: ../src/xz/xz.1:1297
 msgid ""
 "Many filters have limitations on where they can be in the filter chain: some "
 "filters can work only as the last filter in the chain, some only as a non-"
@@ -2319,7 +2319,7 @@ msgstr ""
 "ou existe para evitar problemas de segurança."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1306
+#: ../src/xz/xz.1:1305
 msgid ""
 "A custom filter chain is specified by using one or more filter options in "
 "the order they are wanted in the filter chain.  That is, the order of filter "
@@ -2334,7 +2334,7 @@ msgstr ""
 "durante a compactação."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1315
+#: ../src/xz/xz.1:1314
 msgid ""
 "Filters take filter-specific I<options> as a comma-separated list.  Extra "
 "commas in I<options> are ignored.  Every option has a default value, so you "
@@ -2346,7 +2346,7 @@ msgstr ""
 "alterar."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1324
+#: ../src/xz/xz.1:1323
 msgid ""
 "To see the whole filter chain and I<options>, use B<xz -vv> (that is, use "
 "B<--verbose> twice).  This works also for viewing the filter chain options "
@@ -2357,19 +2357,19 @@ msgstr ""
 "cadeia de filtros usadas pelas predefinições."
 
 #. type: TP
-#: ../src/xz/xz.1:1324
+#: ../src/xz/xz.1:1323
 #, no-wrap
 msgid "B<--lzma1>[B<=>I<options>]"
 msgstr "B<--lzma1>[B<=>I<opções>]"
 
 #. type: TP
-#: ../src/xz/xz.1:1327
+#: ../src/xz/xz.1:1326
 #, no-wrap
 msgid "B<--lzma2>[B<=>I<options>]"
 msgstr "B<--lzma2>[B<=>I<opções>]"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1332
+#: ../src/xz/xz.1:1331
 msgid ""
 "Add LZMA1 or LZMA2 filter to the filter chain.  These filters can be used "
 "only as the last filter in the chain."
@@ -2378,7 +2378,7 @@ msgstr ""
 "ser usados apenas como o último filtro na cadeia."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1344
+#: ../src/xz/xz.1:1343
 msgid ""
 "LZMA1 is a legacy filter, which is supported almost solely due to the legacy "
 "B<.lzma> file format, which supports only LZMA1.  LZMA2 is an updated "
@@ -2393,18 +2393,18 @@ msgstr ""
 "e as proporções de LZMA1 e LZMA2 são praticamente as mesmas."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1347
+#: ../src/xz/xz.1:1346
 msgid "LZMA1 and LZMA2 share the same set of I<options>:"
 msgstr "LZMA1 e LZMA2 compartilham o mesmo conjunto de I<opções>:"
 
 #. type: TP
-#: ../src/xz/xz.1:1348
+#: ../src/xz/xz.1:1347
 #, no-wrap
 msgid "B<preset=>I<preset>"
 msgstr "B<preset=>I<predefinição>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1375
+#: ../src/xz/xz.1:1374
 msgid ""
 "Reset all LZMA1 or LZMA2 I<options> to I<preset>.  I<Preset> consist of an "
 "integer, which may be followed by single-letter preset modifiers.  The "
@@ -2422,13 +2422,13 @@ msgstr ""
 "I<opções> LZMA1 ou LZMA2 serão obtidos da predefinição B<6>."
 
 #. type: TP
-#: ../src/xz/xz.1:1375
+#: ../src/xz/xz.1:1374
 #, no-wrap
 msgid "B<dict=>I<size>"
 msgstr "B<dict=>I<tamanho>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1390
+#: ../src/xz/xz.1:1389
 msgid ""
 "Dictionary (history buffer)  I<size> indicates how many bytes of the "
 "recently processed uncompressed data is kept in memory.  The algorithm tries "
@@ -2448,7 +2448,7 @@ msgstr ""
 "arquivo não compactado é um desperdício de memória."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1399
+#: ../src/xz/xz.1:1398
 msgid ""
 "Typical dictionary I<size> is from 64\\ KiB to 64\\ MiB.  The minimum is 4\\ "
 "KiB.  The maximum for compression is currently 1.5\\ GiB (1536\\ MiB).  The "
@@ -2461,7 +2461,7 @@ msgstr ""
 "4\\ GiB, que é o máximo para os formatos de fluxo LZMA1 e LZMA2."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1426
+#: ../src/xz/xz.1:1425
 msgid ""
 "Dictionary I<size> and match finder (I<mf>)  together determine the memory "
 "usage of the LZMA1 or LZMA2 encoder.  The same (or bigger) dictionary "
@@ -2483,13 +2483,13 @@ msgstr ""
 "cabeçalhos B<.xz>."
 
 #. type: TP
-#: ../src/xz/xz.1:1426
+#: ../src/xz/xz.1:1425
 #, no-wrap
 msgid "B<lc=>I<lc>"
 msgstr "B<lc=>I<lc>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1435
+#: ../src/xz/xz.1:1434
 msgid ""
 "Specify the number of literal context bits.  The minimum is 0 and the "
 "maximum is 4; the default is 3.  In addition, the sum of I<lc> and I<lp> "
@@ -2499,7 +2499,7 @@ msgstr ""
 "4; o padrão é 3. Além disso, a soma de I<lc> e I<lp> não deve exceder 4."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1440
+#: ../src/xz/xz.1:1439
 msgid ""
 "All bytes that cannot be encoded as matches are encoded as literals.  That "
 "is, literals are simply 8-bit bytes that are encoded one at a time."
@@ -2509,7 +2509,7 @@ msgstr ""
 "bits que são codificados um de cada vez."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1454
+#: ../src/xz/xz.1:1453
 msgid ""
 "The literal coding makes an assumption that the highest I<lc> bits of the "
 "previous uncompressed byte correlate with the next byte.  For example, in "
@@ -2530,7 +2530,7 @@ msgstr ""
 "não compactados."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1463
+#: ../src/xz/xz.1:1462
 msgid ""
 "The default value (3) is usually good.  If you want maximum compression, "
 "test B<lc=4>.  Sometimes it helps a little, and sometimes it makes "
@@ -2541,13 +2541,13 @@ msgstr ""
 "Se piorar, experimente B<lc=2> também."
 
 #. type: TP
-#: ../src/xz/xz.1:1463
+#: ../src/xz/xz.1:1462
 #, no-wrap
 msgid "B<lp=>I<lp>"
 msgstr "B<lp=>I<lp>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1467
+#: ../src/xz/xz.1:1466
 msgid ""
 "Specify the number of literal position bits.  The minimum is 0 and the "
 "maximum is 4; the default is 0."
@@ -2556,7 +2556,7 @@ msgstr ""
 "o padrão é 0."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1474
+#: ../src/xz/xz.1:1473
 msgid ""
 "I<Lp> affects what kind of alignment in the uncompressed data is assumed "
 "when encoding literals.  See I<pb> below for more information about "
@@ -2567,13 +2567,13 @@ msgstr ""
 "alinhamento."
 
 #. type: TP
-#: ../src/xz/xz.1:1474
+#: ../src/xz/xz.1:1473
 #, no-wrap
 msgid "B<pb=>I<pb>"
 msgstr "B<pb=>I<pb>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1478
+#: ../src/xz/xz.1:1477
 msgid ""
 "Specify the number of position bits.  The minimum is 0 and the maximum is 4; "
 "the default is 2."
@@ -2582,7 +2582,7 @@ msgstr ""
 "padrão é 2."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1485
+#: ../src/xz/xz.1:1484
 msgid ""
 "I<Pb> affects what kind of alignment in the uncompressed data is assumed in "
 "general.  The default means four-byte alignment (2^I<pb>=2^2=4), which is "
@@ -2593,7 +2593,7 @@ msgstr ""
 "geralmente é uma boa escolha quando não há melhor estimativa."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1499
+#: ../src/xz/xz.1:1498
 msgid ""
 "When the alignment is known, setting I<pb> accordingly may reduce the file "
 "size a little.  For example, with text files having one-byte alignment (US-"
@@ -2609,7 +2609,7 @@ msgstr ""
 "a melhor escolha."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1507
+#: ../src/xz/xz.1:1506
 msgid ""
 "Even though the assumed alignment can be adjusted with I<pb> and I<lp>, "
 "LZMA1 and LZMA2 still slightly favor 16-byte alignment.  It might be worth "
@@ -2622,13 +2622,13 @@ msgstr ""
 "serão compactados com LZMA1 ou LZMA2."
 
 #. type: TP
-#: ../src/xz/xz.1:1507
+#: ../src/xz/xz.1:1506
 #, no-wrap
 msgid "B<mf=>I<mf>"
 msgstr "B<mf=>I<mf>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1522
+#: ../src/xz/xz.1:1521
 msgid ""
 "Match finder has a major effect on encoder speed, memory usage, and "
 "compression ratio.  Usually Hash Chain match finders are faster than Binary "
@@ -2642,7 +2642,7 @@ msgstr ""
 "I<predefinição>: 0 usa B<hc3>, 1\\(en3 usa B<hc4> e o resto usa B<bt4>."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1528
+#: ../src/xz/xz.1:1527
 msgid ""
 "The following match finders are supported.  The memory usage formulas below "
 "are rough approximations, which are closest to the reality when I<dict> is a "
@@ -2653,134 +2653,134 @@ msgstr ""
 "da realidade quando I<dict> é uma potência de dois."
 
 #. type: TP
-#: ../src/xz/xz.1:1529
+#: ../src/xz/xz.1:1528
 #, no-wrap
 msgid "B<hc3>"
 msgstr "B<hc3>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1532
+#: ../src/xz/xz.1:1531
 msgid "Hash Chain with 2- and 3-byte hashing"
 msgstr "Cadeia de hashs com hashing de 2 e 3 bytes"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1536 ../src/xz/xz.1:1585
+#: ../src/xz/xz.1:1535 ../src/xz/xz.1:1584
 msgid "Minimum value for I<nice>: 3"
 msgstr "Valor mínimo para I<nice>: 3"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1538 ../src/xz/xz.1:1557 ../src/xz/xz.1:1587
-#: ../src/xz/xz.1:1606
+#: ../src/xz/xz.1:1537 ../src/xz/xz.1:1556 ../src/xz/xz.1:1586
+#: ../src/xz/xz.1:1605
 msgid "Memory usage:"
 msgstr "Uso de memória:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1543
+#: ../src/xz/xz.1:1542
 msgid "I<dict> * 7.5 (if I<dict> E<lt>= 16 MiB);"
 msgstr "I<dict> * 7.5 (if I<dict> E<lt>= 16 MiB);"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1548
+#: ../src/xz/xz.1:1547
 msgid "I<dict> * 5.5 + 64 MiB (if I<dict> E<gt> 16 MiB)"
 msgstr "I<dict> * 5.5 + 64 MiB (if I<dict> E<gt> 16 MiB)"
 
 #. type: TP
-#: ../src/xz/xz.1:1548
+#: ../src/xz/xz.1:1547
 #, no-wrap
 msgid "B<hc4>"
 msgstr "B<hc4>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1551
+#: ../src/xz/xz.1:1550
 msgid "Hash Chain with 2-, 3-, and 4-byte hashing"
 msgstr "Cadeia de hashs com hashing de 2, 3 e 4 bytes"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1555 ../src/xz/xz.1:1604
+#: ../src/xz/xz.1:1554 ../src/xz/xz.1:1603
 msgid "Minimum value for I<nice>: 4"
 msgstr "Valor mínimo para I<nice>: 4"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1562
+#: ../src/xz/xz.1:1561
 msgid "I<dict> * 7.5 (if I<dict> E<lt>= 32 MiB);"
 msgstr "I<dict> * 7.5 (if I<dict> E<lt>= 32 MiB);"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1567
+#: ../src/xz/xz.1:1566
 msgid "I<dict> * 6.5 (if I<dict> E<gt> 32 MiB)"
 msgstr "I<dict> * 6.5 (if I<dict> E<gt> 32 MiB)"
 
 #. type: TP
-#: ../src/xz/xz.1:1567
+#: ../src/xz/xz.1:1566
 #, no-wrap
 msgid "B<bt2>"
 msgstr "B<bt2>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1570
+#: ../src/xz/xz.1:1569
 msgid "Binary Tree with 2-byte hashing"
 msgstr "Árvore binária com hashing de 2 bytes"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1574
+#: ../src/xz/xz.1:1573
 msgid "Minimum value for I<nice>: 2"
 msgstr "Valor mínimo para I<nice>: 2"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1578
+#: ../src/xz/xz.1:1577
 msgid "Memory usage: I<dict> * 9.5"
 msgstr "Uso de memória: I<dict> * 9.5"
 
 #. type: TP
-#: ../src/xz/xz.1:1578
+#: ../src/xz/xz.1:1577
 #, no-wrap
 msgid "B<bt3>"
 msgstr "B<bt3>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1581
+#: ../src/xz/xz.1:1580
 msgid "Binary Tree with 2- and 3-byte hashing"
 msgstr "Árvore binária com hashing de 2 e 3 bytes"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1592
+#: ../src/xz/xz.1:1591
 msgid "I<dict> * 11.5 (if I<dict> E<lt>= 16 MiB);"
 msgstr "I<dict> * 11.5 (if I<dict> E<lt>= 16 MiB);"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1597
+#: ../src/xz/xz.1:1596
 msgid "I<dict> * 9.5 + 64 MiB (if I<dict> E<gt> 16 MiB)"
 msgstr "I<dict> * 9.5 + 64 MiB (if I<dict> E<gt> 16 MiB)"
 
 #. type: TP
-#: ../src/xz/xz.1:1597
+#: ../src/xz/xz.1:1596
 #, no-wrap
 msgid "B<bt4>"
 msgstr "B<bt4>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1600
+#: ../src/xz/xz.1:1599
 msgid "Binary Tree with 2-, 3-, and 4-byte hashing"
 msgstr "Árvore binária com hashing de 2, 3 e 4 bytes"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1611
+#: ../src/xz/xz.1:1610
 msgid "I<dict> * 11.5 (if I<dict> E<lt>= 32 MiB);"
 msgstr "I<dict> * 11.5 (if I<dict> E<lt>= 32 MiB);"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1616
+#: ../src/xz/xz.1:1615
 msgid "I<dict> * 10.5 (if I<dict> E<gt> 32 MiB)"
 msgstr "I<dict> * 10.5 (if I<dict> E<gt> 32 MiB)"
 
 #. type: TP
-#: ../src/xz/xz.1:1617
+#: ../src/xz/xz.1:1616
 #, no-wrap
 msgid "B<mode=>I<mode>"
 msgstr "B<mode=>I<modo>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1638
+#: ../src/xz/xz.1:1637
 msgid ""
 "Compression I<mode> specifies the method to analyze the data produced by the "
 "match finder.  Supported I<modes> are B<fast> and B<normal>.  The default is "
@@ -2792,7 +2792,7 @@ msgstr ""
 "B<normal> para I<predefinições> 4\\(en9."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1647
+#: ../src/xz/xz.1:1646
 msgid ""
 "Usually B<fast> is used with Hash Chain match finders and B<normal> with "
 "Binary Tree match finders.  This is also what the I<presets> do."
@@ -2802,13 +2802,13 @@ msgstr ""
 "Isso também é o que os I<predefinições> fazem."
 
 #. type: TP
-#: ../src/xz/xz.1:1647
+#: ../src/xz/xz.1:1646
 #, no-wrap
 msgid "B<nice=>I<nice>"
 msgstr "B<nice=>I<nice>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1654
+#: ../src/xz/xz.1:1653
 msgid ""
 "Specify what is considered to be a nice length for a match.  Once a match of "
 "at least I<nice> bytes is found, the algorithm stops looking for possibly "
@@ -2819,7 +2819,7 @@ msgstr ""
 "algoritmo para de procurar correspondências possivelmente melhores."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1661
+#: ../src/xz/xz.1:1660
 msgid ""
 "I<Nice> can be 2\\(en273 bytes.  Higher values tend to give better "
 "compression ratio at the expense of speed.  The default depends on the "
@@ -2830,13 +2830,13 @@ msgstr ""
 "I<predefinição>."
 
 #. type: TP
-#: ../src/xz/xz.1:1661
+#: ../src/xz/xz.1:1660
 #, no-wrap
 msgid "B<depth=>I<depth>"
 msgstr "B<depth=>I<profundidade>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1671
+#: ../src/xz/xz.1:1670
 msgid ""
 "Specify the maximum search depth in the match finder.  The default is the "
 "special value of 0, which makes the compressor determine a reasonable "
@@ -2847,7 +2847,7 @@ msgstr ""
 "compressor determine um I<profundidade> razoável de I<mf> e I<nice>."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1682
+#: ../src/xz/xz.1:1681
 msgid ""
 "Reasonable I<depth> for Hash Chains is 4\\(en100 and 16\\(en1000 for Binary "
 "Trees.  Using very high values for I<depth> can make the encoder extremely "
@@ -2861,7 +2861,7 @@ msgstr ""
 "interromper a compactação caso ela esteja demorando muito."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1693
+#: ../src/xz/xz.1:1692
 msgid ""
 "When decoding raw streams (B<--format=raw>), LZMA2 needs only the dictionary "
 "I<size>.  LZMA1 needs also I<lc>, I<lp>, and I<pb>."
@@ -2870,49 +2870,49 @@ msgstr ""
 "dicionário I<tamanho>. LZMA1 também precisa de I<lc>, I<lp> e I<pb>."
 
 #. type: TP
-#: ../src/xz/xz.1:1693
+#: ../src/xz/xz.1:1692
 #, no-wrap
 msgid "B<--x86>[B<=>I<options>]"
 msgstr "B<--x86>[B<=>I<opções>]"
 
 #. type: TP
-#: ../src/xz/xz.1:1696
+#: ../src/xz/xz.1:1695
 #, no-wrap
 msgid "B<--arm>[B<=>I<options>]"
 msgstr "B<--arm>[B<=>I<opções>]"
 
 #. type: TP
-#: ../src/xz/xz.1:1698
+#: ../src/xz/xz.1:1697
 #, no-wrap
 msgid "B<--armthumb>[B<=>I<options>]"
 msgstr "B<--armthumb>[B<=>I<opções>]"
 
 #. type: TP
-#: ../src/xz/xz.1:1700
+#: ../src/xz/xz.1:1699
 #, no-wrap
 msgid "B<--arm64>[B<=>I<options>]"
 msgstr "B<--arm64>[B<=>I<opções>]"
 
 #. type: TP
-#: ../src/xz/xz.1:1702
+#: ../src/xz/xz.1:1701
 #, no-wrap
 msgid "B<--powerpc>[B<=>I<options>]"
 msgstr "B<--powerpc>[B<=>I<opções>]"
 
 #. type: TP
-#: ../src/xz/xz.1:1704
+#: ../src/xz/xz.1:1703
 #, no-wrap
 msgid "B<--ia64>[B<=>I<options>]"
 msgstr "B<--ia64>[B<=>I<opções>]"
 
 #. type: TP
-#: ../src/xz/xz.1:1706
+#: ../src/xz/xz.1:1705
 #, no-wrap
 msgid "B<--sparc>[B<=>I<options>]"
 msgstr "B<--sparc>[B<=>I<opções>]"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1712
+#: ../src/xz/xz.1:1711
 msgid ""
 "Add a branch/call/jump (BCJ) filter to the filter chain.  These filters can "
 "be used only as a non-last filter in the filter chain."
@@ -2922,7 +2922,7 @@ msgstr ""
 "filtros."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1726
+#: ../src/xz/xz.1:1725
 msgid ""
 "A BCJ filter converts relative addresses in the machine code to their "
 "absolute counterparts.  This doesn't change the size of the data but it "
@@ -2941,14 +2941,14 @@ msgstr ""
 "rápidos e usam uma quantidade insignificante de memória."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1729
+#: ../src/xz/xz.1:1728
 msgid "These BCJ filters have known problems related to the compression ratio:"
 msgstr ""
 "Esses filtros BCJ têm problemas conhecidos relacionados à taxa de "
 "compactação:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1736
+#: ../src/xz/xz.1:1735
 msgid ""
 "Some types of files containing executable code (for example, object files, "
 "static libraries, and Linux kernel modules)  have the addresses in the "
@@ -2962,7 +2962,7 @@ msgstr ""
 "compactação desses arquivos."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1746
+#: ../src/xz/xz.1:1745
 msgid ""
 "If a BCJ filter is applied on an archive, it is possible that it makes the "
 "compression ratio worse than not using a BCJ filter.  For example, if there "
@@ -2980,7 +2980,7 @@ msgstr ""
 "melhor em cada situação."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1751
+#: ../src/xz/xz.1:1750
 msgid ""
 "Different instruction sets have different alignment: the executable file "
 "must be aligned to a multiple of this value in the input data to make the "
@@ -2991,55 +2991,55 @@ msgstr ""
 "para fazer o filtro funcionar."
 
 #. type: tbl table
-#: ../src/xz/xz.1:1758
+#: ../src/xz/xz.1:1757
 #, no-wrap
 msgid "Filter"
 msgstr "Filtro"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1758
+#: ../src/xz/xz.1:1757
 #, no-wrap
 msgid "Alignment"
 msgstr "Alinhamento"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1758
+#: ../src/xz/xz.1:1757
 #, no-wrap
 msgid "Notes"
 msgstr "Observações"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1759
+#: ../src/xz/xz.1:1758
 #, no-wrap
 msgid "x86"
 msgstr "x86"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1759
+#: ../src/xz/xz.1:1758
 #, no-wrap
 msgid "32-bit or 64-bit x86"
 msgstr "x86 32 bits ou 64 bits"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1760
+#: ../src/xz/xz.1:1759
 #, no-wrap
 msgid "ARM"
 msgstr "ARM"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1761
+#: ../src/xz/xz.1:1760
 #, no-wrap
 msgid "ARM-Thumb"
 msgstr "ARM-Thumb"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1762
+#: ../src/xz/xz.1:1761
 #, no-wrap
 msgid "ARM64"
 msgstr "ARM64"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1762
+#: ../src/xz/xz.1:1761
 #, no-wrap
 msgid "4096-byte alignment is best"
 msgstr ""
@@ -3047,43 +3047,43 @@ msgstr ""
 ";;é melhor"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1763
+#: ../src/xz/xz.1:1762
 #, no-wrap
 msgid "PowerPC"
 msgstr "PowerPC"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1763
+#: ../src/xz/xz.1:1762
 #, no-wrap
 msgid "Big endian only"
 msgstr "Somente big endian"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1764
+#: ../src/xz/xz.1:1763
 #, no-wrap
 msgid "IA-64"
 msgstr "IA-64"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1764
+#: ../src/xz/xz.1:1763
 #, no-wrap
 msgid "16"
 msgstr "16"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1764
+#: ../src/xz/xz.1:1763
 #, no-wrap
 msgid "Itanium"
 msgstr "Itanium"
 
 #. type: tbl table
-#: ../src/xz/xz.1:1765
+#: ../src/xz/xz.1:1764
 #, no-wrap
 msgid "SPARC"
 msgstr "SPARC"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1782
+#: ../src/xz/xz.1:1781
 msgid ""
 "Since the BCJ-filtered data is usually compressed with LZMA2, the "
 "compression ratio may be improved slightly if the LZMA2 options are set to "
@@ -3101,18 +3101,18 @@ msgstr ""
 "executáveis x86."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1785
+#: ../src/xz/xz.1:1784
 msgid "All BCJ filters support the same I<options>:"
 msgstr "Todos os filtros BCJ suportam as mesmas I<opções>:"
 
 #. type: TP
-#: ../src/xz/xz.1:1786
+#: ../src/xz/xz.1:1785
 #, no-wrap
 msgid "B<start=>I<offset>"
 msgstr "B<start=>I<deslocamento>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1800
+#: ../src/xz/xz.1:1799
 msgid ""
 "Specify the start I<offset> that is used when converting between relative "
 "and absolute addresses.  The I<offset> must be a multiple of the alignment "
@@ -3126,13 +3126,13 @@ msgstr ""
 "útil."
 
 #. type: TP
-#: ../src/xz/xz.1:1801
+#: ../src/xz/xz.1:1800
 #, no-wrap
 msgid "B<--delta>[B<=>I<options>]"
 msgstr "B<--delta>[B<=>I<opções>]"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1806
+#: ../src/xz/xz.1:1805
 msgid ""
 "Add the Delta filter to the filter chain.  The Delta filter can be only used "
 "as a non-last filter in the filter chain."
@@ -3141,7 +3141,7 @@ msgstr ""
 "usado como filtro não-último na cadeia de filtros."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1815
+#: ../src/xz/xz.1:1814
 msgid ""
 "Currently only simple byte-wise delta calculation is supported.  It can be "
 "useful when compressing, for example, uncompressed bitmap images or "
@@ -3157,18 +3157,18 @@ msgstr ""
 "exemplo, com B<flac>(1)."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1818
+#: ../src/xz/xz.1:1817
 msgid "Supported I<options>:"
 msgstr "I<Opções> suportadas:"
 
 #. type: TP
-#: ../src/xz/xz.1:1819
+#: ../src/xz/xz.1:1818
 #, no-wrap
 msgid "B<dist=>I<distance>"
 msgstr "B<dist=>I<distância>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1827
+#: ../src/xz/xz.1:1826
 msgid ""
 "Specify the I<distance> of the delta calculation in bytes.  I<distance> must "
 "be 1\\(en256.  The default is 1."
@@ -3177,7 +3177,7 @@ msgstr ""
 "1\\(en256. O padrão é 1."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1832
+#: ../src/xz/xz.1:1831
 msgid ""
 "For example, with B<dist=2> and eight-byte input A1 B1 A2 B3 A3 B5 A4 B7, "
 "the output will be A1 B1 01 02 01 02 01 02."
@@ -3186,19 +3186,19 @@ msgstr ""
 "a saída será A1 B1 01 02 01 02 01 02."
 
 #. type: SS
-#: ../src/xz/xz.1:1834
+#: ../src/xz/xz.1:1833
 #, no-wrap
 msgid "Other options"
 msgstr "Outras opções"
 
 #. type: TP
-#: ../src/xz/xz.1:1835 ../src/xzdec/xzdec.1:83
+#: ../src/xz/xz.1:1834 ../src/xzdec/xzdec.1:83
 #, no-wrap
 msgid "B<-q>, B<--quiet>"
 msgstr "B<-q>, B<--quiet>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1842
+#: ../src/xz/xz.1:1841
 msgid ""
 "Suppress warnings and notices.  Specify this twice to suppress errors too.  "
 "This option has no effect on the exit status.  That is, even if a warning "
@@ -3210,13 +3210,13 @@ msgstr ""
 "usado."
 
 #. type: TP
-#: ../src/xz/xz.1:1842
+#: ../src/xz/xz.1:1841
 #, no-wrap
 msgid "B<-v>, B<--verbose>"
 msgstr "B<-v>, B<--verbose>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1851
+#: ../src/xz/xz.1:1850
 msgid ""
 "Be verbose.  If standard error is connected to a terminal, B<xz> will "
 "display a progress indicator.  Specifying B<--verbose> twice will give even "
@@ -3227,12 +3227,12 @@ msgstr ""
 "uma saída ainda mais detalhada."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1853
+#: ../src/xz/xz.1:1852
 msgid "The progress indicator shows the following information:"
 msgstr "O indicador de progresso mostra as seguintes informações:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1858
+#: ../src/xz/xz.1:1857
 msgid ""
 "Completion percentage is shown if the size of the input file is known.  That "
 "is, the percentage cannot be shown in pipes."
@@ -3242,7 +3242,7 @@ msgstr ""
 "(pipe)."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1861
+#: ../src/xz/xz.1:1860
 msgid ""
 "Amount of compressed data produced (compressing)  or consumed "
 "(decompressing)."
@@ -3251,7 +3251,7 @@ msgstr ""
 "(descompactando)."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1864
+#: ../src/xz/xz.1:1863
 msgid ""
 "Amount of uncompressed data consumed (compressing)  or produced "
 "(decompressing)."
@@ -3260,7 +3260,7 @@ msgstr ""
 "(descompactação)."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1868
+#: ../src/xz/xz.1:1867
 msgid ""
 "Compression ratio, which is calculated by dividing the amount of compressed "
 "data processed so far by the amount of uncompressed data processed so far."
@@ -3270,7 +3270,7 @@ msgstr ""
 "compactados processados até o momento."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1875
+#: ../src/xz/xz.1:1874
 msgid ""
 "Compression or decompression speed.  This is measured as the amount of "
 "uncompressed data consumed (compression) or produced (decompression) per "
@@ -3283,12 +3283,12 @@ msgstr ""
 "B<xz> começou a processar o arquivo."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1877
+#: ../src/xz/xz.1:1876
 msgid "Elapsed time in the format M:SS or H:MM:SS."
 msgstr "Tempo decorrido no formato M:SS ou H:MM:SS."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1885
+#: ../src/xz/xz.1:1884
 msgid ""
 "Estimated remaining time is shown only when the size of the input file is "
 "known and a couple of seconds have already passed since B<xz> started "
@@ -3301,7 +3301,7 @@ msgstr ""
 "nunca tem dois pontos, por exemplo, 2 min 30 s."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1900
+#: ../src/xz/xz.1:1899
 msgid ""
 "When standard error is not a terminal, B<--verbose> will make B<xz> print "
 "the filename, compressed size, uncompressed size, compression ratio, and "
@@ -3321,13 +3321,13 @@ msgstr ""
 "porcentagem de conclusão se o tamanho do arquivo de entrada for conhecido."
 
 #. type: TP
-#: ../src/xz/xz.1:1900 ../src/xzdec/xzdec.1:89
+#: ../src/xz/xz.1:1899 ../src/xzdec/xzdec.1:89
 #, no-wrap
 msgid "B<-Q>, B<--no-warn>"
 msgstr "B<-Q>, B<--no-warn>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1910
+#: ../src/xz/xz.1:1909
 msgid ""
 "Don't set the exit status to 2 even if a condition worth a warning was "
 "detected.  This option doesn't affect the verbosity level, thus both B<--"
@@ -3340,13 +3340,13 @@ msgstr ""
 "exibir avisos e não alterar o status de saída."
 
 #. type: TP
-#: ../src/xz/xz.1:1910
+#: ../src/xz/xz.1:1909
 #, no-wrap
 msgid "B<--robot>"
 msgstr "B<--robot>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1922
+#: ../src/xz/xz.1:1921
 msgid ""
 "Print messages in a machine-parsable format.  This is intended to ease "
 "writing frontends that want to use B<xz> instead of liblzma, which may be "
@@ -3360,13 +3360,13 @@ msgstr ""
 "estável em versões B<xz>. Consulte a seção B<MODO ROBÔ> para obter detalhes."
 
 #. type: TP
-#: ../src/xz/xz.1:1922
+#: ../src/xz/xz.1:1921
 #, no-wrap
 msgid "B<--info-memory>"
 msgstr "B<--info-memory>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1929
+#: ../src/xz/xz.1:1928
 msgid ""
 "Display, in human-readable format, how much physical memory (RAM)  and how "
 "many processor threads B<xz> thinks the system has and the memory usage "
@@ -3377,13 +3377,13 @@ msgstr ""
 "uso de memória para compactação e descompactação e saia com êxito."
 
 #. type: TP
-#: ../src/xz/xz.1:1929 ../src/xzdec/xzdec.1:96
+#: ../src/xz/xz.1:1928 ../src/xzdec/xzdec.1:96
 #, no-wrap
 msgid "B<-h>, B<--help>"
 msgstr "B<-h>, B<--help>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1933
+#: ../src/xz/xz.1:1932
 msgid ""
 "Display a help message describing the most commonly used options, and exit "
 "successfully."
@@ -3392,13 +3392,13 @@ msgstr ""
 "sucesso."
 
 #. type: TP
-#: ../src/xz/xz.1:1933
+#: ../src/xz/xz.1:1932
 #, no-wrap
 msgid "B<-H>, B<--long-help>"
 msgstr "B<-H>, B<--long-help>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1938
+#: ../src/xz/xz.1:1937
 msgid ""
 "Display a help message describing all features of B<xz>, and exit "
 "successfully"
@@ -3407,13 +3407,13 @@ msgstr ""
 "sucesso"
 
 #. type: TP
-#: ../src/xz/xz.1:1938 ../src/xzdec/xzdec.1:99
+#: ../src/xz/xz.1:1937 ../src/xzdec/xzdec.1:99
 #, no-wrap
 msgid "B<-V>, B<--version>"
 msgstr "B<-V>, B<--version>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1947
+#: ../src/xz/xz.1:1946
 msgid ""
 "Display the version number of B<xz> and liblzma in human readable format.  "
 "To get machine-parsable output, specify B<--robot> before B<--version>."
@@ -3423,13 +3423,13 @@ msgstr ""
 "B<--version>."
 
 #. type: SH
-#: ../src/xz/xz.1:1948
+#: ../src/xz/xz.1:1947
 #, no-wrap
 msgid "ROBOT MODE"
 msgstr "MODO ROBÔ"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1964
+#: ../src/xz/xz.1:1963
 msgid ""
 "The robot mode is activated with the B<--robot> option.  It makes the output "
 "of B<xz> easier to parse by other programs.  Currently B<--robot> is "
@@ -3442,13 +3442,13 @@ msgstr ""
 "terá suporte para compactação e descompactação no futuro."
 
 #. type: SS
-#: ../src/xz/xz.1:1965
+#: ../src/xz/xz.1:1964
 #, no-wrap
 msgid "Version"
 msgstr "Versão"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1970
+#: ../src/xz/xz.1:1969
 #, fuzzy
 #| msgid ""
 #| "B<xz --robot --version> will print the version number of B<xz> and "
@@ -3461,34 +3461,34 @@ msgstr ""
 "seguinte formato:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1972
+#: ../src/xz/xz.1:1971
 msgid "B<XZ_VERSION=>I<XYYYZZZS>"
 msgstr "B<XZ_VERSION=>I<XYYYZZZS>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1974
+#: ../src/xz/xz.1:1973
 msgid "B<LIBLZMA_VERSION=>I<XYYYZZZS>"
 msgstr "B<LIBLZMA_VERSION=>I<XYYYZZZS>"
 
 #. type: TP
-#: ../src/xz/xz.1:1974
+#: ../src/xz/xz.1:1973
 #, no-wrap
 msgid "I<X>"
 msgstr "I<X>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1977
+#: ../src/xz/xz.1:1976
 msgid "Major version."
 msgstr "Versão principal."
 
 #. type: TP
-#: ../src/xz/xz.1:1977
+#: ../src/xz/xz.1:1976
 #, no-wrap
 msgid "I<YYY>"
 msgstr "I<YYY>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1982
+#: ../src/xz/xz.1:1981
 msgid ""
 "Minor version.  Even numbers are stable.  Odd numbers are alpha or beta "
 "versions."
@@ -3497,13 +3497,13 @@ msgstr ""
 "alfa ou beta."
 
 #. type: TP
-#: ../src/xz/xz.1:1982
+#: ../src/xz/xz.1:1981
 #, no-wrap
 msgid "I<ZZZ>"
 msgstr "I<ZZZ>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1986
+#: ../src/xz/xz.1:1985
 msgid ""
 "Patch level for stable releases or just a counter for development releases."
 msgstr ""
@@ -3511,13 +3511,13 @@ msgstr ""
 "desenvolvimento."
 
 #. type: TP
-#: ../src/xz/xz.1:1986
+#: ../src/xz/xz.1:1985
 #, no-wrap
 msgid "I<S>"
 msgstr "I<S>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1994
+#: ../src/xz/xz.1:1993
 msgid ""
 "Stability.  0 is alpha, 1 is beta, and 2 is stable.  I<S> should be always 2 "
 "when I<YYY> is even."
@@ -3526,7 +3526,7 @@ msgstr ""
 "quando I<YYY> for par."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1999
+#: ../src/xz/xz.1:1998
 msgid ""
 "I<XYYYZZZS> are the same on both lines if B<xz> and liblzma are from the "
 "same XZ Utils release."
@@ -3535,18 +3535,18 @@ msgstr ""
 "versão do XZ Utils."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2005
+#: ../src/xz/xz.1:2004
 msgid "Examples: 4.999.9beta is B<49990091> and 5.0.0 is B<50000002>."
 msgstr "Exemplos: 4.999.9beta é B<49990091> e 5.0.0 é B<50000002>."
 
 #. type: SS
-#: ../src/xz/xz.1:2006
+#: ../src/xz/xz.1:2005
 #, no-wrap
 msgid "Memory limit information"
 msgstr "Informações de limite de memória"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2009
+#: ../src/xz/xz.1:2008
 #, fuzzy
 #| msgid ""
 #| "B<xz --robot --info-memory> prints a single line with three tab-separated "
@@ -3559,25 +3559,25 @@ msgstr ""
 "separadas por tabulações:"
 
 #. type: IP
-#: ../src/xz/xz.1:2009
+#: ../src/xz/xz.1:2008
 #, no-wrap
 msgid "1."
 msgstr "1."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2011
+#: ../src/xz/xz.1:2010
 msgid "Total amount of physical memory (RAM) in bytes."
 msgstr "Quantidade total de memória física (RAM) em bytes."
 
 #. type: IP
-#: ../src/xz/xz.1:2011 ../src/xz/xz.1:2126 ../src/xz/xz.1:2163
-#: ../src/xz/xz.1:2189 ../src/xz/xz.1:2259 ../src/xz/xz.1:2286
+#: ../src/xz/xz.1:2010 ../src/xz/xz.1:2125 ../src/xz/xz.1:2162
+#: ../src/xz/xz.1:2188 ../src/xz/xz.1:2258 ../src/xz/xz.1:2285
 #, no-wrap
 msgid "2."
 msgstr "2."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2018
+#: ../src/xz/xz.1:2017
 msgid ""
 "Memory usage limit for compression in bytes (B<--memlimit-compress>).  A "
 "special value of B<0> indicates the default setting which for single-"
@@ -3588,14 +3588,14 @@ msgstr ""
 "thread única é o mesmo que sem limite."
 
 #. type: IP
-#: ../src/xz/xz.1:2018 ../src/xz/xz.1:2128 ../src/xz/xz.1:2165
-#: ../src/xz/xz.1:2191 ../src/xz/xz.1:2264 ../src/xz/xz.1:2288
+#: ../src/xz/xz.1:2017 ../src/xz/xz.1:2127 ../src/xz/xz.1:2164
+#: ../src/xz/xz.1:2190 ../src/xz/xz.1:2263 ../src/xz/xz.1:2287
 #, no-wrap
 msgid "3."
 msgstr "3."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2025
+#: ../src/xz/xz.1:2024
 msgid ""
 "Memory usage limit for decompression in bytes (B<--memlimit-decompress>).  A "
 "special value of B<0> indicates the default setting which for single-"
@@ -3606,14 +3606,14 @@ msgstr ""
 "para o modo de thread única é o mesmo que sem limite."
 
 #. type: IP
-#: ../src/xz/xz.1:2025 ../src/xz/xz.1:2130 ../src/xz/xz.1:2167
-#: ../src/xz/xz.1:2194 ../src/xz/xz.1:2274 ../src/xz/xz.1:2290
+#: ../src/xz/xz.1:2024 ../src/xz/xz.1:2129 ../src/xz/xz.1:2166
+#: ../src/xz/xz.1:2193 ../src/xz/xz.1:2273 ../src/xz/xz.1:2289
 #, no-wrap
 msgid "4."
 msgstr "4."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2037
+#: ../src/xz/xz.1:2036
 msgid ""
 "Since B<xz> 5.3.4alpha: Memory usage for multi-threaded decompression in "
 "bytes (B<--memlimit-mt-decompress>).  This is never zero because a system-"
@@ -3630,14 +3630,14 @@ msgstr ""
 "mt-decompress>."
 
 #. type: IP
-#: ../src/xz/xz.1:2037 ../src/xz/xz.1:2132 ../src/xz/xz.1:2169
-#: ../src/xz/xz.1:2196 ../src/xz/xz.1:2292
+#: ../src/xz/xz.1:2036 ../src/xz/xz.1:2131 ../src/xz/xz.1:2168
+#: ../src/xz/xz.1:2195 ../src/xz/xz.1:2291
 #, no-wrap
 msgid "5."
 msgstr "5."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2049
+#: ../src/xz/xz.1:2048
 msgid ""
 "Since B<xz> 5.3.4alpha: A system-specific default memory usage limit that is "
 "used to limit the number of threads when compressing with an automatic "
@@ -3652,19 +3652,19 @@ msgstr ""
 "o valor padrão para B<--memlimit-mt-decompress>."
 
 #. type: IP
-#: ../src/xz/xz.1:2049 ../src/xz/xz.1:2134 ../src/xz/xz.1:2171
-#: ../src/xz/xz.1:2198 ../src/xz/xz.1:2294
+#: ../src/xz/xz.1:2048 ../src/xz/xz.1:2133 ../src/xz/xz.1:2170
+#: ../src/xz/xz.1:2197 ../src/xz/xz.1:2293
 #, no-wrap
 msgid "6."
 msgstr "6."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2054
+#: ../src/xz/xz.1:2053
 msgid "Since B<xz> 5.3.4alpha: Number of available processor threads."
 msgstr "Desde B<xz> 5.3.4alpha: Número de threads de processador disponíveis."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2058
+#: ../src/xz/xz.1:2057
 msgid ""
 "In the future, the output of B<xz --robot --info-memory> may have more "
 "columns, but never more than a single line."
@@ -3673,13 +3673,13 @@ msgstr ""
 "nunca mais do que uma única linha."
 
 #. type: SS
-#: ../src/xz/xz.1:2059
+#: ../src/xz/xz.1:2058
 #, no-wrap
 msgid "List mode"
 msgstr "Modo lista"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2064
+#: ../src/xz/xz.1:2063
 msgid ""
 "B<xz --robot --list> uses tab-separated output.  The first column of every "
 "line has a string that indicates the type of the information found on that "
@@ -3690,13 +3690,13 @@ msgstr ""
 "naquela linha:"
 
 #. type: TP
-#: ../src/xz/xz.1:2064
+#: ../src/xz/xz.1:2063
 #, no-wrap
 msgid "B<name>"
 msgstr "B<name>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2068
+#: ../src/xz/xz.1:2067
 msgid ""
 "This is always the first line when starting to list a file.  The second "
 "column on the line is the filename."
@@ -3705,13 +3705,13 @@ msgstr ""
 "coluna na linha é o nome do arquivo."
 
 #. type: TP
-#: ../src/xz/xz.1:2068
+#: ../src/xz/xz.1:2067
 #, no-wrap
 msgid "B<file>"
 msgstr "B<file>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2076
+#: ../src/xz/xz.1:2075
 msgid ""
 "This line contains overall information about the B<.xz> file.  This line is "
 "always printed after the B<name> line."
@@ -3720,13 +3720,13 @@ msgstr ""
 "sempre impressa após a linha B<name>."
 
 #. type: TP
-#: ../src/xz/xz.1:2076
+#: ../src/xz/xz.1:2075
 #, no-wrap
 msgid "B<stream>"
 msgstr "B<stream>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2086
+#: ../src/xz/xz.1:2085
 msgid ""
 "This line type is used only when B<--verbose> was specified.  There are as "
 "many B<stream> lines as there are streams in the B<.xz> file."
@@ -3735,13 +3735,13 @@ msgstr ""
 "Existem tantas linhas de B<stream> quanto fluxos no arquivo B<.xz>."
 
 #. type: TP
-#: ../src/xz/xz.1:2086
+#: ../src/xz/xz.1:2085
 #, no-wrap
 msgid "B<block>"
 msgstr "B<block>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2101
+#: ../src/xz/xz.1:2100
 msgid ""
 "This line type is used only when B<--verbose> was specified.  There are as "
 "many B<block> lines as there are blocks in the B<.xz> file.  The B<block> "
@@ -3754,13 +3754,13 @@ msgstr ""
 "linha não são intercalados."
 
 #. type: TP
-#: ../src/xz/xz.1:2101
+#: ../src/xz/xz.1:2100
 #, no-wrap
 msgid "B<summary>"
 msgstr "B<summary>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2116
+#: ../src/xz/xz.1:2115
 msgid ""
 "This line type is used only when B<--verbose> was specified twice.  This "
 "line is printed after all B<block> lines.  Like the B<file> line, the "
@@ -3772,13 +3772,13 @@ msgstr ""
 "arquivo B<.xz>."
 
 #. type: TP
-#: ../src/xz/xz.1:2116
+#: ../src/xz/xz.1:2115
 #, no-wrap
 msgid "B<totals>"
 msgstr "B<totals>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2120
+#: ../src/xz/xz.1:2119
 msgid ""
 "This line is always the very last line of the list output.  It shows the "
 "total counts and sizes."
@@ -3787,32 +3787,32 @@ msgstr ""
 "contagens totais e tamanhos."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2124
+#: ../src/xz/xz.1:2123
 msgid "The columns of the B<file> lines:"
 msgstr "As colunas das linhas B<file>:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2128
+#: ../src/xz/xz.1:2127
 msgid "Number of streams in the file"
 msgstr "Número de fluxos no arquivo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2130
+#: ../src/xz/xz.1:2129
 msgid "Total number of blocks in the stream(s)"
 msgstr "Número total de blocos no(s) fluxo(s)"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2132
+#: ../src/xz/xz.1:2131
 msgid "Compressed size of the file"
 msgstr "Tamanho compactado do arquivo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2134
+#: ../src/xz/xz.1:2133
 msgid "Uncompressed size of the file"
 msgstr "Uncompressed size of the file"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2140
+#: ../src/xz/xz.1:2139
 msgid ""
 "Compression ratio, for example, B<0.123>.  If ratio is over 9.999, three "
 "dashes (B<--->)  are displayed instead of the ratio."
@@ -3821,14 +3821,14 @@ msgstr ""
 "9.999, serão exibidos três traços (B<--->) em vez da proporção."
 
 #. type: IP
-#: ../src/xz/xz.1:2140 ../src/xz/xz.1:2173 ../src/xz/xz.1:2200
-#: ../src/xz/xz.1:2296
+#: ../src/xz/xz.1:2139 ../src/xz/xz.1:2172 ../src/xz/xz.1:2199
+#: ../src/xz/xz.1:2295
 #, no-wrap
 msgid "7."
 msgstr "7."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2153
+#: ../src/xz/xz.1:2152
 msgid ""
 "Comma-separated list of integrity check names.  The following strings are "
 "used for the known check types: B<None>, B<CRC32>, B<CRC64>, and "
@@ -3842,117 +3842,117 @@ msgstr ""
 "número decimal (um ou dois dígitos)."
 
 #. type: IP
-#: ../src/xz/xz.1:2153 ../src/xz/xz.1:2175 ../src/xz/xz.1:2202
-#: ../src/xz/xz.1:2299
+#: ../src/xz/xz.1:2152 ../src/xz/xz.1:2174 ../src/xz/xz.1:2201
+#: ../src/xz/xz.1:2298
 #, no-wrap
 msgid "8."
 msgstr "8."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2155
+#: ../src/xz/xz.1:2154
 msgid "Total size of stream padding in the file"
 msgstr "Tamanho total do preenchimento de fluxo no arquivo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2161
+#: ../src/xz/xz.1:2160
 msgid "The columns of the B<stream> lines:"
 msgstr "As colunas das linhas B<stream>:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2165
+#: ../src/xz/xz.1:2164
 msgid "Stream number (the first stream is 1)"
 msgstr "Número do fluxo (o primeiro fluxo é 1)"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2167
+#: ../src/xz/xz.1:2166
 msgid "Number of blocks in the stream"
 msgstr "Número de blocos no fluxo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2169
+#: ../src/xz/xz.1:2168
 msgid "Compressed start offset"
 msgstr "Deslocamento inicial compactado"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2171
+#: ../src/xz/xz.1:2170
 msgid "Uncompressed start offset"
 msgstr "Deslocamento inicial descompactado"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2173
+#: ../src/xz/xz.1:2172
 msgid "Compressed size (does not include stream padding)"
 msgstr "Tamanho compactado (não inclui preenchimento de fluxo)"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2175 ../src/xz/xz.1:2204 ../src/xz/xz.1:2294
+#: ../src/xz/xz.1:2174 ../src/xz/xz.1:2203 ../src/xz/xz.1:2293
 msgid "Uncompressed size"
 msgstr "Tamanho descompactado"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2177 ../src/xz/xz.1:2206
+#: ../src/xz/xz.1:2176 ../src/xz/xz.1:2205
 msgid "Compression ratio"
 msgstr "Taxa de compactação"
 
 #. type: IP
-#: ../src/xz/xz.1:2177 ../src/xz/xz.1:2204 ../src/xz/xz.1:2301
+#: ../src/xz/xz.1:2176 ../src/xz/xz.1:2203 ../src/xz/xz.1:2300
 #, no-wrap
 msgid "9."
 msgstr "9."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2179 ../src/xz/xz.1:2208
+#: ../src/xz/xz.1:2178 ../src/xz/xz.1:2207
 msgid "Name of the integrity check"
 msgstr "Nome da verificação de integridade"
 
 #. type: IP
-#: ../src/xz/xz.1:2179 ../src/xz/xz.1:2206 ../src/xz/xz.1:2317
+#: ../src/xz/xz.1:2178 ../src/xz/xz.1:2205 ../src/xz/xz.1:2316
 #, no-wrap
 msgid "10."
 msgstr "10."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2181
+#: ../src/xz/xz.1:2180
 msgid "Size of stream padding"
 msgstr "Tamanho do preenchimento do fluxo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2187
+#: ../src/xz/xz.1:2186
 msgid "The columns of the B<block> lines:"
 msgstr "As colunas das linhas B<block>:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2191
+#: ../src/xz/xz.1:2190
 msgid "Number of the stream containing this block"
 msgstr "Número do fluxo que contém este bloco"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2194
+#: ../src/xz/xz.1:2193
 msgid ""
 "Block number relative to the beginning of the stream (the first block is 1)"
 msgstr "Número do bloco relativo ao início do fluxo (o primeiro bloco é 1)"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2196
+#: ../src/xz/xz.1:2195
 msgid "Block number relative to the beginning of the file"
 msgstr "Número do bloco relativo ao início do arquivo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2198
+#: ../src/xz/xz.1:2197
 msgid "Compressed start offset relative to the beginning of the file"
 msgstr "Deslocamento inicial compactado em relação ao início do arquivo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2200
+#: ../src/xz/xz.1:2199
 msgid "Uncompressed start offset relative to the beginning of the file"
 msgstr "Deslocamento inicial descompactado em relação ao início do arquivo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2202
+#: ../src/xz/xz.1:2201
 msgid "Total compressed size of the block (includes headers)"
 msgstr "Tamanho total compactado do bloco (inclui cabeçalhos)"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2220
+#: ../src/xz/xz.1:2219
 msgid ""
 "If B<--verbose> was specified twice, additional columns are included on the "
 "B<block> lines.  These are not displayed with a single B<--verbose>, because "
@@ -3964,35 +3964,35 @@ msgstr ""
 "pode ser lento:"
 
 #. type: IP
-#: ../src/xz/xz.1:2222 ../src/xz/xz.1:2322
+#: ../src/xz/xz.1:2221 ../src/xz/xz.1:2321
 #, no-wrap
 msgid "11."
 msgstr "11."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2224
+#: ../src/xz/xz.1:2223
 msgid "Value of the integrity check in hexadecimal"
 msgstr "Valor da verificação de integridade em hexadecimal"
 
 #. type: IP
-#: ../src/xz/xz.1:2224 ../src/xz/xz.1:2332
+#: ../src/xz/xz.1:2223 ../src/xz/xz.1:2331
 #, no-wrap
 msgid "12."
 msgstr "12."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2226
+#: ../src/xz/xz.1:2225
 msgid "Block header size"
 msgstr "Tamanho do cabeçalho do bloco"
 
 #. type: IP
-#: ../src/xz/xz.1:2226
+#: ../src/xz/xz.1:2225
 #, no-wrap
 msgid "13."
 msgstr "13."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2236
+#: ../src/xz/xz.1:2235
 msgid ""
 "Block flags: B<c> indicates that compressed size is present, and B<u> "
 "indicates that uncompressed size is present.  If the flag is not set, a dash "
@@ -4006,13 +4006,13 @@ msgstr ""
 "futuro."
 
 #. type: IP
-#: ../src/xz/xz.1:2236
+#: ../src/xz/xz.1:2235
 #, no-wrap
 msgid "14."
 msgstr "14."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2239
+#: ../src/xz/xz.1:2238
 msgid ""
 "Size of the actual compressed data in the block (this excludes the block "
 "header, block padding, and check fields)"
@@ -4021,13 +4021,13 @@ msgstr ""
 "bloco, o preenchimento do bloco e os campos de verificação)"
 
 #. type: IP
-#: ../src/xz/xz.1:2239
+#: ../src/xz/xz.1:2238
 #, no-wrap
 msgid "15."
 msgstr "15."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2244
+#: ../src/xz/xz.1:2243
 msgid ""
 "Amount of memory (in bytes) required to decompress this block with this "
 "B<xz> version"
@@ -4036,13 +4036,13 @@ msgstr ""
 "esta versão B<xz>"
 
 #. type: IP
-#: ../src/xz/xz.1:2244
+#: ../src/xz/xz.1:2243
 #, no-wrap
 msgid "16."
 msgstr "16."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2251
+#: ../src/xz/xz.1:2250
 msgid ""
 "Filter chain.  Note that most of the options used at compression time cannot "
 "be known, because only the options that are needed for decompression are "
@@ -4053,12 +4053,12 @@ msgstr ""
 "descompactação são armazenadas nos cabeçalhos B<.xz>."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2257
+#: ../src/xz/xz.1:2256
 msgid "The columns of the B<summary> lines:"
 msgstr "As colunas das linhas B<summary>:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2264
+#: ../src/xz/xz.1:2263
 msgid ""
 "Amount of memory (in bytes) required to decompress this file with this B<xz> "
 "version"
@@ -4067,7 +4067,7 @@ msgstr ""
 "com esta versão do B<xz>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2270 ../src/xz/xz.1:2328
+#: ../src/xz/xz.1:2269 ../src/xz/xz.1:2327
 msgid ""
 "B<yes> or B<no> indicating if all block headers have both compressed size "
 "and uncompressed size stored in them"
@@ -4076,42 +4076,42 @@ msgstr ""
 "compactado e tamanho não compactado armazenados neles"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2274 ../src/xz/xz.1:2332
+#: ../src/xz/xz.1:2273 ../src/xz/xz.1:2331
 msgid "I<Since> B<xz> I<5.1.2alpha:>"
 msgstr "I<Desde> B<xz> I<5.1.2alpha:>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2278 ../src/xz/xz.1:2336
+#: ../src/xz/xz.1:2277 ../src/xz/xz.1:2335
 msgid "Minimum B<xz> version required to decompress the file"
 msgstr "Versão mínima do B<xz> necessária para descompactar o arquivo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2284
+#: ../src/xz/xz.1:2283
 msgid "The columns of the B<totals> line:"
 msgstr "As colunas da linha B<totals>:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2288
+#: ../src/xz/xz.1:2287
 msgid "Number of streams"
 msgstr "Número de fluxos"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2290
+#: ../src/xz/xz.1:2289
 msgid "Number of blocks"
 msgstr "Número de blocos"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2292
+#: ../src/xz/xz.1:2291
 msgid "Compressed size"
 msgstr "Tamanho compactado"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2296
+#: ../src/xz/xz.1:2295
 msgid "Average compression ratio"
 msgstr "Taxa de compactação média"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2299
+#: ../src/xz/xz.1:2298
 msgid ""
 "Comma-separated list of integrity check names that were present in the files"
 msgstr ""
@@ -4119,12 +4119,12 @@ msgstr ""
 "estavam presentes nos arquivos"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2301
+#: ../src/xz/xz.1:2300
 msgid "Stream padding size"
 msgstr "Tamanho do preenchimento do fluxo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2307
+#: ../src/xz/xz.1:2306
 msgid ""
 "Number of files.  This is here to keep the order of the earlier columns the "
 "same as on B<file> lines."
@@ -4133,7 +4133,7 @@ msgstr ""
 "anteriores a mesma das linhas B<file>."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2315
+#: ../src/xz/xz.1:2314
 msgid ""
 "If B<--verbose> was specified twice, additional columns are included on the "
 "B<totals> line:"
@@ -4142,7 +4142,7 @@ msgstr ""
 "incluídas na linha B<totals>:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2322
+#: ../src/xz/xz.1:2321
 msgid ""
 "Maximum amount of memory (in bytes) required to decompress the files with "
 "this B<xz> version"
@@ -4151,7 +4151,7 @@ msgstr ""
 "arquivos com esta versão do B<xz>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2342
+#: ../src/xz/xz.1:2341
 msgid ""
 "Future versions may add new line types and new columns can be added to the "
 "existing line types, but the existing columns won't be changed."
@@ -4161,47 +4161,47 @@ msgstr ""
 "serão alteradas."
 
 #. type: SH
-#: ../src/xz/xz.1:2343 ../src/xzdec/xzdec.1:104 ../src/lzmainfo/lzmainfo.1:44
+#: ../src/xz/xz.1:2342 ../src/xzdec/xzdec.1:104 ../src/lzmainfo/lzmainfo.1:44
 #: ../src/scripts/xzgrep.1:81
 #, no-wrap
 msgid "EXIT STATUS"
 msgstr "STATUS DE SAÍDA"
 
 #. type: TP
-#: ../src/xz/xz.1:2344 ../src/xzdec/xzdec.1:105 ../src/lzmainfo/lzmainfo.1:45
+#: ../src/xz/xz.1:2343 ../src/xzdec/xzdec.1:105 ../src/lzmainfo/lzmainfo.1:45
 #, no-wrap
 msgid "B<0>"
 msgstr "B<0>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2347 ../src/lzmainfo/lzmainfo.1:48
+#: ../src/xz/xz.1:2346 ../src/lzmainfo/lzmainfo.1:48
 msgid "All is good."
 msgstr "Está tudo bem."
 
 #. type: TP
-#: ../src/xz/xz.1:2347 ../src/xzdec/xzdec.1:108 ../src/lzmainfo/lzmainfo.1:48
+#: ../src/xz/xz.1:2346 ../src/xzdec/xzdec.1:108 ../src/lzmainfo/lzmainfo.1:48
 #, no-wrap
 msgid "B<1>"
 msgstr "B<1>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2350 ../src/xzdec/xzdec.1:111 ../src/lzmainfo/lzmainfo.1:51
+#: ../src/xz/xz.1:2349 ../src/xzdec/xzdec.1:111 ../src/lzmainfo/lzmainfo.1:51
 msgid "An error occurred."
 msgstr "Ocorreu um erro."
 
 #. type: TP
-#: ../src/xz/xz.1:2350
+#: ../src/xz/xz.1:2349
 #, no-wrap
 msgid "B<2>"
 msgstr "B<2>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2354
+#: ../src/xz/xz.1:2353
 msgid "Something worth a warning occurred, but no actual errors occurred."
 msgstr "Algo digno de um aviso ocorreu, mas ocorreu nenhum erro real."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2357
+#: ../src/xz/xz.1:2356
 msgid ""
 "Notices (not warnings or errors) printed on standard error don't affect the "
 "exit status."
@@ -4210,13 +4210,13 @@ msgstr ""
 "status de saída."
 
 #. type: SH
-#: ../src/xz/xz.1:2358 ../src/scripts/xzgrep.1:94 ../src/scripts/xzless.1:52
+#: ../src/xz/xz.1:2357 ../src/scripts/xzgrep.1:94 ../src/scripts/xzless.1:52
 #, no-wrap
 msgid "ENVIRONMENT"
 msgstr "AMBIENTE"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2371
+#: ../src/xz/xz.1:2370
 msgid ""
 "B<xz> parses space-separated lists of options from the environment variables "
 "B<XZ_DEFAULTS> and B<XZ_OPT>, in this order, before parsing the options from "
@@ -4232,13 +4232,13 @@ msgstr ""
 "os argumentos da linha de comando."
 
 #. type: TP
-#: ../src/xz/xz.1:2371
+#: ../src/xz/xz.1:2370
 #, no-wrap
 msgid "B<XZ_DEFAULTS>"
 msgstr "B<XZ_DEFAULTS>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2380
+#: ../src/xz/xz.1:2379
 msgid ""
 "User-specific or system-wide default options.  Typically this is set in a "
 "shell initialization script to enable B<xz>'s memory usage limiter by "
@@ -4252,13 +4252,13 @@ msgstr ""
 "remover a definição de B<XZ_DEFAULTS>."
 
 #. type: TP
-#: ../src/xz/xz.1:2380
+#: ../src/xz/xz.1:2379
 #, no-wrap
 msgid "B<XZ_OPT>"
 msgstr "B<XZ_OPT>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2391
+#: ../src/xz/xz.1:2390
 msgid ""
 "This is for passing options to B<xz> when it is not possible to set the "
 "options directly on the B<xz> command line.  This is the case when B<xz> is "
@@ -4269,13 +4269,13 @@ msgstr ""
 "executado por um script ou ferramenta, por exemplo, GNU B<tar>(1):"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2397
+#: ../src/xz/xz.1:2396
 #, no-wrap
 msgid "CW<XZ_OPT=-2v tar caf foo.tar.xz foo>\n"
 msgstr "CW<XZ_OPT=-2v tar caf foo.tar.xz foo>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2411
+#: ../src/xz/xz.1:2410
 msgid ""
 "Scripts may use B<XZ_OPT>, for example, to set script-specific default "
 "compression options.  It is still recommended to allow users to override "
@@ -4288,7 +4288,7 @@ msgstr ""
 "scripts B<sh>(1) pode-se usar algo assim:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2418
+#: ../src/xz/xz.1:2417
 #, no-wrap
 msgid ""
 "CW<XZ_OPT=${XZ_OPT-\"-7e\"}\n"
@@ -4298,13 +4298,13 @@ msgstr ""
 "export XZ_OPT>\n"
 
 #. type: SH
-#: ../src/xz/xz.1:2423
+#: ../src/xz/xz.1:2422
 #, no-wrap
 msgid "LZMA UTILS COMPATIBILITY"
 msgstr "COMPATIBILIDADE COM LZMA UTILS"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2436
+#: ../src/xz/xz.1:2435
 msgid ""
 "The command line syntax of B<xz> is practically a superset of B<lzma>, "
 "B<unlzma>, and B<lzcat> as found from LZMA Utils 4.32.x.  In most cases, it "
@@ -4319,13 +4319,13 @@ msgstr ""
 "porém, que às vezes podem causar problemas."
 
 #. type: SS
-#: ../src/xz/xz.1:2437
+#: ../src/xz/xz.1:2436
 #, no-wrap
 msgid "Compression preset levels"
 msgstr "Níveis de predefinição de compactação"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2444
+#: ../src/xz/xz.1:2443
 msgid ""
 "The numbering of the compression level presets is not identical in B<xz> and "
 "LZMA Utils.  The most important difference is how dictionary sizes are "
@@ -4338,43 +4338,43 @@ msgstr ""
 "dicionário é aproximadamente igual ao uso de memória do descompactador."
 
 #. type: tbl table
-#: ../src/xz/xz.1:2450 ../src/xz/xz.1:2475
+#: ../src/xz/xz.1:2449 ../src/xz/xz.1:2474
 #, no-wrap
 msgid "Level"
 msgstr "Nível"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2450 ../src/xz/xz.1:2475
+#: ../src/xz/xz.1:2449 ../src/xz/xz.1:2474
 #, no-wrap
 msgid "xz"
 msgstr "xz"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2450
+#: ../src/xz/xz.1:2449
 #, no-wrap
 msgid "LZMA Utils"
 msgstr "LZMA Utils"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2451 ../src/xz/xz.1:2476
+#: ../src/xz/xz.1:2450 ../src/xz/xz.1:2475
 #, no-wrap
 msgid "N/A"
 msgstr "N/D"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2452
+#: ../src/xz/xz.1:2451
 #, no-wrap
 msgid "64 KiB"
 msgstr "64 KiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2454
+#: ../src/xz/xz.1:2453
 #, no-wrap
 msgid "512 KiB"
 msgstr "512 KiB"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2469
+#: ../src/xz/xz.1:2468
 msgid ""
 "The dictionary size differences affect the compressor memory usage too, but "
 "there are some other differences between LZMA Utils and XZ Utils, which make "
@@ -4385,49 +4385,49 @@ msgstr ""
 "Utils, que tornam a diferença ainda maior:"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2475
+#: ../src/xz/xz.1:2474
 #, no-wrap
 msgid "LZMA Utils 4.32.x"
 msgstr "LZMA Utils 4.32.x"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2478 ../src/xz/xz.1:2479
+#: ../src/xz/xz.1:2477 ../src/xz/xz.1:2478
 #, no-wrap
 msgid "12 MiB"
 msgstr "12 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2481
+#: ../src/xz/xz.1:2480
 #, no-wrap
 msgid "26 MiB"
 msgstr "26 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2482
+#: ../src/xz/xz.1:2481
 #, no-wrap
 msgid "45 MiB"
 msgstr "45 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2483
+#: ../src/xz/xz.1:2482
 #, no-wrap
 msgid "83 MiB"
 msgstr "83 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2484
+#: ../src/xz/xz.1:2483
 #, no-wrap
 msgid "159 MiB"
 msgstr "159 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:2485
+#: ../src/xz/xz.1:2484
 #, no-wrap
 msgid "311 MiB"
 msgstr "311 MiB"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2494
+#: ../src/xz/xz.1:2493
 msgid ""
 "The default preset level in LZMA Utils is B<-7> while in XZ Utils it is "
 "B<-6>, so both use an 8 MiB dictionary by default."
@@ -4436,13 +4436,13 @@ msgstr ""
 "B<-6>, então ambos usam um dicionário de 8 MiB por padrão."
 
 #. type: SS
-#: ../src/xz/xz.1:2495
+#: ../src/xz/xz.1:2494
 #, no-wrap
 msgid "Streamed vs. non-streamed .lzma files"
 msgstr "Arquivos .lzma em um fluxo versus sem ser em um fluxo"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2505
+#: ../src/xz/xz.1:2504
 msgid ""
 "The uncompressed size of the file can be stored in the B<.lzma> header.  "
 "LZMA Utils does that when compressing regular files.  The alternative is to "
@@ -4458,7 +4458,7 @@ msgstr ""
 "caso, por exemplo, de encadeamentos (pipes)."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2526
+#: ../src/xz/xz.1:2525
 msgid ""
 "B<xz> supports decompressing B<.lzma> files with or without end-of-payload "
 "marker, but all B<.lzma> files created by B<xz> will use end-of-payload "
@@ -4479,13 +4479,13 @@ msgstr ""
 "tamanho descompactado conhecido."
 
 #. type: SS
-#: ../src/xz/xz.1:2527
+#: ../src/xz/xz.1:2526
 #, no-wrap
 msgid "Unsupported .lzma files"
 msgstr "Arquivos .lzma não suportados"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2550
+#: ../src/xz/xz.1:2549
 msgid ""
 "The B<.lzma> format allows I<lc> values up to 8, and I<lp> values up to 4.  "
 "LZMA Utils can decompress files with any I<lc> and I<lp>, but always creates "
@@ -4498,7 +4498,7 @@ msgstr ""
 "possível com B<xz> e com LZMA SDK."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2561
+#: ../src/xz/xz.1:2560
 msgid ""
 "The implementation of the LZMA1 filter in liblzma requires that the sum of "
 "I<lc> and I<lp> must not exceed 4.  Thus, B<.lzma> files, which exceed this "
@@ -4509,7 +4509,7 @@ msgstr ""
 "não podem ser descompactados com B<xz>."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2576
+#: ../src/xz/xz.1:2575
 msgid ""
 "LZMA Utils creates only B<.lzma> files which have a dictionary size of "
 "2^I<n> (a power of 2) but accepts files with any dictionary size.  liblzma "
@@ -4524,7 +4524,7 @@ msgstr ""
 "os falsos positivos ao detectar arquivos B<.lzma>."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2581
+#: ../src/xz/xz.1:2580
 msgid ""
 "These limitations shouldn't be a problem in practice, since practically all "
 "B<.lzma> files have been compressed with settings that liblzma will accept."
@@ -4534,13 +4534,13 @@ msgstr ""
 "aceitará."
 
 #. type: SS
-#: ../src/xz/xz.1:2582
+#: ../src/xz/xz.1:2581
 #, no-wrap
 msgid "Trailing garbage"
 msgstr "Lixo à direita"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2592
+#: ../src/xz/xz.1:2591
 msgid ""
 "When decompressing, LZMA Utils silently ignore everything after the first B<."
 "lzma> stream.  In most situations, this is a bug.  This also means that LZMA "
@@ -4552,7 +4552,7 @@ msgstr ""
 "B<.lzma> concatenados."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2602
+#: ../src/xz/xz.1:2601
 msgid ""
 "If there is data left after the first B<.lzma> stream, B<xz> considers the "
 "file to be corrupt unless B<--single-stream> was used.  This may break "
@@ -4563,19 +4563,19 @@ msgstr ""
 "pode quebrar scripts obscuros que presumiram que o lixo à direita é ignorado."
 
 #. type: SH
-#: ../src/xz/xz.1:2603 ../src/xzdec/xzdec.1:117
+#: ../src/xz/xz.1:2602 ../src/xzdec/xzdec.1:117
 #, no-wrap
 msgid "NOTES"
 msgstr "NOTAS"
 
 #. type: SS
-#: ../src/xz/xz.1:2605
+#: ../src/xz/xz.1:2604
 #, no-wrap
 msgid "Compressed output may vary"
 msgstr "A saída compactada pode variar"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2616
+#: ../src/xz/xz.1:2615
 msgid ""
 "The exact compressed output produced from the same uncompressed input file "
 "may vary between XZ Utils versions even if compression options are "
@@ -4592,7 +4592,7 @@ msgstr ""
 "versão do XZ Utils, se diferentes opções de compilação forem usadas."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2626
+#: ../src/xz/xz.1:2625
 msgid ""
 "The above means that once B<--rsyncable> has been implemented, the resulting "
 "files won't necessarily be rsyncable unless both old and new files have been "
@@ -4608,13 +4608,13 @@ msgstr ""
 "rsyncable estável nas versões do xz."
 
 #. type: SS
-#: ../src/xz/xz.1:2627
+#: ../src/xz/xz.1:2626
 #, no-wrap
 msgid "Embedded .xz decompressors"
 msgstr "Descompactadores .xz embarcados"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2644
+#: ../src/xz/xz.1:2643
 msgid ""
 "Embedded B<.xz> decompressor implementations like XZ Embedded don't "
 "necessarily support files created with integrity I<check> types other than "
@@ -4628,7 +4628,7 @@ msgstr ""
 "check=crc32> ao criar arquivos para sistemas embarcados."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2654
+#: ../src/xz/xz.1:2653
 msgid ""
 "Outside embedded systems, all B<.xz> format decompressors support all the "
 "I<check> types, or at least are able to decompress the file without "
@@ -4640,7 +4640,7 @@ msgstr ""
 "se a I<verificação> específica não for suportada."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2657
+#: ../src/xz/xz.1:2656
 msgid ""
 "XZ Embedded supports BCJ filters, but only with the default start offset."
 msgstr ""
@@ -4648,19 +4648,19 @@ msgstr ""
 "inicial padrão."
 
 #. type: SH
-#: ../src/xz/xz.1:2658
+#: ../src/xz/xz.1:2657
 #, no-wrap
 msgid "EXAMPLES"
 msgstr "EXEMPLOS"
 
 #. type: SS
-#: ../src/xz/xz.1:2660
+#: ../src/xz/xz.1:2659
 #, no-wrap
 msgid "Basics"
 msgstr "Básico"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2670
+#: ../src/xz/xz.1:2669
 msgid ""
 "Compress the file I<foo> into I<foo.xz> using the default compression level "
 "(B<-6>), and remove I<foo> if compression is successful:"
@@ -4669,13 +4669,13 @@ msgstr ""
 "(B<-6>) e remover I<foo> se a compactação for bem-sucedida:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2675
+#: ../src/xz/xz.1:2674
 #, no-wrap
 msgid "CW<xz foo>\n"
 msgstr "CW<xz foo>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2686
+#: ../src/xz/xz.1:2685
 msgid ""
 "Decompress I<bar.xz> into I<bar> and don't remove I<bar.xz> even if "
 "decompression is successful:"
@@ -4684,13 +4684,13 @@ msgstr ""
 "descompactação for bem-sucedida:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2691
+#: ../src/xz/xz.1:2690
 #, no-wrap
 msgid "CW<xz -dk bar.xz>\n"
 msgstr "CW<xz -dk bar.xz>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2704
+#: ../src/xz/xz.1:2703
 msgid ""
 "Create I<baz.tar.xz> with the preset B<-4e> (B<-4 --extreme>), which is "
 "slower than the default B<-6>, but needs less memory for compression and "
@@ -4701,13 +4701,13 @@ msgstr ""
 "descompactação (48 \\ MiB e 5\\ MiB, respectivamente):"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2709
+#: ../src/xz/xz.1:2708
 #, no-wrap
 msgid "CW<tar cf - baz | xz -4e E<gt> baz.tar.xz>\n"
 msgstr "CW<tar cf - baz | xz -4e E<gt> baz.tar.xz>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2715
+#: ../src/xz/xz.1:2714
 msgid ""
 "A mix of compressed and uncompressed files can be decompressed to standard "
 "output with a single command:"
@@ -4716,19 +4716,19 @@ msgstr ""
 "para a saída padrão com um único comando:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2720
+#: ../src/xz/xz.1:2719
 #, no-wrap
 msgid "CW<xz -dcf a.txt b.txt.xz c.txt d.txt.lzma E<gt> abcd.txt>\n"
 msgstr "CW<xz -dcf a.txt b.txt.xz c.txt d.txt.lzma E<gt> abcd.txt>\n"
 
 #. type: SS
-#: ../src/xz/xz.1:2724
+#: ../src/xz/xz.1:2723
 #, no-wrap
 msgid "Parallel compression of many files"
 msgstr "Compactação paralela de muitos arquivos"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2730
+#: ../src/xz/xz.1:2729
 msgid ""
 "On GNU and *BSD, B<find>(1)  and B<xargs>(1)  can be used to parallelize "
 "compression of many files:"
@@ -4737,7 +4737,7 @@ msgstr ""
 "compactação de muitos arquivos:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2736
+#: ../src/xz/xz.1:2735
 #, no-wrap
 msgid ""
 "CW<find . -type f \\e! -name '*.xz' -print0 \\e\n"
@@ -4747,7 +4747,7 @@ msgstr ""
 "    | xargs -0r -P4 -n16 xz -T1>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2758
+#: ../src/xz/xz.1:2757
 msgid ""
 "The B<-P> option to B<xargs>(1)  sets the number of parallel B<xz> "
 "processes.  The best value for the B<-n> option depends on how many files "
@@ -4764,7 +4764,7 @@ msgstr ""
 "eventualmente criará."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2766
+#: ../src/xz/xz.1:2765
 msgid ""
 "The option B<-T1> for B<xz> is there to force it to single-threaded mode, "
 "because B<xargs>(1)  is used to control the amount of parallelization."
@@ -4773,13 +4773,13 @@ msgstr ""
 "porque B<xargs>(1) é usado para controlar a quantidade de paralelização."
 
 #. type: SS
-#: ../src/xz/xz.1:2767
+#: ../src/xz/xz.1:2766
 #, no-wrap
 msgid "Robot mode"
 msgstr "Modo robô"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2770
+#: ../src/xz/xz.1:2769
 msgid ""
 "Calculate how many bytes have been saved in total after compressing multiple "
 "files:"
@@ -4788,13 +4788,13 @@ msgstr ""
 "arquivos:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2775
+#: ../src/xz/xz.1:2774
 #, no-wrap
 msgid "CW<xz --robot --list *.xz | awk '/^totals/{print $5-$4}'>\n"
 msgstr "CW<xz --robot --list *.xz | awk '/^totals/{print $5-$4}'>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2790
+#: ../src/xz/xz.1:2789
 msgid ""
 "A script may want to know that it is using new enough B<xz>.  The following "
 "B<sh>(1)  script checks that the version number of the B<xz> tool is at "
@@ -4807,7 +4807,7 @@ msgstr ""
 "não suportavam a opção B<--robot>:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2799
+#: ../src/xz/xz.1:2798
 #, no-wrap
 msgid ""
 "CW<if ! eval \"$(xz --robot --version 2E<gt> /dev/null)\" ||\n"
@@ -4823,7 +4823,7 @@ msgstr ""
 "unset XZ_VERSION LIBLZMA_VERSION>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2806
+#: ../src/xz/xz.1:2805
 msgid ""
 "Set a memory usage limit for decompression using B<XZ_OPT>, but if a limit "
 "has already been set, don't increase it:"
@@ -4832,7 +4832,7 @@ msgstr ""
 "mas se um limite já tiver sido definido, não o aumentar:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2816
+#: ../src/xz/xz.1:2815
 #, no-wrap
 msgid ""
 "CW<NEWLIM=$((123 E<lt>E<lt> 20))\\ \\ # 123 MiB\n"
@@ -4850,7 +4850,7 @@ msgstr ""
 "fi>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2826
+#: ../src/xz/xz.1:2825
 msgid ""
 "The simplest use for custom filter chains is customizing a LZMA2 preset.  "
 "This can be useful, because the presets cover only a subset of the "
@@ -4862,7 +4862,7 @@ msgstr ""
 "de compactação."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2834
+#: ../src/xz/xz.1:2833
 msgid ""
 "The CompCPU columns of the tables from the descriptions of the options "
 "B<-0> ... B<-9> and B<--extreme> are useful when customizing LZMA2 presets.  "
@@ -4873,7 +4873,7 @@ msgstr ""
 "partes relevantes coletadas dessas duas tabelas:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2859
+#: ../src/xz/xz.1:2858
 msgid ""
 "If you know that a file requires somewhat big dictionary (for example, 32\\ "
 "MiB) to compress well, but you want to compress it quicker than B<xz -8> "
@@ -4886,13 +4886,13 @@ msgstr ""
 "baixo (por exemplo, 1) pode ser modificado para usar um dicionário maior:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2864
+#: ../src/xz/xz.1:2863
 #, no-wrap
 msgid "CW<xz --lzma2=preset=1,dict=32MiB foo.tar>\n"
 msgstr "CW<xz --lzma2=preset=1,dict=32MiB foo.tar>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2880
+#: ../src/xz/xz.1:2879
 msgid ""
 "With certain files, the above command may be faster than B<xz -6> while "
 "compressing significantly better.  However, it must be emphasized that only "
@@ -4913,7 +4913,7 @@ msgstr ""
 "ao máximo as semelhanças entre arquivos consecutivos."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2887
+#: ../src/xz/xz.1:2886
 msgid ""
 "If very high compressor and decompressor memory usage is fine, and the file "
 "being compressed is at least several hundred megabytes, it may be useful to "
@@ -4925,13 +4925,13 @@ msgstr ""
 "o B<xz -9> usaria:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2892
+#: ../src/xz/xz.1:2891
 #, no-wrap
 msgid "CW<xz -vv --lzma2=dict=192MiB big_foo.tar>\n"
 msgstr "CW<xz -vv --lzma2=dict=192MiB big_foo.tar>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2905
+#: ../src/xz/xz.1:2904
 msgid ""
 "Using B<-vv> (B<--verbose --verbose>)  like in the above example can be "
 "useful to see the memory requirements of the compressor and decompressor.  "
@@ -4945,7 +4945,7 @@ msgstr ""
 "pequenos."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2917
+#: ../src/xz/xz.1:2916
 msgid ""
 "Sometimes the compression time doesn't matter, but the decompressor memory "
 "usage has to be kept low, for example, to make it possible to decompress the "
@@ -4962,13 +4962,13 @@ msgstr ""
 "que existe B<--check=crc32>) usando cerca de 100\\ KiB de memória."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2922
+#: ../src/xz/xz.1:2921
 #, no-wrap
 msgid "CW<xz --check=crc32 --lzma2=preset=6e,dict=64KiB foo>\n"
 msgstr "CW<xz --check=crc32 --lzma2=preset=6e,dict=64KiB foo>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2945
+#: ../src/xz/xz.1:2944
 msgid ""
 "If you want to squeeze out as many bytes as possible, adjusting the number "
 "of literal context bits (I<lc>)  and number of position bits (I<pb>)  can "
@@ -4987,13 +4987,13 @@ msgstr ""
 "que B<xz -6e> (tente também sem B<lc=4>):"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2950
+#: ../src/xz/xz.1:2949
 #, no-wrap
 msgid "CW<xz --lzma2=preset=6e,pb=0,lc=4 source_code.tar>\n"
 msgstr "CW<xz --lzma2=preset=6e,pb=0,lc=4 source_code.tar>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2958
+#: ../src/xz/xz.1:2957
 msgid ""
 "Using another filter together with LZMA2 can improve compression with "
 "certain file types.  For example, to compress a x86-32 or x86-64 shared "
@@ -5004,13 +5004,13 @@ msgstr ""
 "compartilhada x86-32 ou x86-64 usando o filtro x86 BCJ:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2963
+#: ../src/xz/xz.1:2962
 #, no-wrap
 msgid "CW<xz --x86 --lzma2 libfoo.so>\n"
 msgstr "CW<xz --x86 --lzma2 libfoo.so>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2977
+#: ../src/xz/xz.1:2976
 msgid ""
 "Note that the order of the filter options is significant.  If B<--x86> is "
 "specified after B<--lzma2>, B<xz> will give an error, because there cannot "
@@ -5023,7 +5023,7 @@ msgstr ""
 "como o último filtro em a corrente."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2983
+#: ../src/xz/xz.1:2982
 msgid ""
 "The Delta filter together with LZMA2 can give good results with bitmap "
 "images.  It should usually beat PNG, which has a few more advanced filters "
@@ -5034,7 +5034,7 @@ msgstr ""
 "do que o delta simples, mas usa Deflate para a compactação real."
 
 #. type: Plain text
-#: ../src/xz/xz.1:2993
+#: ../src/xz/xz.1:2992
 msgid ""
 "The image has to be saved in uncompressed format, for example, as "
 "uncompressed TIFF.  The distance parameter of the Delta filter is set to "
@@ -5049,13 +5049,13 @@ msgstr ""
 "para acomodar o alinhamento de três bytes:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:2998
+#: ../src/xz/xz.1:2997
 #, no-wrap
 msgid "CW<xz --delta=dist=3 --lzma2=pb=0 foo.tiff>\n"
 msgstr "CW<xz --delta=dist=3 --lzma2=pb=0 foo.tiff>\n"
 
 #. type: Plain text
-#: ../src/xz/xz.1:3006
+#: ../src/xz/xz.1:3005
 msgid ""
 "If multiple images have been put into a single archive (for example, B<."
 "tar>), the Delta filter will work on that too as long as all images have the "
@@ -5066,7 +5066,7 @@ msgstr ""
 "mesmo número de bytes por pixel."
 
 #. type: SH
-#: ../src/xz/xz.1:3007 ../src/xzdec/xzdec.1:143 ../src/lzmainfo/lzmainfo.1:59
+#: ../src/xz/xz.1:3006 ../src/xzdec/xzdec.1:143 ../src/lzmainfo/lzmainfo.1:59
 #: ../src/scripts/xzdiff.1:65 ../src/scripts/xzgrep.1:106
 #: ../src/scripts/xzless.1:65 ../src/scripts/xzmore.1:51
 #, no-wrap
@@ -5074,7 +5074,7 @@ msgid "SEE ALSO"
 msgstr "VEJA TAMBÉM"
 
 #. type: Plain text
-#: ../src/xz/xz.1:3016
+#: ../src/xz/xz.1:3015
 msgid ""
 "B<xzdec>(1), B<xzdiff>(1), B<xzgrep>(1), B<xzless>(1), B<xzmore>(1), "
 "B<gzip>(1), B<bzip2>(1), B<7z>(1)"
@@ -5083,17 +5083,17 @@ msgstr ""
 "B<gzip>(1), B<bzip2>(1), B<7z>(1)"
 
 #. type: Plain text
-#: ../src/xz/xz.1:3018
+#: ../src/xz/xz.1:3017
 msgid "XZ Utils: E<lt>https://tukaani.org/xz/E<gt>"
 msgstr "XZ Utils: E<lt>https://tukaani.org/xz/E<gt>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:3020 ../src/xzdec/xzdec.1:146
+#: ../src/xz/xz.1:3019 ../src/xzdec/xzdec.1:146
 msgid "XZ Embedded: E<lt>https://tukaani.org/xz/embedded.htmlE<gt>"
 msgstr "XZ Embedded: E<lt>https://tukaani.org/xz/embedded.htmlE<gt>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:3021
+#: ../src/xz/xz.1:3020
 #, fuzzy
 #| msgid "LZMA SDK: E<lt>http://7-zip.org/sdk.htmlE<gt>"
 msgid "LZMA SDK: E<lt>https://7-zip.org/sdk.htmlE<gt>"

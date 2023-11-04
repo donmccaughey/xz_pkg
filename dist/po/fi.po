@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xz 5.4.0-pre1\n"
 "Report-Msgid-Bugs-To: xz@tukaani.org\n"
-"POT-Creation-Date: 2023-08-02 20:42+0800\n"
+"POT-Creation-Date: 2023-10-31 22:33+0800\n"
 "PO-Revision-Date: 2022-11-10 16:17+0200\n"
 "Last-Translator: Lauri Nurmi <lanurmi@iki.fi>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -50,8 +50,8 @@ msgstr "Vain yksi tiedosto voidaan antaa valitsimille ”--files” ja ”--file
 #. TRANSLATORS: This is a translatable
 #. string because French needs a space
 #. before the colon ("%s : %s").
-#: src/xz/args.c:533 src/xz/coder.c:691 src/xz/coder.c:707 src/xz/coder.c:967
-#: src/xz/coder.c:970 src/xz/file_io.c:605 src/xz/file_io.c:679
+#: src/xz/args.c:533 src/xz/coder.c:692 src/xz/coder.c:708 src/xz/coder.c:968
+#: src/xz/coder.c:971 src/xz/file_io.c:605 src/xz/file_io.c:679
 #: src/xz/file_io.c:769 src/xz/file_io.c:940 src/xz/list.c:369
 #: src/xz/list.c:415 src/xz/list.c:477 src/xz/list.c:581 src/xz/list.c:590
 #, fuzzy, c-format
@@ -86,64 +86,64 @@ msgstr "%s: --format=raw vaatii, että --suffix=.PÄÄTE on annettu, ellei kirjo
 msgid "Maximum number of filters is four"
 msgstr "Suodattimien enimmäismäärä on neljä"
 
-#: src/xz/coder.c:134
+#: src/xz/coder.c:135
 msgid "Memory usage limit is too low for the given filter setup."
 msgstr "Muistinkäytön raja on liian matala valituille suotimille."
 
-#: src/xz/coder.c:169
+#: src/xz/coder.c:170
 msgid "Using a preset in raw mode is discouraged."
 msgstr "Esiasetusten käyttö raw-tilassa ei ole suositeltavaa."
 
-#: src/xz/coder.c:171
+#: src/xz/coder.c:172
 msgid "The exact options of the presets may vary between software versions."
 msgstr "Esiasetusten tarkat asetukset saattavat vaihdella ohjelmistoversioiden välillä."
 
-#: src/xz/coder.c:194
+#: src/xz/coder.c:195
 msgid "The .lzma format supports only the LZMA1 filter"
 msgstr ".lzma-muoto tukee vain LZMA1-suodinta"
 
-#: src/xz/coder.c:202
+#: src/xz/coder.c:203
 msgid "LZMA1 cannot be used with the .xz format"
 msgstr "LZMA1:tä ei voi käyttää .xz-muodon kanssa"
 
-#: src/xz/coder.c:219
+#: src/xz/coder.c:220
 msgid "The filter chain is incompatible with --flush-timeout"
 msgstr "Suodinketju on yhteensopimaton valitsimen --flush-timeout kanssa"
 
-#: src/xz/coder.c:225
+#: src/xz/coder.c:226
 msgid "Switching to single-threaded mode due to --flush-timeout"
 msgstr "Vaihdetaan yksisäikeiseen tilaan valitsimen --flush-timeout vuoksi"
 
-#: src/xz/coder.c:249
+#: src/xz/coder.c:250
 #, c-format
 msgid "Using up to %<PRIu32> threads."
 msgstr "Käytetään enintään %<PRIu32> säiettä."
 
-#: src/xz/coder.c:265
+#: src/xz/coder.c:266
 msgid "Unsupported filter chain or filter options"
 msgstr "Ei-tuettu suodinketju tai suotimen asetukset"
 
-#: src/xz/coder.c:277
+#: src/xz/coder.c:278
 #, c-format
 msgid "Decompression will need %s MiB of memory."
 msgstr "Purkaminen vaatii %s MiB muistia."
 
-#: src/xz/coder.c:309
+#: src/xz/coder.c:310
 #, c-format
 msgid "Reduced the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
 msgstr "Pudotettiin säikeiden määrä %s säikeestä %s:een, jottei ylitettäisi %s MiB:n rajaa muistinkäytölle"
 
-#: src/xz/coder.c:329
+#: src/xz/coder.c:330
 #, c-format
 msgid "Reduced the number of threads from %s to one. The automatic memory usage limit of %s MiB is still being exceeded. %s MiB of memory is required. Continuing anyway."
 msgstr "Pudotettiin säikeiden määrä %s säikeestä yhteen. Automaattinen %s MiB:n raja muistinkäytölle ylittyy silti. Vaaditaan %s MiB muistia. Jatketaan kaikesta huolimatta."
 
-#: src/xz/coder.c:356
+#: src/xz/coder.c:357
 #, c-format
 msgid "Switching to single-threaded mode to not exceed the memory usage limit of %s MiB"
 msgstr "Siirrytään yhden säikeen tilaan, jottei ylitettäisi %s MiB:n rajaa muistinkäytölle"
 
-#: src/xz/coder.c:411
+#: src/xz/coder.c:412
 #, c-format
 msgid "Adjusted LZMA%c dictionary size from %s MiB to %s MiB to not exceed the memory usage limit of %s MiB"
 msgstr "Pudotettiin LZMA%c-sanaston koko %s MiB:stä %s MiB:hen, jottei ylitettäisi %s MiB:n rajaa muistinkäytölle"
@@ -246,37 +246,37 @@ msgstr "Virhe tilalippujen palauttamisessa vakiosyötteelle: %s"
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "Virhe tiedoston tilalippujen noutamisessa vakiotulosteelle: %s"
 
-#: src/xz/file_io.c:1060
+#: src/xz/file_io.c:1081
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "Virhe O_APPEND-lipun palauttamisessa vakiosyötteelle: %s"
 
-#: src/xz/file_io.c:1072
+#: src/xz/file_io.c:1093
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s: Tiedoston sulkeminen epäonnistui: %s"
 
-#: src/xz/file_io.c:1108 src/xz/file_io.c:1371
+#: src/xz/file_io.c:1129 src/xz/file_io.c:1391
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s: Siirtyminen epäonnistui yritettäessä luoda hajanaista tiedostoa: %s"
 
-#: src/xz/file_io.c:1209
+#: src/xz/file_io.c:1229
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s: Lukuvirhe: %s"
 
-#: src/xz/file_io.c:1239
+#: src/xz/file_io.c:1259
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s: Virhe tiedostossa siirtymisessä: %s"
 
-#: src/xz/file_io.c:1263
+#: src/xz/file_io.c:1283
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s: Odottamaton tiedoston loppu"
 
-#: src/xz/file_io.c:1322
+#: src/xz/file_io.c:1342
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s: Kirjoitusvirhe: %s"
@@ -970,12 +970,12 @@ msgstr "%s: Virheellinen asetuksen nimi"
 msgid "%s: Invalid option value"
 msgstr "%s: Virheellinen asetuksen arvo"
 
-#: src/xz/options.c:247
+#: src/xz/options.c:248
 #, c-format
 msgid "Unsupported LZMA1/LZMA2 preset: %s"
 msgstr "Ei-tuettu LZMA1/LZMA2-esiasetus: %s"
 
-#: src/xz/options.c:355
+#: src/xz/options.c:356
 msgid "The sum of lc and lp must not exceed 4"
 msgstr "lc:n ja lp:n summa ei saa olla yli 4"
 
@@ -994,30 +994,30 @@ msgstr "%s: Tiedostolla on jo ”%s”-pääte, ohitetaan"
 msgid "%s: Invalid filename suffix"
 msgstr "%s: Virheellinen tiedostonimen pääte"
 
-#: src/xz/util.c:71
+#: src/xz/util.c:107
 #, c-format
 msgid "%s: Value is not a non-negative decimal integer"
 msgstr "%s: Arvo ei ole ei ole epänegatiivinen kymmenkantainen kokonaisluku"
 
-#: src/xz/util.c:113
+#: src/xz/util.c:149
 #, c-format
 msgid "%s: Invalid multiplier suffix"
 msgstr "%s: Tuntematon kerroin"
 
-#: src/xz/util.c:115
+#: src/xz/util.c:151
 msgid "Valid suffixes are `KiB' (2^10), `MiB' (2^20), and `GiB' (2^30)."
 msgstr "Kelvolliset kertoimet ovat ”KiB” (2¹⁰), ”MiB” (2²⁰) ja ”GiB” (2³⁰)."
 
-#: src/xz/util.c:132
+#: src/xz/util.c:168
 #, c-format
 msgid "Value of the option `%s' must be in the range [%<PRIu64>, %<PRIu64>]"
 msgstr "Valitsimen ”%s” arvon on oltava välillä [%<PRIu64>, %<PRIu64>]"
 
-#: src/xz/util.c:269
+#: src/xz/util.c:270
 msgid "Compressed data cannot be read from a terminal"
 msgstr "Tiivistettyä dataa ei voi lukea päätteestä"
 
-#: src/xz/util.c:282
+#: src/xz/util.c:283
 msgid "Compressed data cannot be written to a terminal"
 msgstr "Tiivistettyä dataa ei voi kirjoittaa päätteeseen"
 

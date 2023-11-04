@@ -1,9 +1,9 @@
-XZ Utils 5.4.4 for macOS
+XZ Utils 5.4.5 for macOS
 ========================
 
 This project builds a signed universal macOS installer package for [XZ
 Utils][1], a general-purpose data compression tool and library.  It contains
-the source distribution for XZ Utils 5.4.4.
+the source distribution for XZ Utils 5.4.5.
 
 [1]: http://tukaani.org/xz/ "XZ Utils"
 
@@ -46,7 +46,7 @@ To build and sign the executable and installer, run:
         $ make [APP_SIGNING_ID="<cert name 1>"] [INSTALLER_SIGNING_ID="<cert name 2>"] [TMP="<build dir>"]
 
 Intermediate files are generated in the temp directory; the signed installer 
-package is written into the project root with the name `xz-5.4.4.pkg`.  
+package is written into the project root with the name `xz-5.4.5.pkg`.  
 
 To notarize the signed installer package, run:
 
@@ -57,7 +57,7 @@ success.  Check the file `$(TMP)/notarization-log.json` for detailed
 information if notarization fails.  The signed installer is stapled in place
 if notarization succeeds.  Use the command:
 
-        $ xcrun stapler validate --verbose xz-5.4.4.pkg
+        $ xcrun stapler validate --verbose xz-5.4.5.pkg
 
 to check the notarization state of the installer package.
 

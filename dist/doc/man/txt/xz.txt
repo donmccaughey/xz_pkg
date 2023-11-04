@@ -630,8 +630,6 @@ OPTIONS
               limit.   Setting limit to 0 resets the limit to the default sys-
               tem-specific value.
 
-
-
        -M limit, --memlimit=limit, --memory=limit
               This  is  equivalent  to  specifying   --memlimit-compress=limit
               --memlimit-decompress=limit --memlimit-mt-decompress=limit.
@@ -1491,7 +1489,6 @@ EXAMPLES
 
               Preset   CompCPU
                -0         0
-
                -1         1
                -2         2
                -3         3
