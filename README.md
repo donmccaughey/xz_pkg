@@ -7,6 +7,20 @@ the source distribution for XZ Utils 5.4.5.
 
 [1]: http://tukaani.org/xz/ "XZ Utils"
 
+## Security Note
+
+XZ Utils versions 5.6.0 and 5.6.1 appear to have been compromised by the
+injection of malicious changes in the source code combined with a malicious
+build script added into the distributed tarballs.  For more information, see
+[this email to the oss-security][email] mailing list.
+
+[email]: https://openwall.com/lists/oss-security/2024/03/29/4
+
+Currently (2024-03-29) this exploit appears to only be present in the 5.6.0 and
+5.6.1 releases and only targets x86 Linux systems running `glibc`, `sshd` and
+`systemd`.  It does not appear to be present in earlier versions of XZ Utils
+nor does it appear to affect macOS systems.
+
 ## Prerequesites
 
 A recent version of Xcode and the [`jq`][2] command are needed to build and
