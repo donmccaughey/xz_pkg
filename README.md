@@ -12,9 +12,11 @@ the source distribution for XZ Utils 5.4.5.
 XZ Utils versions 5.6.0 and 5.6.1 appear to have been compromised by the
 injection of malicious changes in the source code combined with a malicious
 build script added into the distributed tarballs.  For more information, see
-[this email to the oss-security][email] mailing list.
+[this email to the oss-security][email] mailing list, this [Red Hat blog post][redhat] and [CVE-2024-3094][cve].
 
 [email]: https://openwall.com/lists/oss-security/2024/03/29/4
+[redhat]: https://www.redhat.com/en/blog/urgent-security-alert-fedora-41-and-rawhide-users
+[cve]: https://www.cve.org/CVERecord?id=CVE-2024-3094
 
 Currently (2024-03-29) this exploit appears to only be present in the 5.6.0 and
 5.6.1 releases and only targets x86 Linux systems running `glibc`, `sshd` and
