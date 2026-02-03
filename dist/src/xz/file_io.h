@@ -1,12 +1,11 @@
+// SPDX-License-Identifier: 0BSD
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 /// \file       file_io.h
 /// \brief      I/O types and functions
 //
 //  Author:     Lasse Collin
-//
-//  This file has been put into the public domain.
-//  You can do whatever you want with this file.
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -16,6 +15,16 @@
 #	define IO_BUFFER_SIZE 8192
 #else
 #	define IO_BUFFER_SIZE (BUFSIZ & ~7U)
+#endif
+
+#ifdef _MSC_VER
+	// The first one renames both "struct stat" -> "struct _stat64"
+	// and stat() -> _stat64(). The documentation mentions only
+	// "struct __stat64", not "struct _stat64", but the latter
+	// works too.
+#	define stat _stat64
+#	define fstat _fstat64
+#	define off_t __int64
 #endif
 
 
@@ -45,6 +54,12 @@ typedef struct {
 
 	/// File descriptor of the target file
 	int dest_fd;
+
+#ifndef TUKLIB_DOSLIKE
+	/// File descriptor of the directory of the target file (which is
+	/// also the directory of the source file)
+	int dir_fd;
+#endif
 
 	/// True once end of the source file has been detected.
 	bool src_eof;
@@ -88,12 +103,6 @@ extern void io_write_to_user_abort_pipe(void);
 
 /// \brief      Disable creation of sparse files when decompressing
 extern void io_no_sparse(void);
-
-
-#ifdef ENABLE_SANDBOX
-/// \brief      main() calls this if conditions for sandboxing have been met.
-extern void io_allow_sandbox(void);
-#endif
 
 
 /// \brief      Open the source file
@@ -174,6 +183,6 @@ extern bool io_pread(file_pair *pair, io_buf *buf, size_t size, uint64_t pos);
 /// \param      buf     Buffer containing the data to be written
 /// \param      size    Size of the buffer; must be at most IO_BUFFER_SIZE
 ///
-/// \return     On success, zero is returned. On error, -1 is returned
-///             and error message printed.
+/// \return     On success, false is returned. On error, error message
+///             is printed and true is returned.
 extern bool io_write(file_pair *pair, const io_buf *buf, size_t size);

@@ -1,13 +1,15 @@
+# SPDX-License-Identifier: 0BSD
+
+#############################################################################
 #
 # tuklib_cpucores.cmake - see tuklib_cpucores.m4 for description and comments
 #
 # Author: Lasse Collin
 #
-# This file has been put into the public domain.
-# You can do whatever you want with this file.
-#
+#############################################################################
 
 include("${CMAKE_CURRENT_LIST_DIR}/tuklib_common.cmake")
+include(CMakePushCheckState)
 include(CheckCSourceCompiles)
 include(CheckIncludeFile)
 
@@ -75,6 +77,7 @@ function(tuklib_cpucores_internal_check)
     #
     # We test sysctl() first and intentionally break the sysctl() test on QNX
     # so that sysctl() is never used on QNX.
+    cmake_push_check_state()
     check_include_file(sys/param.h HAVE_SYS_PARAM_H)
     if(HAVE_SYS_PARAM_H)
         list(APPEND CMAKE_REQUIRED_DEFINITIONS -DHAVE_SYS_PARAM_H)
@@ -102,6 +105,7 @@ function(tuklib_cpucores_internal_check)
             }
         "
         TUKLIB_CPUCORES_SYSCTL)
+    cmake_pop_check_state()
     if(TUKLIB_CPUCORES_SYSCTL)
         if(HAVE_SYS_PARAM_H)
             set(TUKLIB_CPUCORES_DEFINITIONS

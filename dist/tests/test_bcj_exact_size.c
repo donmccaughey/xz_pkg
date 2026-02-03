@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: 0BSD
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 /// \file       test_bcj_exact_size.c
@@ -6,9 +8,6 @@
 /// These tests fail with XZ Utils 5.0.3 and earlier.
 //
 //  Author:     Lasse Collin
-//
-//  This file has been put into the public domain.
-//  You can do whatever you want with this file.
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -28,7 +27,7 @@ test_exact_size(void)
 				"is disabled");
 
 	// Something to be compressed
-	const uint8_t in[16] = "0123456789ABCDEF";
+	const uint8_t in[16] = "0123456789ABCDE";
 
 	// in[] after compression
 	uint8_t compressed[1024];

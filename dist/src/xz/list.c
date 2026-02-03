@@ -1,12 +1,11 @@
+// SPDX-License-Identifier: 0BSD
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 /// \file       list.c
 /// \brief      Listing information about .xz files
 //
 //  Author:     Lasse Collin
-//
-//  This file has been put into the public domain.
-//  You can do whatever you want with this file.
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -348,13 +347,14 @@ static bool
 parse_indexes(xz_file_info *xfi, file_pair *pair)
 {
 	if (pair->src_st.st_size <= 0) {
-		message_error(_("%s: File is empty"), pair->src_name);
+		message_error(_("%s: File is empty"),
+				tuklib_mask_nonprint(pair->src_name));
 		return true;
 	}
 
 	if (pair->src_st.st_size < 2 * LZMA_STREAM_HEADER_SIZE) {
 		message_error(_("%s: Too small to be a valid .xz file"),
-				pair->src_name);
+				tuklib_mask_nonprint(pair->src_name));
 		return true;
 	}
 
@@ -366,7 +366,9 @@ parse_indexes(xz_file_info *xfi, file_pair *pair)
 			hardware_memlimit_get(MODE_LIST),
 			(uint64_t)(pair->src_st.st_size));
 	if (ret != LZMA_OK) {
-		message_error(_("%s: %s"), pair->src_name, message_strm(ret));
+		message_error(_("%s: %s"),
+				tuklib_mask_nonprint(pair->src_name),
+				message_strm(ret));
 		return true;
 	}
 
@@ -412,7 +414,8 @@ parse_indexes(xz_file_info *xfi, file_pair *pair)
 		}
 
 		default:
-			message_error(_("%s: %s"), pair->src_name,
+			message_error(_("%s: %s"),
+					tuklib_mask_nonprint(pair->src_name),
 					message_strm(ret));
 
 			// If the error was too low memory usage limit,
@@ -474,7 +477,8 @@ parse_block_header(file_pair *pair, const lzma_index_iter *iter,
 		break;
 
 	case LZMA_OPTIONS_ERROR:
-		message_error(_("%s: %s"), pair->src_name,
+		message_error(_("%s: %s"),
+				tuklib_mask_nonprint(pair->src_name),
 				message_strm(LZMA_OPTIONS_ERROR));
 		return true;
 
@@ -521,8 +525,7 @@ parse_block_header(file_pair *pair, const lzma_index_iter *iter,
 
 		// If the above fails, the file is corrupt so
 		// LZMA_DATA_ERROR is a good error code.
-
-	// Fall through
+		FALLTHROUGH;
 
 	case LZMA_DATA_ERROR:
 		// Free the memory allocated by lzma_block_header_decode().
@@ -544,11 +547,21 @@ parse_block_header(file_pair *pair, const lzma_index_iter *iter,
 		xfi->memusage_max = bhi->memusage;
 
 	// Determine the minimum XZ Utils version that supports this Block.
+	//   - RISC-V filter needs 5.6.0.
 	//
 	//   - ARM64 filter needs 5.4.0.
 	//
 	//   - 5.0.0 doesn't support empty LZMA2 streams and thus empty
 	//     Blocks that use LZMA2. This decoder bug was fixed in 5.0.2.
+	if (xfi->min_version < 50060002U) {
+		for (size_t i = 0; filters[i].id != LZMA_VLI_UNKNOWN; ++i) {
+			if (filters[i].id == LZMA_FILTER_RISCV) {
+				xfi->min_version = 50060002U;
+				break;
+			}
+		}
+	}
+
 	if (xfi->min_version < 50040002U) {
 		for (size_t i = 0; filters[i].id != LZMA_VLI_UNKNOWN; ++i) {
 			if (filters[i].id == LZMA_FILTER_ARM64) {
@@ -578,7 +591,8 @@ parse_block_header(file_pair *pair, const lzma_index_iter *iter,
 
 	// Check if the stringification succeeded.
 	if (str_ret != LZMA_OK) {
-		message_error(_("%s: %s"), pair->src_name,
+		message_error(_("%s: %s"),
+				tuklib_mask_nonprint(pair->src_name),
 				message_strm(str_ret));
 		return true;
 	}
@@ -587,7 +601,8 @@ parse_block_header(file_pair *pair, const lzma_index_iter *iter,
 
 data_error:
 	// Show the error message.
-	message_error(_("%s: %s"), pair->src_name,
+	message_error(_("%s: %s"),
+			tuklib_mask_nonprint(pair->src_name),
 			message_strm(LZMA_DATA_ERROR));
 	return true;
 }
@@ -640,6 +655,8 @@ parse_check_value(file_pair *pair, const lzma_index_iter *iter)
 ///                     be printed.
 /// \param      bhi     Pointer to structure where to store the information
 ///                     about the Block Header field.
+/// \param      xfi     Pointer to structure where to store the information
+///                     about the entire .xz file.
 ///
 /// \return     False on success, true on error. If an error occurs,
 ///             the error message is printed too so the caller doesn't
@@ -735,7 +752,7 @@ print_info_basic(const xz_file_info *xfi, file_pair *pair)
 	char checks[CHECKS_STR_SIZE];
 	get_check_names(checks, lzma_index_checks(xfi->idx), false);
 
-	const char *cols[7] = {
+	const char *cols[6] = {
 		uint64_to_str(lzma_index_stream_count(xfi->idx), 0),
 		uint64_to_str(lzma_index_block_count(xfi->idx), 1),
 		uint64_to_nicestr(lzma_index_file_size(xfi->idx),
@@ -745,7 +762,6 @@ print_info_basic(const xz_file_info *xfi, file_pair *pair)
 		get_ratio(lzma_index_file_size(xfi->idx),
 			lzma_index_uncompressed_size(xfi->idx)),
 		checks,
-		pair->src_name,
 	};
 	printf("%*s %*s  %*s  %*s  %*s  %-*s %s\n",
 			tuklib_mbstr_fw(cols[0], 5), cols[0],
@@ -754,7 +770,7 @@ print_info_basic(const xz_file_info *xfi, file_pair *pair)
 			tuklib_mbstr_fw(cols[3], 11), cols[3],
 			tuklib_mbstr_fw(cols[4], 5), cols[4],
 			tuklib_mbstr_fw(cols[5], 7), cols[5],
-			cols[6]);
+			tuklib_mask_nonprint(pair->src_name));
 
 	return false;
 }
@@ -1025,7 +1041,7 @@ print_info_adv(xz_file_info *xfi, file_pair *pair)
 		printf("  %-*s %s\n", COLON_STR(COLON_STR_SIZES_IN_HEADERS),
 				xfi->all_have_sizes ? _("Yes") : _("No"));
 		//printf("  %-*s %s\n", COLON_STR(COLON_STR_MINIMUM_XZ_VERSION),
-		printf(_("  Minimum XZ Utils version: %s\n"),
+		printf("  %s %s\n", _("Minimum XZ Utils version:"),
 				xz_ver_to_str(xfi->min_version));
 	}
 
@@ -1039,7 +1055,11 @@ print_info_robot(xz_file_info *xfi, file_pair *pair)
 	char checks[CHECKS_STR_SIZE];
 	get_check_names(checks, lzma_index_checks(xfi->idx), false);
 
-	printf("name\t%s\n", pair->src_name);
+	// Robot mode has to mask at least some control chars to prevent
+	// the output from getting out of sync if filename is malicious.
+	// Masking all non-printable chars is more than we need but
+	// perhaps this is good enough in practice.
+	printf("name\t%s\n", tuklib_mask_nonprint(pair->src_name));
 
 	printf("file\t%" PRIu64 "\t%" PRIu64 "\t%" PRIu64 "\t%" PRIu64
 			"\t%s\t%s\t%" PRIu64 "\n",
@@ -1169,6 +1189,10 @@ print_totals_basic(void)
 				totals.uncompressed_size),
 			checks);
 
+#if defined(__sun) && (defined(__GNUC__) || defined(__clang__))
+#	pragma GCC diagnostic push
+#	pragma GCC diagnostic ignored "-Wformat-nonliteral"
+#endif
 	// Since we print totals only when there are at least two files,
 	// the English message will always use "%s files". But some other
 	// languages need different forms for different plurals so we
@@ -1180,6 +1204,9 @@ print_totals_basic(void)
 			totals.files <= ULONG_MAX ? totals.files
 				: (totals.files % 1000000) + 1000000),
 			uint64_to_str(totals.files, 0));
+#if defined(__sun) && (defined(__GNUC__) || defined(__clang__))
+#	pragma GCC diagnostic pop
+#endif
 
 	return;
 }
@@ -1203,7 +1230,7 @@ print_totals_adv(void)
 		printf("  %-*s %s\n", COLON_STR(COLON_STR_SIZES_IN_HEADERS),
 				totals.all_have_sizes ? _("Yes") : _("No"));
 		//printf("  %-*s %s\n", COLON_STR(COLON_STR_MINIMUM_XZ_VERSION),
-		printf(_("  Minimum XZ Utils version: %s\n"),
+		printf("  %s %s\n", _("Minimum XZ Utils version:"),
 				xz_ver_to_str(totals.min_version));
 	}
 
@@ -1266,9 +1293,21 @@ list_totals(void)
 extern void
 list_file(const char *filename)
 {
-	if (opt_format != FORMAT_XZ && opt_format != FORMAT_AUTO)
-		message_fatal(_("--list works only on .xz files "
+	if (opt_format != FORMAT_XZ && opt_format != FORMAT_AUTO) {
+		// The 'lzmainfo' message is printed only when --format=lzma
+		// is used (it is implied if using "lzma" as the command
+		// name). Thus instead of using message_fatal(), print
+		// the messages separately and then call tuklib_exit()
+		// like message_fatal() does.
+		message(V_ERROR, _("--list works only on .xz files "
 				"(--format=xz or --format=auto)"));
+
+		if (opt_format == FORMAT_LZMA)
+			message(V_ERROR,
+				_("Try 'lzmainfo' with .lzma files."));
+
+		tuklib_exit(E_ERROR, E_ERROR, false);
+	}
 
 	message_filename(filename);
 

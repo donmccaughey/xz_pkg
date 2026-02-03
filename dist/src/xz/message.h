@@ -1,12 +1,11 @@
+// SPDX-License-Identifier: 0BSD
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 /// \file       message.h
 /// \brief      Printing messages to stderr
 //
 //  Author:     Lasse Collin
-//
-//  This file has been put into the public domain.
-//  You can do whatever you want with this file.
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -24,7 +23,10 @@ enum message_verbosity {
 extern const int message_progress_sigs[];
 
 
-/// \brief      Initializes the message functions
+/// \brief      Initializes the progress message functions
+///
+/// message_fatal() and such can be called even before message_init()
+/// has been called.
 ///
 /// If an error occurs, this function doesn't return.
 ///
@@ -111,6 +113,12 @@ tuklib_attr_noreturn
 extern void message_help(bool long_help);
 
 
+/// Prints a help message specifically for using the --filters and
+/// --filtersX command line options.
+tuklib_attr_noreturn
+extern void message_filters_help(void);
+
+
 /// \brief      Set the total number of files to be processed
 ///
 /// Standard input is counted as a file here. This is used when printing
@@ -136,6 +144,10 @@ extern void message_filename(const char *src_name);
 /// given *strm becomes invalid.
 ///
 /// \param      strm      Pointer to lzma_stream used for the coding.
+/// \param      is_passthru
+///                       If true, we are copying input to output without
+///                       encoding or decoding, and thus cannot use
+///                       lzma_get_progress().
 /// \param      in_size   Size of the input file, or zero if unknown.
 ///
 extern void message_progress_start(lzma_stream *strm,

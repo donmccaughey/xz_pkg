@@ -1,12 +1,12 @@
+// SPDX-License-Identifier: 0BSD
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 /// \file       args.h
 /// \brief      Argument parsing
 //
-//  Author:     Lasse Collin
-//
-//  This file has been put into the public domain.
-//  You can do whatever you want with this file.
+//  Authors:    Lasse Collin
+//              Jia Tan
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -34,7 +34,7 @@ typedef struct {
 extern bool opt_stdout;
 extern bool opt_force;
 extern bool opt_keep_original;
-// extern bool opt_recursive;
+extern bool opt_synchronous;
 extern bool opt_robot;
 extern bool opt_ignore_check;
 

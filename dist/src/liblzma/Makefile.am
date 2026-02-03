@@ -1,9 +1,5 @@
-##
+## SPDX-License-Identifier: 0BSD
 ## Author: Lasse Collin
-##
-## This file has been put into the public domain.
-## You can do whatever you want with this file.
-##
 
 SUBDIRS = api
 
@@ -24,15 +20,17 @@ liblzma_la_CPPFLAGS = \
 	-I$(top_srcdir)/src/liblzma/simple \
 	-I$(top_srcdir)/src/common \
 	-DTUKLIB_SYMBOL_PREFIX=lzma_
-liblzma_la_LDFLAGS = -no-undefined -version-info 9:5:4
+liblzma_la_LDFLAGS = -no-undefined -version-info 13:2:8
 
 EXTRA_DIST += liblzma_generic.map liblzma_linux.map validate_map.sh
 if COND_SYMVERS_GENERIC
 liblzma_la_LDFLAGS += \
+	$(LINKER_FLAG_UNDEFINED_VERSION) \
 	-Wl,--version-script=$(top_srcdir)/src/liblzma/liblzma_generic.map
 endif
 if COND_SYMVERS_LINUX
 liblzma_la_LDFLAGS += \
+	$(LINKER_FLAG_UNDEFINED_VERSION) \
 	-Wl,--version-script=$(top_srcdir)/src/liblzma/liblzma_linux.map
 endif
 

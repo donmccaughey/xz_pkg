@@ -1,27 +1,11 @@
-XZ Utils 5.4.5 for macOS
+XZ Utils 5.8.2 for macOS
 ========================
 
 This project builds a signed universal macOS installer package for [XZ
 Utils][1], a general-purpose data compression tool and library.  It contains
-the source distribution for XZ Utils 5.4.5.
+the source distribution for XZ Utils 5.8.2.
 
 [1]: http://tukaani.org/xz/ "XZ Utils"
-
-## Security Note
-
-XZ Utils versions 5.6.0 and 5.6.1 appear to have been compromised by the
-injection of malicious changes in the source code combined with a malicious
-build script added into the distributed tarballs.  For more information, see
-[this email to the oss-security][email] mailing list, this [Red Hat blog post][redhat] and [CVE-2024-3094][cve].
-
-[email]: https://openwall.com/lists/oss-security/2024/03/29/4
-[redhat]: https://www.redhat.com/en/blog/urgent-security-alert-fedora-41-and-rawhide-users
-[cve]: https://www.cve.org/CVERecord?id=CVE-2024-3094
-
-Currently (2024-03-29) this exploit appears to only be present in the 5.6.0 and
-5.6.1 releases and only targets x86 Linux systems running `glibc`, `sshd` and
-`systemd`.  It does not appear to be present in earlier versions of XZ Utils
-nor does it appear to affect macOS systems.
 
 ## Prerequesites
 
@@ -62,7 +46,7 @@ To build and sign the executable and installer, run:
         $ make [APP_SIGNING_ID="<cert name 1>"] [INSTALLER_SIGNING_ID="<cert name 2>"] [TMP="<build dir>"]
 
 Intermediate files are generated in the temp directory; the signed installer 
-package is written into the project root with the name `xz-5.4.5.pkg`.  
+package is written into the project root with the name `xz-5.8.2.pkg`.  
 
 To notarize the signed installer package, run:
 
@@ -73,7 +57,7 @@ success.  Check the file `$(TMP)/notarization-log.json` for detailed
 information if notarization fails.  The signed installer is stapled in place
 if notarization succeeds.  Use the command:
 
-        $ xcrun stapler validate --verbose xz-5.4.5.pkg
+        $ xcrun stapler validate --verbose xz-5.8.2.pkg
 
 to check the notarization state of the installer package.
 

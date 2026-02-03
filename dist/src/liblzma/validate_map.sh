@@ -1,4 +1,5 @@
 #!/bin/sh
+# SPDX-License-Identifier: 0BSD
 
 ###############################################################################
 #
@@ -78,9 +79,6 @@
 #
 # Author: Lasse Collin
 #
-# This file has been put into the public domain.
-# You can do whatever you want with this file.
-#
 ###############################################################################
 
 LC_ALL=C
@@ -88,7 +86,7 @@ export LC_ALL
 
 STATUS=0
 
-cd "$(dirname "$0")"
+cd "$(dirname "$0")" || exit 1
 
 # Get the list of symbols that aren't defined in liblzma_generic.map.
 SYMS=$(sed -n 's/^extern LZMA_API([^)]*) \([a-z0-9_]*\)(.*$/\1;/p' \
@@ -97,7 +95,7 @@ SYMS=$(sed -n 's/^extern LZMA_API([^)]*) \([a-z0-9_]*\)(.*$/\1;/p' \
 	| grep -Fve "$(sed '/[{}:*]/d;/^$/d;s/^	//' liblzma_generic.map)")
 
 # Check that there are no old alpha or beta versions listed.
-VER=$(cd ../.. && sh build-aux/version.sh)
+VER=$(cd ../.. && sh build-aux/version.sh) || exit 1
 NAMES=
 case $VER in
 	*alpha | *beta)
@@ -124,7 +122,7 @@ DUPS=$(sort liblzma_generic.map | sed '/^$/d;/^global:$/d' | uniq -d)
 # ignored (@XZ_5.1.2alpha or @XZ_5.2.2 won't be added at all when
 # the #define HAVE_SYMBOL_VERSIONS_LINUX isn't used).
 IN_SYNC=
-if ! sed '109,123d' liblzma_linux.map \
+if ! sed '111,125d' liblzma_linux.map \
 		| cmp -s - liblzma_generic.map; then
 	IN_SYNC=no
 fi

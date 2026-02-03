@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: 0BSD
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 /// \file       test_block_header.c
@@ -5,9 +7,6 @@
 //
 //  Authors:    Lasse Collin
 //              Jia Tan
-//
-//  This file has been put into the public domain.
-//  You can do whatever you want with this file.
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -28,7 +27,7 @@ do { \
 	memzero(&(block), sizeof(lzma_block)); \
 	(block).filters = filters_; \
 	(block).check = LZMA_CHECK_CRC32; \
-} while (0);
+} while (0)
 
 
 #ifdef HAVE_ENCODERS
@@ -320,7 +319,7 @@ test_lzma_block_header_encode(void)
 	uint8_t flags = out[1];
 
 	// Should have number of filters = 1
-	assert_uint_eq((flags & 0x3) + 1, 1);
+	assert_uint_eq((flags & 0x3) + 1U, 1);
 
 	// Bits 2-7 must be empty not set
 	assert_uint_eq(flags & (0xFF - 0x3), 0);
