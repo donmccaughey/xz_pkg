@@ -11,23 +11,25 @@ the source distribution for XZ Utils 5.8.2.
 
 A recent version of Xcode and the [`jq`][2] command are needed to build and
 notarize this installer package.  An [Apple Developer][3] account is required
-to generate the credentials needed to sign and notarize.
+to generate the credentials needed to sign and notarize.  The [GitHub CLI][4] is
+used to publish package releases to GitHub.
 
 [2]: https://stedolan.github.io/jq/
 [3]: https://developer.apple.com
+[4]: https://cli.github.com/
 
 ## Building
 
-The [`Makefile`][4] in the project root directory builds the installer package.
+The [`Makefile`][5] in the project root directory builds the installer package.
 The following makefile variables can be set from the command line:
 
 - `APP_SIGNING_ID`: The name of the 
-    [Apple _Developer ID Application_ certificate][5] used to sign the 
+    [Apple _Developer ID Application_ certificate][6] used to sign the 
     `xz` executable.  The certificate must be installed on the build 
     machine's Keychain.  Defaults to "Developer ID Application: Donald 
     McCaughey" if not specified.
 - `INSTALLER_SIGNING_ID`: The name of the 
-    [Apple _Developer ID Installer_ certificate][5] used to sign the 
+    [Apple _Developer ID Installer_ certificate][6] used to sign the 
     installer.  The certificate must be installed on the build machine's
     Keychain.  Defaults to "Developer ID Installer: Donald McCaughey" if 
     not specified.
@@ -38,8 +40,8 @@ The following makefile variables can be set from the command line:
 - `TMP`: The name of the directory for intermediate files.  Defaults to 
     "`./tmp`" if not specified.
 
-[4]: https://github.com/donmccaughey/xz_pkg/blob/master/Makefile
-[5]: https://developer.apple.com/account/resources/certificates/list
+[5]: https://github.com/donmccaughey/xz_pkg/blob/master/Makefile
+[6]: https://developer.apple.com/account/resources/certificates/list
 
 To build and sign the executable and installer, run:
 
@@ -72,11 +74,11 @@ Three sets of credentials are needed to sign and notarize this package:
 - A "Developer ID Installer" certificate (for signing the installer package)
 - An App Store Connect API key (for notarizing the signed installer)
 
-The two certificates are obtained from the [Apple Developer portal][6]; use the 
-[Keychain Access app][7] to create the certificate signing requests.  Add the 
+The two certificates are obtained from the [Apple Developer portal][7]; use the 
+[Keychain Access app][8] to create the certificate signing requests.  Add the 
 certificates to the build machine's Keychain.
 
-The App Store Connect API key is obtained from the [App Store Connect site][8].
+The App Store Connect API key is obtained from the [App Store Connect site][9].
 After the key is created, get the _Issuer ID_ (a UUID), the _Key ID_
 (an alphanumeric string) and download the API key, which comes as a file named
 `AuthKey_<key id>.p8`.  To add the API key to the build machine's Keychain, 
@@ -90,9 +92,9 @@ use the `store-credentials` subcommand of `notarytool`:
 
 The `--sync` option adds the credentials to the user's iCloud Keychain.
 
-[6]: https://developer.apple.com/account/resources/certificates/add
-[7]: https://help.apple.com/developer-account/#/devbfa00fef7
-[8]: https://appstoreconnect.apple.com/access/api
+[7]: https://developer.apple.com/account/resources/certificates/add
+[8]: https://help.apple.com/developer-account/#/devbfa00fef7
+[9]: https://appstoreconnect.apple.com/access/api
 
 ## License
 
@@ -100,4 +102,3 @@ The installer and related scripts are copyright (c) 2023 Don McCaughey.
 Different parts of XZ Utils are distributed under different licenses.  The
 sources for the macOS installer package are distributed under GNU GPLv2.
 See the LICENSE file for details.
-
