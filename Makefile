@@ -32,26 +32,7 @@ clean :
 
 
 .PHONY : check
-check :
-	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/lzmadec)" = "x86_64 arm64"
-	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/lzmainfo)" = "x86_64 arm64"
-	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xz)" = "x86_64 arm64"
-	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xzdec)" = "x86_64 arm64"
-	test "$(shell lipo -archs $(TMP)/install/usr/local/lib/liblzma.a)" = "x86_64 arm64"
-	test "$(shell lipo -archs $(TMP)/install/usr/local/lib/liblzma.5.dylib)" = "x86_64 arm64"
-	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/lzmadec) dylibs" = "0 dylibs"
-	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/lzmainfo) dylibs" = "0 dylibs"
-	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/xz) dylibs" = "0 dylibs"
-	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/xzdec) dylibs" = "0 dylibs"
-	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmadec
-	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmainfo
-	codesign --verify --strict $(TMP)/install/usr/local/bin/xz
-	codesign --verify --strict $(TMP)/install/usr/local/bin/xzdec
-	codesign --verify --strict $(TMP)/install/usr/local/lib/liblzma.a
-	codesign --verify --strict $(TMP)/install/usr/local/lib/liblzma.5.dylib
-	pkgutil --check-signature xz-$(ver).pkg
-	spctl --assess --type install xz-$(ver).pkg
-	xcrun stapler validate xz-$(ver).pkg
+check : $(TMP)/checked-package.stamp.txt
 
 
 ##### compilation flags ##########
@@ -275,3 +256,24 @@ $(TMP)/notarized.stamp.txt : $(TMP)/notarization-log.json | $$(dir $$@)
 xz-$(ver).pkg : $(TMP)/xz-$(ver)-unnotarized.pkg $(TMP)/notarized.stamp.txt
 	cp $< $@
 	xcrun stapler staple $@
+
+$(TMP)/checked-package.stamp.txt : xz-$(ver).pkg
+	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/lzmadec)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/lzmainfo)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xz)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/bin/xzdec)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/lib/liblzma.a)" = "x86_64 arm64"
+	test "$(shell lipo -archs $(TMP)/install/usr/local/lib/liblzma.5.dylib)" = "x86_64 arm64"
+	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/lzmadec) dylibs" = "0 dylibs"
+	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/lzmainfo) dylibs" = "0 dylibs"
+	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/xz) dylibs" = "0 dylibs"
+	test "$(shell ./tools/dylibs --no-sys-libs --count $(TMP)/install/usr/local/bin/xzdec) dylibs" = "0 dylibs"
+	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmadec
+	codesign --verify --strict $(TMP)/install/usr/local/bin/lzmainfo
+	codesign --verify --strict $(TMP)/install/usr/local/bin/xz
+	codesign --verify --strict $(TMP)/install/usr/local/bin/xzdec
+	codesign --verify --strict $(TMP)/install/usr/local/lib/liblzma.a
+	codesign --verify --strict $(TMP)/install/usr/local/lib/liblzma.5.dylib
+	pkgutil --check-signature xz-$(ver).pkg
+	spctl --assess --type install xz-$(ver).pkg
+	xcrun stapler validate xz-$(ver).pkg
