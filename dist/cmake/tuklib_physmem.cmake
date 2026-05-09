@@ -101,7 +101,7 @@ function(tuklib_physmem_internal_check)
     if(TUKLIB_PHYSMEM_SYSCTL)
         if(HAVE_SYS_PARAM_H)
             set(TUKLIB_PHYSMEM_DEFINITIONS
-                "HAVE_PARAM_H;TUKLIB_PHYSMEM_SYSCTL"
+                "HAVE_SYS_PARAM_H;TUKLIB_PHYSMEM_SYSCTL"
                 CACHE INTERNAL "")
         else()
             set(TUKLIB_PHYSMEM_DEFINITIONS
