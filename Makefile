@@ -296,7 +296,7 @@ $(TMP)/tagged.stamp.txt : $(TMP)/checked-package.stamp.txt
 
 $(TMP)/released.stamp.txt : $(TMP)/tagged.stamp.txt
 		gh release create $(tag) \
-		    pkg-config-$(ver).pkg \
+		    xz-$(ver).pkg \
 			--draft \
 			--notes "$(tag-message)" \
 			--title "$(tag-title)"
