@@ -281,6 +281,7 @@ $(TMP)/checked-package.stamp.txt : xz-$(ver).pkg
 	pkgutil --check-signature xz-$(ver).pkg
 	spctl --assess --type install xz-$(ver).pkg
 	xcrun stapler validate xz-$(ver).pkg
+	date > $@
 
 
 ##### release ##########
