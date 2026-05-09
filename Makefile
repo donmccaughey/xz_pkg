@@ -301,4 +301,4 @@ $(TMP)/released.stamp.txt : $(TMP)/tagged.stamp.txt
 			--draft \
 			--notes "$(tag-message)" \
 			--title "$(tag-title)"
-		date -> $@
+		date > $@
