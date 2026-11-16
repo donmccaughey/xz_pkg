@@ -209,7 +209,7 @@ Comprimare. Acesta este modul de operare implicit atunci când nu este
 specificată nicio opțiune de mod de funcționare și nici un alt mod de
 operare nu este implicat din numele comenzii (de exemplu, \fBunxz\fP implică
 \fB\-\-decompress\fP).
-.IP ""
+.IP
 .\" The DESCRIPTION section already says this but it's good to repeat it
 .\" here because the default behavior is a bit dangerous and new users
 .\" in a hurry may skip reading the DESCRIPTION section.
@@ -236,7 +236,7 @@ Afișează informații despre \fIfișiere\fP comprimate. Nu are loc nicio
 decomprimare la ieșire și nu sunt create sau eliminate fișiere. În modul
 listă, programul nu poate citi datele comprimate din intrarea standard sau
 din alte surse care nu pot fi explorate.
-.IP ""
+.IP
 Listarea implicită arată informații de bază despre \fIfișiere\fP, câte un
 fișier pe linie. Pentru a obține informații mai detaliate, utilizați și
 opțiunea \fB\-\-verbose\fP. Pentru și mai multe informații, utilizați opțiunea
@@ -245,7 +245,7 @@ deoarece obținerea tuturor informațiilor suplimentare necesită multe
 căutări. Lățimea ieșirii detaliate depășește 80 de caractere, deci
 canalizarea ieșirii către, de exemplu, \fBless\ \-S\fP poate fi convenabilă dacă
 terminalul nu este suficient de lat.
-.IP ""
+.IP
 Ieșirea exactă poate varia între versiunile \fBxz\fP și diferitele
 localizări(configurările regionale). Pentru ieșiri care pot fi citite de
 mașină, ar trebui utilizată opțiunea \fB\-\-robot \-\-list\fP.
@@ -254,7 +254,7 @@ mașină, ar trebui utilizată opțiunea \fB\-\-robot \-\-list\fP.
 .TP 
 \fB\-k\fP, \fB\-\-keep\fP
 Nu șterge fișierele de intrare.
-.IP ""
+.IP
 Începând cu \fBxz\fP 5.2.6, această opțiune face ca \fBxz\fP să comprime sau să
 decomprime, chiar dacă intrarea este o legătură simbolică către un fișier
 obișnuit, are mai mult de\-o legătură dură sau are marcați biții setuid,
@@ -293,14 +293,14 @@ Scrie datele comprimate sau decomprimate la ieșirea standard în loc de
 Decomprimă numai primul flux \fB.xz\fP și ignoră în tăcere posibilele date de
 intrare rămase în urma fluxului. În mod normal, astfel de resturi rămase
 face ca \fBxz\fP să afișeze o eroare.
-.IP ""
+.IP
 \fBxz\fP nu decomprimă niciodată mai mult de un flux din fișierele \fB.lzma\fP sau
 din fluxurile brute, dar această opțiune face ca \fBxz\fP să ignore posibilele
 resturi de date rămase după fișierul \fB.lzma\fP sau fluxul brut.
-.IP ""
+.IP
 Această opțiune nu are efect dacă modul de funcționare nu este
 \fB\-\-decompress\fP sau \fB\-\-test\fP.
-.IP ""
+.IP
 Începând cu \fBxz\fP 5.7.1alpha, \fB\-\-single\-stream\fP implică \fB\-\-keep\fP.
 .TP 
 \fB\-\-no\-sparse\fP
@@ -317,12 +317,12 @@ prin reducerea cantității de date de In/Ieș pe disc.
 Când comprimă, utilizează \fI.suf\fP ca sufix pentru fișierul țintă în loc de
 \&\fB.xz\fP sau \fB.lzma\fP. Dacă nu scrie la ieșirea standard și fișierul sursă are
 deja sufixul \fI.suf\fP, este afișat un avertisment și fișierul este omis.
-.IP ""
+.IP
 Când decomprimă, recunoaște fișierele cu sufixul \fI.suf\fP în plus față de
 fișierele cu sufixul \fB.xz\fP, \fB.txz\fP, \fB.lzma\fP, \fB.tlz\fP sau \fB.lz\fP. Dacă
 fișierul sursă are sufixul \fI.suf\fP, sufixul este eliminat pentru a obține
 numele fișierului țintă.
-.IP ""
+.IP
 La comprimarea sau decomprimarea fluxurilor brute (\fB\-\-format=raw\fP), sufixul
 trebuie să fie întotdeauna specificat, cu excepția cazului în care se scrie
 la ieșirea standard, deoarece nu există un sufix implicit pentru fluxurile
@@ -367,7 +367,7 @@ compatibilitatea cu versiunile mai vechi de LZMA Utils.
 \fBlzip\fP
 Acceptă numai fișierele \fB.lz\fP când decomprimă. Comprimarea nu este
 acceptată.
-.IP ""
+.IP
 Sunt acceptate versiunile 0 și 1 ale formatului \fB.lz\fP. Fișierele versiunii
 0 au fost create cu \fBlzip\fP 1.3 și versiuni mai vechi. Astfel de fișiere nu
 sunt comune, dar pot fi găsite în arhivele de fișiere, deoarece câteva
@@ -391,7 +391,7 @@ datele necomprimate și stocată în fișierul \fB.xz\fP. Această opțiune are 
 numai la comprimarea în format \fB.xz\fP; formatul \fB.lzma\fP nu acceptă
 verificări de integritate. Verificarea integrității (dacă există) este
 efectuată atunci când fișierul \fB.xz\fP este decomprimat.
-.IP ""
+.IP
 Tipuri de \fIverificare\fP acceptate:
 .RS
 .TP 
@@ -414,7 +414,7 @@ deteriorate, iar diferența de viteză este neglijabilă.
 \fBsha256\fP
 Calculează SHA\-256. Acest lucru este oarecum mai lent decât CRC32 și CRC64.
 .RE
-.IP ""
+.IP
 Integritatea antetelor \fB.xz\fP este întotdeauna verificată cu CRC32. Nu este
 posibilă modificarea sau dezactivarea acesteia.
 .TP 
@@ -422,7 +422,7 @@ posibilă modificarea sau dezactivarea acesteia.
 Nu efectuează verificarea integrității datelor comprimate la
 decomprimare. Valorile CRC32 din antetele \fB.xz\fP vor fi însă verificate
 normal.
-.IP ""
+.IP
 \fBNu utilizați această opțiune decât dacă știți ce faceți\fP. Motive posibile
 pentru a utiliza această opțiune:
 .RS
@@ -441,7 +441,7 @@ Selectează un nivel prestabilit de comprimare. Valoarea implicită este
 efect. Dacă a fost deja specificat un lanț de filtre personalizat,
 specificarea unui nivel prestabilit de comprimare șterge lanțul de filtre
 personalizat.
-.IP ""
+.IP
 Diferențele dintre valorile prestabilite sunt mai semnificative decât cu
 \fBgzip\fP(1) și \fBbzip2\fP(1). Valorile de comprimare selectate determină
 cerințele de memorie ale instrumentului de decomprimare, astfel încât
@@ -472,15 +472,14 @@ Acestea sunt precum \fB\-6\fP, dar cu cerințe mai mari de memorie pentru
 comprimare și decomprimare. Acestea sunt utile numai atunci când comprimați
 fișiere mai mari de 8Mio, 16Mio și, respectiv, 32Mio.
 .RE
-.IP ""
+.IP
 Pe același hardware, viteza de decomprimare este aproximativ un număr
 constant de octeți de date comprimate pe secundă. Cu alte cuvinte, cu cât
 comprimarea este mai bună, cu atât decomprimarea va fi de obicei mai
 rapidă. Aceasta înseamnă, de asemenea, că valoarea de la ieșire a cantității
 de date necomprimate produsă pe secundă poate varia foarte mult.
-.IP ""
+.IP
 Următorul tabel rezumă caracteristicile valorilor prestabilite:
-.RS
 .RS
 .PP
 .TS
@@ -500,8 +499,7 @@ ValPrestab;DimDict;CPUComp;MemComp;MemDec
 \-9;64 MiB;6;674 MiB;65 MiB
 .TE
 .RE
-.RE
-.IP ""
+.IP
 Descrieri coloane:
 .RS
 .IP \(bu 3
@@ -528,7 +526,7 @@ decomprimării. Cantitatea exactă a memoriei utilizate la decomprimare este
 puțin mai mare decât dimensiunea dicționarului LZMA2, dar valorile din tabel
 au fost rotunjite la următorul Mio.
 .RE
-.IP ""
+.IP
 Cerințele de memorie ale modului cu mai multe fire de execuție sunt
 semnificativ mai mari decât cele ale modului cu un singur fir de
 execuție. Cu valoarea implicită a lui \fB\-\-block\-size\fP, fiecare fir are
@@ -542,12 +540,11 @@ selectat (\fB\-0\fP ... \fB\-9\fP) pentru a obține un raport de comprimare puț
 bun, dar din nefericire, acest lucru îl poate înrăutăți. Utilizarea memoriei
 pentru decomprimare nu este afectată, dar utilizarea memoriei la comprimare
 crește puțin la nivelurile prestabilite \fB\-0\fP ... \fB\-3\fP.
-.IP ""
+.IP
 Deoarece există două valori prestabilite cu dimensiuni ale dicționarului de
 4Mio și 8Mio, valorile prestabilite \fB\-3e\fP și \fB\-5e\fP folosesc configurări
 puțin mai rapide (CPUComp mai mic) decât \fB\-4e\fP și \fB\-6e\fP, respectiv. În
 acest fel, nu există două nivele prestabilite identice.
-.RS
 .RS
 .PP
 .TS
@@ -567,8 +564,7 @@ ValPrestab;DimDict;CPUComp;MemComp;MemDec
 \-9e;64 MiB;8;674 MiB;65 MiB
 .TE
 .RE
-.RE
-.IP ""
+.IP
 De exemplu, există un total de patru nivele prestabilite care folosesc
 dicționarul 8Mio, a căror ordine de la cel mai rapid la cel mai lent este
 \fB\-5\fP, \fB\-6\fP, \fB\-5e\fP și \fB\-6e\fP .
@@ -590,7 +586,7 @@ posibilă decomprimarea cu acces aleatoriu limitat. Această opțiune este de
 obicei folosită pentru a suprascrie dimensiunea implicită a blocului în
 modul cu mai multe fire de execuție, dar această opțiune poate fi folosită
 și în modul cu un singur fir de execuție.
-.IP ""
+.IP
 În modul cu mai multe fire de execuție, aproximativ de trei ori
 \fIdimensiunea\fP de octeți vor fi alocați în fiecare fir pentru stocarea
 intrării și ieșirii. \fIDimensiunea\fP implicită este de trei ori dimensiunea
@@ -602,7 +598,7 @@ atunci memoria tampon a dicționarului LZMA2 nu va fi niciodată utilizată pe
 deplin. În modul cu mai multe fire de execuție, dimensiunile blocurilor sunt
 stocate în anteturile blocurilor. Aceste informații privind dimensiunea sunt
 necesare pentru decomprimarea cu mai multe fire.
-.IP ""
+.IP
 În modul cu un singur fir de execuție, nicio divizare a blocurilor nu se
 face în mod implicit. Folosirea acestei opțiuni nu afectează utilizarea
 memoriei. Nu sunt stocate informații despre dimensiune în antetele
@@ -615,20 +611,20 @@ execuție.
 \fB\-\-block\-list=\fP\fIelemente\fP
 Când comprimă în formatul \fB.xz\fP, începe un nou bloc cu un lanț de filtre
 personalizat opțional după intervalele specificate de date necomprimate.
-.IP ""
+.IP
 \fIelementele\fP sunt o listă separată prin virgule. Fiecare element este
 format dintr\-un număr opțional de lanț de filtrare între 0 și 9, urmat de
 două puncte (\fB:\fP) și de o dimensiune cerută a datelor
 necomprimate. Omiterea unui element (două sau mai multe virgule consecutive)
 este o prescurtare pentru a utiliza dimensiunea și filtrele din elementul
 anterior.
-.IP ""
+.IP
 În cazul în care fișierul de intrare este mai mare decât suma dimensiunilor
 din \fIelemente\fP, ultimul element se repetă până la sfârșitul fișierului. O
 valoare specială de \fB0\fP poate fi utilizată ca ultimă dimensiune pentru a
 indica faptul că restul fișierului trebuie să fie codificat ca un singur
 bloc.
-.IP ""
+.IP
 Un lanț de filtre alternativ pentru fiecare bloc poate fi specificat în
 combinație cu opțiunile \fB\-\-filters1=\fP\fIfiltre\fP \&...\&
 \fB\-\-filters9=\fP\fIfiltre\fP. Aceste opțiuni definesc lanțuri de filtre cu un
@@ -654,7 +650,7 @@ Lanțul de filtre implicit și 2 MiB de intrare
 Lanțul de filtre implicit și 4 MiB de intrare pentru fiecare bloc până la
 sfârșitul intrării.
 .RE
-.IP ""
+.IP
 Dacă se specifică o dimensiune care depășește dimensiunea blocului
 codificatorului (fie valoarea implicită în modul cu fire de execuție, fie
 valoarea specificată cu \fB\-\-block\-size=\fP\fIdimensiune\fP), codificatorul va
@@ -663,7 +659,7 @@ exemplu, dacă se specifică \fB\-\-block\-size=10MiB\fP
 \fB\-\-block\-list=5MiB,10MiB,8MiB,12MiB,24MiB\fP și fișierul de intrare este de
 80 MiB, se vor obține 11 blocuri: 5, 10, 8, 10, 10, 2, 10, 10, 10, 4, 10,
 10, 10 și 1 Mio.
-.IP ""
+.IP
 În modul cu mai multe fire de execuție, dimensiunile blocurilor sunt stocate
 în antetele blocurilor. Acest lucru nu se face în modul cu un singur fir de
 execuție, astfel încât ieșirea codificată nu va fi identică cu cea a modului
@@ -678,14 +674,14 @@ fie util dacă \fBxz\fP este utilizat pentru a comprima datele care sunt
 transmise în flux printr\-o rețea. Valorile mici de \fItimp_limită\fP fac datele
 disponibile la capătul de recepție cu o mică întârziere, dar valorile mari
 de \fItimp_limită\fP oferă un raport de comprimare mai bun.
-.IP ""
+.IP
 Această caracteristică este dezactivată în mod implicit. Dacă această
 opțiune este specificată de mai multe ori, ultima este cea care se ia în
 considerare. Valoarea specială a lui \fItimp_limită\fP de \fB0\fP, poate fi
 utilizată pentru a dezactiva în mod explicit această caracteristică.
-.IP ""
+.IP
 Această caracteristică nu este disponibilă în sistemele non\-POSIX.
-.IP ""
+.IP
 .\" FIXME
 \fBAceastă caracteristică este încă experimentală\fP. În prezent, \fBxz\fP este
 nepotrivit pentru decomprimarea fluxului în timp real datorită modului în
@@ -699,16 +695,16 @@ toate acestea, dacă sistemul se blochează imediat după ștergere, este
 posibil ca fișierul țintă să nu fi fost scris pe dispozitivul de stocare,
 dar operația de ștergere să fi fost. În acest caz, nici fișierul sursă
 original, nici fișierul țintă nu sunt disponibile.
-.IP ""
+.IP
 Această opțiune are efect numai atunci când \fBxz\fP urmează să elimine
 fișierul sursă. În alte cazuri, sincronizarea nu se face niciodată.
-.IP ""
+.IP
 Sincronizarea și \fB\-\-no\-sync\fP au fost adăugate în \fBxz\fP 5.7.1alpha.
 .TP 
 \fB\-\-memlimit\-compress=\fP\fIlimita\fP
 Stabilește o limită de utilizare a memoriei pentru comprimare. Dacă această
 opțiune este specificată de mai multe ori, ultima va avea efect.
-.IP ""
+.IP
 Dacă parametrii de comprimare depășesc \fIlimita\fP, \fBxz\fP va încerca să
 ajusteze parametrii scăzând valorile acestora, astfel încât limita să nu mai
 fie depășită și va afișa o notificare că ajustarea automată a fost
@@ -716,14 +712,14 @@ efectuată. Ajustările se fac în această ordine: reducerea numărului de fire
 trecerea la modul un singur fir de execuție dacă chiar și un singur fir în
 modul cu mai multe fire de execuție depășește \fIlimita\fP și, în final,
 reducerea dimensiunii dicționarului LZMA2.
-.IP ""
+.IP
 Când comprimă cu opțiunea \fB\-\-format=raw\fP sau dacă a fost specificată
 opțiunea \fB\-\-no\-adjust\fP, numai numărul de fire poate fi redus, deoarece se
 poate face fără a afecta rezultatul comprimării.
-.IP ""
+.IP
 Dacă \fIlimita\fP nu poate fi îndeplinită chiar și cu ajustările descrise mai
 sus, este afișată o eroare și \fBxz\fP va ieși cu starea de ieșire 1.
-.IP ""
+.IP
 \fILimita\fP poate fi specificata în mai multe moduri:
 .RS
 .IP \(bu 3
@@ -741,7 +737,7 @@ sistemele cu mai multă memorie. De exemplu: \fB\-\-memlimit\-compress=70%\fP
 \fB0\fP. În prezent, aceasta este echivalentă cu stabilirea \fIlimitei\fP la
 \fBmax\fP (fără limită de utilizare a memoriei).
 .RE
-.IP ""
+.IP
 Pentru \fBxz\fP pe 32 de biți există un caz special: dacă \fIlimita\fP ar fi peste
 \fB4020MiB\fP, \fIlimita\fP este stabilită la \fB4020MiB\fP.  Pe MIPS32 este
 stabilită în schimb la \fB2000MiB\fP; (valorile \fB0\fP și \fBmax\fP nu sunt afectate
@@ -749,7 +745,7 @@ de acest lucru \-\- o caracteristică similară nu există pentru
 decomprimare). Acest lucru poate fi util atunci când un executabil pe 32 de
 biți are acces la un spațiu de adrese de 4Gio (2Gio pe MIPS32), se speră că
 nu produce daune în alte situații.
-.IP ""
+.IP
 Consultați și secțiunea \fBUtilizarea memoriei\fP.
 .TP 
 \fB\-\-memlimit\-decompress=\fP\fIlimita\fP
@@ -771,12 +767,12 @@ atât modurilor cu un singur fir de execuție, cât și modurilor cu mai multe
 fire de execuție și astfel \fIlimita\fP efectivă pentru modul cu mai multe fire
 de execuție nu va fi niciodată mai mare decât limita stabilită cu opțiunea
 \fB\-\-memlimit\-decompress\fP.
-.IP ""
+.IP
 Spre deosebire de celelalte opțiuni de limită de utilizare a memoriei,
 opțiunea \fB\-\-memlimit\-mt\-decompress=\fP\fIlimita\fP are o \fIlimită\fP implicită
 specifică sistemului. Comanda \fBxz \-\-info\-memory\fP poate fi folosită pentru a
 vedea valoarea curentă.
-.IP ""
+.IP
 Această opțiune și valoarea ei implicită există deoarece, fără nicio limită,
 decomprimarea cu (mai multe) fire de execuție ar putea ajunge să aloce o
 cantitate „nebună” de memorie cu unele fișiere de intrare. Dacă \fIlimita\fP
@@ -787,7 +783,7 @@ adecvate, \fBxz\fP va încerca să utilizeze acea cantitate de memorie chiar și
 cu un număr redus de fire de execuție. Rularea lui \fBxz\fP cu depășirea
 cantității de memorie fizice(RAM) sau a celei de interschimb(swap) nu va
 îmbunătăți performanța de decomprimare.
-.IP ""
+.IP
 Consultați opțiunea \fB\-\-memlimit\-compress=\fP\fIlimita\fP pentru modalități
 posibile de a specifica \fIlimita\fP. Stabilirea \fIlimitei\fP la \fB0\fP
 restabilește \fIlimita\fP la valoarea implicită specifică sistemului.
@@ -806,7 +802,7 @@ să reducă dimensiunea dicționarului LZMA2. Chiar și atunci când această
 opțiune este utilizată, numărul de fire de execuție poate fi redus pentru a
 îndeplini limita de utilizare a memoriei, deoarece aceasta nu va afecta
 comprimarea.
-.IP ""
+.IP
 Ajustarea automată este întotdeauna dezactivată la crearea fluxurilor brute
 (\fB\-\-format=raw\fP).
 .TP 
@@ -818,7 +814,7 @@ poate fi mai mic decât \fInumăr\fP dacă fișierul de intrare nu este suficien
 de mare pentru a trece la modul cu mai multe fire de execuție cu parametrii
 dați, sau dacă folosirea mai multor fire de execuție ar depăși limita de
 utilizare a memoriei.
-.IP ""
+.IP
 Operațiile de comprimare cu un singur fir de execuție și cele cu mai multe
 fire de execuție produc ieșiri diferite. Comprimarea cu un singur fir de
 execuție va oferi cea mai mică dimensiune a fișierului, dar numai ieșirea de
@@ -829,14 +825,14 @@ orice altă valoare, inclusiv \fB0\fP, va determina ca \fBxz\fP să folosească
 comprimarea cu mai multe fire de execuție chiar dacă sistemul acceptă doar
 un fir hardware; (\fBxz\fP 5.2.x folosește modul cu un singur fir de execuție
 în această situație).
-.IP ""
+.IP
 Pentru a utiliza modul cu mai multe fire de execuție cu un singur fir,
 stabiliți \fInumărul\fP la \fB+1\fP. Prefixul \fB+\fP nu are efect cu alte valori
 decât \fB1\fP. O limită de utilizare a memoriei poate face în continuare \fBxz\fP
 să treacă în modul cu un singur fir, cu excepția cazului în care este
 utilizată opțiunea \fB\-\-no\-adjust\fP. Suportul pentru prefixul \fB+\fP a fost
 adăugat în \fBxz\fP 5.4.0.
-.IP ""
+.IP
 Dacă a fost solicitat un număr automat de fire și nu a fost specificată
 nicio limită de utilizare a memoriei, atunci o limită „maleabilă” implicită
 specifică sistemului va fi utilizată pentru a limita eventual numărul de
@@ -846,19 +842,19 @@ niciodată \fBxz\fP să comprime sau să decomprime. Această limită „maleabi
 implicită nu va face \fBxz\fP să treacă de la modul cu mai multe fire de
 execuție la modul cu un singur fir de execuție. Limitele active pot fi
 văzute rulând comanda \fBxz \-\-info\-memory\fP.
-.IP ""
+.IP
 În prezent, singura metodă de procesare cu fire de execuție este împărțirea
 intrării în blocuri și comprimarea lor independent unul de
 celălalt. Dimensiunea implicită a blocului depinde de nivelul de comprimare
 și poate fi înlocuită cu opțiunea \fB\-\-block\-size=\fP\fIdimensiune\fP.
-.IP ""
+.IP
 Decomprimarea cu fire de execuție funcționează numai pe fișierele care
 conțin mai multe blocuri cu informații despre dimensiune în antetele
 blocurilor. Toate fișierele suficient de mari comprimate în modul cu mai
 multe fire de execuție îndeplinesc această condiție, dar fișierele
 comprimate în modul cu un singur fir de execuție nu o îndeplinesc chiar dacă
 a fost folosită opțiunea \fB\-\-block\-size=\fP\fIdimensiune\fP.
-.IP ""
+.IP
 Valoarea implicită pentru \fIfire de execuție\fP este \fB0\fP. În \fBxz\fP 5.4.x și
 mai vechi, valoarea implicită este \fB1\fP.
 .
@@ -922,7 +918,7 @@ opțiuni ca și \fB\-\-extreme\fP.
 \fB\-\-filters1\fP=\fIfiltre\fP ... \fB\-\-filters9\fP=\fIfiltre\fP
 Specifică până la nouă lanțuri de filtre suplimentare care pot fi utilizate
 cu \fB\-\-block\-list\fP.
-.IP ""
+.IP
 De exemplu, atunci când se comprimă o arhivă cu fișiere executabile urmate
 de fișiere text, partea executabilă ar putea utiliza un lanț de filtre cu un
 filtru BCJ, iar partea de text doar filtrul LZMA2.
@@ -939,13 +935,13 @@ Afișează un mesaj de ajutor care descrie modul de specificare a presetărilor
 .PD
 Adaugă filtrul LZMA1 sau LZMA2 la lanțul de filtre. Aceste filtre pot fi
 folosite doar ca ultimul filtru din lanț.
-.IP ""
+.IP
 LZMA1 este un filtru vechi, care este acceptat aproape exclusiv datorită
 formatului de fișier vechi \fB.lzma\fP, care acceptă numai LZMA1. LZMA2 este o
 versiune actualizată a LZMA1 pentru a rezolva unele probleme practice ale
 LZMA1. Formatul \fB.xz\fP folosește LZMA2 și nu acceptă deloc LZMA1. Viteza de
 comprimare și rapoartele LZMA1 și LZMA2 sunt practic aceleași.
-.IP ""
+.IP
 LZMA1 și LZMA2 au același set de \fIopțiuni\fP:
 .RS
 .TP 
@@ -973,12 +969,12 @@ datele aflate în prezent în dicționar. Cu cât dicționarul este mai mare, cu
 atât este mai mare șansa de a găsi o potrivire. Astfel, creșterea
 \fIdimensiunii\fP dicționarului îmbunătățește de obicei raportul de comprimare,
 dar un dicționar mai mare decât fișierul necomprimat este risipă de memorie.
-.IP ""
+.IP
 \fIDimensiunea\fPtipică a dicționarului este de la 64Kio până la 64Mio. Minimul
 este de 4Kio. Maximul pentru compresie este în prezent de 1,5Gio
 (1536Mio). Decomprimarea acceptă deja dicționare cu până la un octet mai
 puțin de 4Gio, care este maximul pentru formatele de flux LZMA1 și LZMA2.
-.IP ""
+.IP
 \fIDimensiunea\fP dicționarului și găsitorul de potriviri (match finder) →
 (\fImf\fP) determină împreună utilizarea memoriei de către codificatorul LZMA1
 sau LZMA2. Aceeași \fIdimensiune\fP a dicționarului (sau mai mare) care a fost
@@ -994,11 +990,11 @@ aceste \fIdimensiuni\fP sunt oarecum preferate pentru comprimare. Alte
 Specifică numărul de biți de context literal. Minimul este 0 și maximul este
 4; implicit este 3.  În plus, suma \fIlc\fP și \fIlp\fP nu trebuie să depășească
 4.
-.IP ""
+.IP
 Toți octeții care nu pot fi codificați ca potriviri sunt codificați ca
 literali. Adică, literalii sunt pur și simplu octeți de 8 biți care sunt
 codificați unul câte unul.
-.IP ""
+.IP
 Codificarea literală presupune că cei mai mari biți \fIlc\fP ai octetului
 anterior necomprimat se corelează cu octetul următor. De exemplu, în textul
 tipic englezesc, o literă mare este adesea urmată de o literă mică, iar o
@@ -1006,7 +1002,7 @@ literă mică este urmată de obicei de o altă literă mică. În setul de
 caractere US\-ASCII, cei mai mari trei biți sunt 010 pentru literele mari și
 011 pentru literele mici. Când \fIlc\fP este cel puțin 3, codificarea literală
 poate profita de această proprietate în datele necomprimate.
-.IP ""
+.IP
 Valoarea implicită (3) este de obicei bună. Dacă doriți o comprimare maximă,
 testați \fBlc=4\fP. Uneori ajută puțin, iar uneori înrăutățește comprimarea
 \&. Dacă o agravează, încercați de\-asemeni cu \fBlc=2\fP.
@@ -1014,7 +1010,7 @@ testați \fBlc=4\fP. Uneori ajută puțin, iar uneori înrăutățește comprima
 \fBlp=\fP\fIlp\fP
 Specifică numărul de biți de poziție literală. Minimul este 0 și maximul
 este 4; implicit este 0.
-.IP ""
+.IP
 \fILp\fP afectează ce fel de aliniere în datele necomprimate este presupusă la
 codificarea literalelor. Consultați argumentul \fIpb\fP de mai jos pentru mai
 multe informații despre aliniere.
@@ -1022,19 +1018,19 @@ multe informații despre aliniere.
 \fBpb=\fP\fIpb\fP
 Specifică numărul de biți de poziție. Minimul este 0 și maximul este 4;
 implicit este 2.
-.IP ""
+.IP
 \fIPb\fP afectează ce fel de aliniere în datele necomprimate este presupusă în
 general. Valoarea implicită înseamnă alinierea pe patru octeți
 (2^\fIpb\fP=2^2=4), care este adesea o alegere bună atunci când nu există o
 ipoteză mai bună.
-.IP ""
+.IP
 Când alinierea este cunoscută, definirea lui \fIpb\fP în mod corespunzător
 poate reduce puțin dimensiunea fișierului. De exemplu, cu fișierele text cu
 aliniere pe un octet (US\-ASCII, ISO\-8859\-*, UTF\-8), definirea \fBpb=0\fP poate
 îmbunătăți ușor comprimarea. Pentru textul UTF\-16, \fBpb=1\fP este o alegere
 bună. Dacă alinierea este un număr impar, cum ar fi 3 octeți, \fBpb=0\fP ar
 putea fi cea mai bună alegere.
-.IP ""
+.IP
 Chiar dacă alinierea presupusă poate fi ajustată cu \fIpb\fP și \fIlp\fP, LZMA1 și
 LZMA2 încă favorizează ușor alinierea pe 16 octeți. Ar putea fi demn de luat
 în considerare atunci când proiectați formate de fișiere care pot fi adesea
@@ -1046,7 +1042,7 @@ utilizării memoriei și raportului de comprimare. De obicei, găsitorii de
 potriviri din lanțul sumelor de control sunt mai rapizi decât găsitorii de
 potriviri din arborele binar. Valoarea implicită depinde de \fIprestabilit\fP:
 0 folosește \fBhc3\fP, 1\(en3 folosește \fBhc4\fP, iar restul folosește \fBbt4\fP.
-.IP ""
+.IP
 Sunt acceptate următoarele opțiuni de căutare de potriviri. Formulele de
 utilizare a memoriei de mai jos sunt aproximări estimative, care se apropie
 cel mai mult de realitate atunci când \fIdict\fP este o putere a lui doi.
@@ -1109,7 +1105,7 @@ Comprimarea \fImod\fP specifică metoda de analiză a datelor produse de
 găsitorul de potriviri. \fIModurile\fP acceptate sunt \fBfast\fP(rapid) și
 \fBnormal\fP. Valoarea implicită este \fBfast\fP pentru \fIprestabiliri\fP 0\(en3 și
 \fBnormal\fP pentru \fIprestabiliri\fP 4\(en9.
-.IP ""
+.IP
 De obicei, \fBfast\fP este folosit cu instrumentele de căutare de potriviri ale
 lanțului de sume de control, și \fBnormal\fP cu instrumentele de căutare de
 potriviri din arborele binar. Aceasta este și ceea ce fac \fIprestabiririle\fP.
@@ -1118,7 +1114,7 @@ potriviri din arborele binar. Aceasta este și ceea ce fac \fIprestabiririle\fP.
 Specifică ceea ce este considerat a fi o lungime bună(nice) pentru o
 potrivire. Odată ce este găsită o potrivire de cel puțin \fInice\fP octeți,
 algoritmul nu mai caută după potriviri posibile mai bune.
-.IP ""
+.IP
 \fINice\fP poate fi de 2\(en273 octeți. Valorile mai mari tind să ofere un
 raport de comprimare mai bun în detrimentul vitezei. Valoarea implicită
 depinde de \fIprestabilit\fP.
@@ -1128,7 +1124,7 @@ Specifică adâncimea maximă de căutare în găsitorul de potriviri. Valoarea
 implicită este valoarea specială de 0, ceea ce face ca instrumentul de
 comprimare să determine o \fIadâncime\fP rezonabilă pornind de la valorile
 \fImf\fP și \fInice\fP.
-.IP ""
+.IP
 \fIAdâncimea\fP rezonabilă pentru lanțuri de sumă de control este 4\(en100 și
 16\(en1000 pentru arbori binari. Folosirea unor valori foarte mari pentru
 \fIadâncime\fP poate face codificatorul extrem de lent cu unele
@@ -1136,7 +1132,7 @@ fișiere. Evitați să stabiliți \fIadâncimea\fP la valori peste 1000, cu exce
 cazului în care sunteți pregătit să întrerupeți comprimarea în cazul în care
 durează prea mult.
 .RE
-.IP ""
+.IP
 La decodificarea fluxurilor brute (\fB\-\-format=raw\fP), LZMA2 are nevoie doar
 de \fIdimensiunea\fP dicționarului. LZMA1 are nevoie de asemenea de \fIlc\fP,
 \fIlp\fP și \fIpb\fP.
@@ -1161,7 +1157,7 @@ de \fIdimensiunea\fP dicționarului. LZMA1 are nevoie de asemenea de \fIlc\fP,
 Adaugă un filtru de ramură/apel/salt (branch/call/jump ⟶ „BCJ”) la lanțul de
 filtre. Aceste filtre pot fi utilizate numai ca un filtru care nu este
 ultimul din lanțul de filtrare.
-.IP ""
+.IP
 Un filtru BCJ convertește adresele relative din codul mașinii în omoloagele
 lor absolute. Acest lucru nu modifică dimensiunea datelor, dar crește
 redundanța, ceea ce poate ajuta LZMA2 să producă fișier \fB.xz\fP cu 0\(en15\ %
@@ -1169,7 +1165,7 @@ mai mic. Filtrele BCJ sunt întotdeauna reversibile, deci folosind un filtru
 BCJ pentru tipul greșit de date nu provoacă nicio pierdere de date, deși
 poate înrăutăți puțin raportul de comprimare. Filtrele BCJ sunt foarte
 rapide și folosesc o cantitate nesemnificativă de memorie.
-.IP ""
+.IP
 Aceste filtre BCJ au probleme cunoscute legate de raportul de comprimare:
 .RS
 .IP \(bu 3
@@ -1187,11 +1183,10 @@ proastă. Conținutul fișierelor neexecutabile din aceeași arhivă poate conta
 și el. În practică, trebuie să încercați cu și fără filtru BCJ pentru a
 vedea care rezultat este mai bun în fiecare situație.
 .RE
-.IP ""
+.IP
 Seturi de instrucțiuni diferite au o aliniere diferită: fișierul executabil
 trebuie aliniat la un multiplu al acestei valori în datele de intrare pentru
 ca filtrul să funcționeze.
-.RS
 .RS
 .PP
 .TS
@@ -1199,20 +1194,19 @@ tab(;);
 l n l
 l n l.
 Filtru;Aliniere;Note
-x86;1;x86 pe 32 de biți
-;;sau 64 de biți
+x86;1;x86 pe 32 de biț\&i
+;;sau 64 de biț\&i
 ARM;4;
 ARM\-Thumb;2;
-ARM64;4;alinierea pe 4096\-octeți
-;;este cea mai bună
+ARM64;4;alinierea pe 4096\-octeț\&i
+;;este cea mai bună\&
 PowerPC;4;Doar big endian
 IA\-64;16;Itanium
 SPARC;4;
 RISC\-V;2;
 .TE
 .RE
-.RE
-.IP ""
+.IP
 Deoarece datele filtrate prin BCJ sunt de obicei comprimate cu LZMA2,
 raportul de comprimare poate fi ușor îmbunătățit dacă opțiunile LZMA2 sunt
 definite pentru a se potrivi cu alinierea filtrului BCJ selectat. Exemple:
@@ -1236,7 +1230,7 @@ Filtrul x86 este o excepție. De obicei, este bine să rămâneți la valorile
 implicite ale LZMA2 (\fBpb=2,lp=0,lc=3\fP) atunci când comprimați executabile
 x86.
 .RE
-.IP ""
+.IP
 Toate filtrele BCJ acceptă același \fIopțiuni\fP:
 .RS
 .TP 
@@ -1251,21 +1245,21 @@ este zero. În practică, valoarea implicită este bună; specificarea unei
 \fB\-\-delta\fP[\fB=\fP\fIopțiuni\fP]
 Adaugă filtrul Delta în lanțul de filtrare. Filtrul Delta poate fi folosit
 doar ca un filtru care nu este ultimul în lanțul de filtrare.
-.IP ""
+.IP
 În prezent, este acceptat doar calculul delta simplu de octeți. Poate fi
 util la comprimarea, de exemplu, a imaginilor bitmap necomprimate sau a
 sunetului PCM necomprimat. Cu toate acestea, algoritmii cu scop special pot
 da rezultate semnificativ mai bune decât Delta + LZMA2. Acest lucru este
 valabil mai ales în cazul audio, care se comprimă mai repede și mai bine, de
 exemplu, cu \fBflac\fP(1).
-.IP ""
+.IP
 \fIOpțiuni\fP acceptate:
 .RS
 .TP 
 \fBdist=\fP\fIdistanța\fP
 Specifică \fIdistanța\fP calculului delta în octeți. \fIDistanța\fP trebuie să fie
 1\(en256. Valoarea implicită este 1.
-.IP ""
+.IP
 De exemplu, cu \fBdist=2\fP și intrare de opt octeți: A1 B1 A2 B3 A3 B5 A4 B7,
 ieșirea va fi: A1 B1 01 02 01 02 01 02.
 .RE
@@ -1283,7 +1277,7 @@ Oferă informații detaliate. Dacă ieșirea de eroare standard este conectată
 la un terminal, \fBxz\fP va afișa un indicator de progres. Specificarea
 opțiunii \fB\-\-verbose\fP de două ori, va avea ca rezultat oferirea de
 informații și mai detaliate.
-.IP ""
+.IP
 Indicatorul de progres afișează următoarele informații:
 .RS
 .IP \(bu 3
@@ -1313,7 +1307,7 @@ intrare este cunoscută și au trecut deja câteva secunde de când \fBxz\fP a
 început procesarea fișierului. Ora este afișată într\-un format mai puțin
 precis, care nu are niciodată două puncte, de exemplu, 2 min 30 s.
 .RE
-.IP ""
+.IP
 Când ieșirea de eroare standard nu este un terminal, \fB\-\-verbose\fP va face
 \fBxz\fP să imprime numele fișierului, dimensiunea comprimată, dimensiunea
 necomprimată, raportul de comprimare și, eventual, de asemenea, viteza și
@@ -1710,7 +1704,7 @@ instrument, de exemplu, GNU \fBtar\fP(1):
 .fi
 .RE
 .RE
-.IP ""
+.IP
 Scripturile pot folosi \fBXZ_OPT\fP, de exemplu, pentru a configura opțiunile
 implicite de comprimare specifice scriptului. Se recomandă totuși să se
 permită utilizatorilor să înlocuiască \fBXZ_OPT\fP dacă acest lucru este

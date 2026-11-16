@@ -387,17 +387,17 @@ OPTIONS
 
             The following table summarises the features of the presets:
 
-                   Preset   DictSize   CompCPU   CompMem   DecMem
-                     -0     256 KiB       0        3 MiB    1 MiB
-                     -1       1 MiB       1        9 MiB    2 MiB
-                     -2       2 MiB       2       17 MiB    3 MiB
-                     -3       4 MiB       3       32 MiB    5 MiB
-                     -4       4 MiB       4       48 MiB    5 MiB
-                     -5       8 MiB       5       94 MiB    9 MiB
-                     -6       8 MiB       6       94 MiB    9 MiB
-                     -7      16 MiB       6      186 MiB   17 MiB
-                     -8      32 MiB       6      370 MiB   33 MiB
-                     -9      64 MiB       6      674 MiB   65 MiB
+            Preset   DictSize   CompCPU   CompMem   DecMem
+              -0     256 KiB       0        3 MiB    1 MiB
+              -1       1 MiB       1        9 MiB    2 MiB
+              -2       2 MiB       2       17 MiB    3 MiB
+              -3       4 MiB       3       32 MiB    5 MiB
+              -4       4 MiB       4       48 MiB    5 MiB
+              -5       8 MiB       5       94 MiB    9 MiB
+              -6       8 MiB       6       94 MiB    9 MiB
+              -7      16 MiB       6      186 MiB   17 MiB
+              -8      32 MiB       6      370 MiB   33 MiB
+              -9      64 MiB       6      674 MiB   65 MiB
 
             Column descriptions:
 
@@ -440,17 +440,17 @@ OPTIONS
             than -4e and -6e, respectively.  That way no two presets are identi-
             cal.
 
-                   Preset   DictSize   CompCPU   CompMem   DecMem
-                    -0e     256 KiB       8        4 MiB    1 MiB
-                    -1e       1 MiB       8       13 MiB    2 MiB
-                    -2e       2 MiB       8       25 MiB    3 MiB
-                    -3e       4 MiB       7       48 MiB    5 MiB
-                    -4e       4 MiB       8       48 MiB    5 MiB
-                    -5e       8 MiB       7       94 MiB    9 MiB
-                    -6e       8 MiB       8       94 MiB    9 MiB
-                    -7e      16 MiB       8      186 MiB   17 MiB
-                    -8e      32 MiB       8      370 MiB   33 MiB
-                    -9e      64 MiB       8      674 MiB   65 MiB
+            Preset   DictSize   CompCPU   CompMem   DecMem
+             -0e     256 KiB       8        4 MiB    1 MiB
+             -1e       1 MiB       8       13 MiB    2 MiB
+             -2e       2 MiB       8       25 MiB    3 MiB
+             -3e       4 MiB       7       48 MiB    5 MiB
+             -4e       4 MiB       8       48 MiB    5 MiB
+             -5e       8 MiB       7       94 MiB    9 MiB
+             -6e       8 MiB       8       94 MiB    9 MiB
+             -7e      16 MiB       8      186 MiB   17 MiB
+             -8e      32 MiB       8      370 MiB   33 MiB
+             -9e      64 MiB       8      674 MiB   65 MiB
 
             For example, there are a total of four presets that use  8 MiB  dic-
             tionary, whose order from the fastest to the slowest is -5, -6, -5e,
@@ -987,15 +987,15 @@ OPTIONS
             file  must  be aligned to a multiple of this value in the input data
             to make the filter work.
 
-                   Filter      Alignment   Notes
-                   x86             1       32-bit or 64-bit x86
-                   ARM             4
-                   ARM-Thumb       2
-                   ARM64           4       4096-byte alignment is best
-                   PowerPC         4       Big endian only
-                   IA-64          16       Itanium
-                   SPARC           4
-                   RISC-V          2
+            Filter      Alignment   Notes
+            x86             1       32-bit or 64-bit x86
+            ARM             4
+            ARM-Thumb       2
+            ARM64           4       4096-byte alignment is best
+            PowerPC         4       Big endian only
+            IA-64          16       Itanium
+            SPARC           4
+            RISC-V          2
 
             Since the BCJ-filtered data is usually compressed  with  LZMA2,  the
             compression  ratio may be improved slightly if the LZMA2 options are

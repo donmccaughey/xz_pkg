@@ -181,7 +181,7 @@ Om flera arbetslägesflaggor ges gäller den sista.
 Komprimera. Detta är standardarbetsläget när ingen arbetslägesflagga anges
 och inget annat arbetsläge impliceras från kommandonamnet (till exempel
 implicerar \fBunxz\fP \fB\-\-decompress\fP).
-.IP ""
+.IP
 .\" The DESCRIPTION section already says this but it's good to repeat it
 .\" here because the default behavior is a bit dangerous and new users
 .\" in a hurry may skip reading the DESCRIPTION section.
@@ -205,7 +205,7 @@ Skriv information om komprimerade \fIfiler\fP. Inge dekomprimeringsutdata
 skapas, och inga filer skapas eller tas bort. I listläge kan programmet inte
 läsa komprimerad data från standard in eller från andra källor där man inte
 kan söka.
-.IP ""
+.IP
 Standardlistningen visar grundläggande information om \fIfiler\fP, en fil per
 rad. För att få mer detaljerad information, använd även flaggan
 \fB\-\-verbose\fP. För ännu mer information, använd \fB\-\-verbose\fP två gånger, men
@@ -213,7 +213,7 @@ observera att detta kan vara långsamt, eftersom det behövs många sökningar
 får att samla all den extra informationen. Bredden av utförlig utdata
 överskrider 80 tecken, så att skicka utdata i ett rör till, till exempel,
 \fBless\ \-S\fP kan vara bekvämt om terminalen inte är bred nog.
-.IP ""
+.IP
 Den exakta utdatan kan variera mellan versioner av \fBxz\fP och olika
 lokaler. För maskinläsbar utdata bör \fB\-\-robot \-\-list\fP användas.
 .
@@ -221,7 +221,7 @@ lokaler. För maskinläsbar utdata bör \fB\-\-robot \-\-list\fP användas.
 .TP 
 \fB\-k\fP, \fB\-\-keep\fP
 Ta inte bort indatafilerna.
-.IP ""
+.IP
 Från \fBxz\fP 5.2.6 gör denna flagga även att \fBxz\fP komprimerar eller
 dekomprimerar även om indatan är en symbolisk länk till en normal fil, har
 mer än en hård länk eller har biten setuid, setgid eller sticky
@@ -256,14 +256,14 @@ för en fil. Detta implicerar \fB\-\-keep\fP.
 Dekomprimera endast den första \fB.xz\fP\-strömmen, och ignorera tys eventuella
 återstående indata som följer efter strömmen. Normalt får sådant avslutande
 skräp \fBxz\fP att visa ett fel.
-.IP ""
+.IP
 \fBxz\fP dekomprimerar aldrig mer än en ström från \fB.lzma\fP\-filer eller råa
 strömmar, men denna flagga gör ändå att \fBxz\fP ignorerar den möjliga
 efterföljande datan efter \fB.lzma\fP\-filen eller den råa strömmen.
-.IP ""
+.IP
 Denna flagga har ingen effekt om arbetsläget inte är \fB\-\-decompress\fP eller
 \fB\-\-test\fP.
-.IP ""
+.IP
 Sedan \fBxz\fP 5.7.1alpha, implicerar \fB\-\-single\-stream\fP \fB\-\-keep\fP.
 .TP 
 \fB\-\-no\-sparse\fP
@@ -279,11 +279,11 @@ begränsa mängden disk\-I/O.
 Vid komprimering, använd \fI.suf\fP som suffixet för målfilen istället för
 \&\fB.xz\fP eller \fB.lzma\fP. Om den inte skriver till standard ut och källfilen
 redan har suffixet \fI.suf\fP visas en varning och filen hoppas över.
-.IP ""
+.IP
 Vid dekomprimering, känn igen filer med suffixet \fI.suf\fP utöver filer
 medsuffixen \fB.xz\fP, \fB.txz\fP, \fB.lzma\fP, \fB.tlz\fP eller \fB.lz\fP. Om källfilen
 har suffixet \fI.suf\fP tas suffixet bort för att få målfilnamnet.
-.IP ""
+.IP
 Vid komprimering eller dekomprimering av råa strömmar (\fB\-\-format=raw\fP)
 måste alltid suffixet anges om den inte skriver till standard ut, eftersom
 det inte finns något standardsuffix för råa strömmar.
@@ -322,7 +322,7 @@ tillhandahålls för bakåtkompatibilitet med LZMA Utils.
 .TP 
 \fBlzip\fP
 Acceptera endast \fB.lz\fP\-filer vid dekomprimering. Komprimering stödjs inte.
-.IP ""
+.IP
 \&\fB.lz\fP\-formatet version 0 och 1 stödjs. Version 0\-filer producerades av
 \fBlzip\fP 1.3 och tidigare. Sådana filer är inte vanliga men kan hittas från
 filarkiv eftersom några källpaket släpptes i detta format. Folk kan ha även
@@ -343,7 +343,7 @@ dekomprimerade datan och lagras i \fB.xz\fP\-filen. Denna flagga har endast
 någon inverkan när man komprimerar till formatet \fB.xz\fP; formatet \fB.lzma\fP
 stödjer inte integritetskontroller. Integritetskontrollen (om någon)
 verifieras när \fB.xz\fP\-filen dekomprimeras.
-.IP ""
+.IP
 \fIKontroll\fPtyper som stödjs:
 .RS
 .TP 
@@ -366,7 +366,7 @@ hastighetsskillnaden är försumbar.
 \fBsha256\fP
 Beräkna SHA\-256. Detta är något långsammare än CRC32 och CRC64.
 .RE
-.IP ""
+.IP
 Integriteten hos \fB.xz\fP\-huvuden verifieras alltid med CRC32. Det är inte
 möjligt att ändra eller avaktivera det.
 .TP 
@@ -374,7 +374,7 @@ möjligt att ändra eller avaktivera det.
 Verifiera inte integritetskontrollen av den komprimerade datan vid
 dekomprimering. CRC32\-värden i \fB.xz\fP\-huvudena kommer fortfarande verifieras
 normalt
-.IP ""
+.IP
 \fBAnvänd inte denna flagga om du inte vet vad du gör.\fP Möjliga anledningar
 till att använda denna flagga:
 .RS
@@ -392,7 +392,7 @@ Välj en förinställningsnivå för komprimering. Standard är \fB\-6\fP. Om fl
 förinställningsnivåer anges gäller den sist angivna. Om en anpassad
 fileterkedja redan angivits gör en inställning av en förinställningsnivå för
 komprimering att den anpassade filterkedjan töms.
-.IP ""
+.IP
 Skillnaden mellan förinställningarna har större betydelse än med \fBgzip\fP(1)
 och \fBbzip2\fP(1). Den valda komprimeringsinställningen avgör minneskraven för
 dekomprimeraren, att använda en för hög förinställningsnivå kan alltså göra
@@ -419,21 +419,20 @@ Dessa liknar \fB\-6\fP med med högre krav på minne till komprimerare och
 dekomprimerare. Dessa är bara användbara vid komprimering av filer större än
 8\ MiB, 16\ MiB respektive 32\ MiB.
 .RE
-.IP ""
+.IP
 På samma hårdvara är dekomprimeringshastigheten ungefär ett konstant antal
 byt av komprimerad data per sekund. Med andra ord, ju bättre komprimering,
 desto snabbare kommer dekomprimeringen vanligen vara. Detta betyder även att
 mängden av okomprimerad utdata skapad per sekund kan variera mycket.
-.IP ""
+.IP
 Följande tabell sammanfattar funktionerna hos förinställningarna:
-.RS
 .RS
 .PP
 .TS
 tab(;);
 c c c c c
 n n n n n.
-Förinställning;LexStrl;KompCPU;KompMin;DekMin
+Fö\&rinstä\&llning;LexStrl;KompCPU;KompMin;DekMin
 \-0;256 KiB;0;3 MiB;1 MiB
 \-1;1 MiB;1;9 MiB;2 MiB
 \-2;2 MiB;2;17 MiB;3 MiB
@@ -446,8 +445,7 @@ Förinställning;LexStrl;KompCPU;KompMin;DekMin
 \-9;64 MiB;6;674 MiB;65 MiB
 .TE
 .RE
-.RE
-.IP ""
+.IP
 Kolumnbeskrivningar:
 .RS
 .IP \(bu 3
@@ -472,7 +470,7 @@ minnesanvändningen hos dekomprimeraren är något mer än
 LZMA2\-lexikonstorleken, men värdena i tabellen har avrundats upp till nästa
 nästa hela MiB.
 .RE
-.IP ""
+.IP
 Minneskravet för det multitrådade läget är signifikant högre än det för
 enkeltrådat läge. Med standardvärdet på \fB\-\-block\-size\fP behöver varje tråd
 3·3·LexStrl plus KompMin eller DekMin. Till exempel, fyra trådar med
@@ -484,18 +482,17 @@ komprimering (\fB\-0\fP … \fB\-9\fP) för att förhoppningsvis få lite bättr
 komprimeringsförhållande, men med otur kan detta även göra det
 sämre. Dekomprimerarens minnesanvändning påverkas inte, men komprimerarens
 minnesanvändning ökar lite vid förinställningsnivåerna \fB\-0\fP … \fB\-3\fP.
-.IP ""
+.IP
 Eftersom det finns två förinställningar med lexikonstorlekar 4\ MiB och 8\ MiB använder förinställningarna \fB\-3e\fP och \fB\-5e\fP något snabbare
 inställningar (lägre KompCPU) än \fB\-4e\fP respektive \fB\-6e\fP.  På det sättet är
 inte två förinställningar identiska.
-.RS
 .RS
 .PP
 .TS
 tab(;);
 c c c c c
 n n n n n.
-Förinställning;LexStrl;KompCPU;KompMin;DekMin
+Fö\&rinstä\&llning;LexStrl;KompCPU;KompMin;DekMin
 \-0e;256 KiB;8;4 MiB;1 MiB
 \-1e;1 MiB;8;13 MiB;2 MiB
 \-2e;2 MiB;8;25 MiB;3 MiB
@@ -508,8 +505,7 @@ Förinställning;LexStrl;KompCPU;KompMin;DekMin
 \-9e;64 MiB;8;674 MiB;65 MiB
 .TE
 .RE
-.RE
-.IP ""
+.IP
 Till exempel finns det totalt fyra förinställningar som använder 8\ MiB
 lexikon, vars ordning från den snabbaste till den långsammaste är \fB\-5\fP,
 \fB\-6\fP, \fB\-5e\fP och \fB\-6e\fP.
@@ -529,7 +525,7 @@ bytes. Blocken komprimeras oberoende av varandra, vilket hjälper till vid
 multitrådning  och gör begränsad random\-access\-dekomprimering möjlig. Denna
 flagga används typiskt för att åsidosätta blockstorleken i multitrådat läge,
 men denna flagga kan användas även i enkeltrådat läge.
-.IP ""
+.IP
 I multitrådat läge kommer ungefär tre gånger \fIstorlek\fP byte att allokeras i
 varje tråd för buffring av indata och utdata. Standardvärdet på \fIstorlek\fP
 är det större av tre gånger LZMA2\-lexikonstorleken eller 1 MiB. Typiskt är
@@ -539,7 +535,7 @@ slöseri med RAM eftersom LZMA2\-lexikonbufferten då aldrig kommer användas
 helt. I multitrådat läge lagras storlekarna på plocken i
 blockhuvudena. Denna storleksinformation krävs för multitrådad
 dekomprimering.
-.IP ""
+.IP
 I singletrådat läge görs som standard ingen uppdelning i block. Att göra
 denna inställning påverark inte minnesanvändningen. Ingen
 storleksinformation lagras i blockhuvuden, därmed kommer filer som skapas i
@@ -550,18 +546,18 @@ kunna dekomprimera filerna i multitrådat läge.
 \fB\-\-block\-list=\fP\fIposter\fP
 Vid komprimering till formatet \fB.xz\fP, börja ett nytt block med en möjlig
 anpassad filterkedja efter de angivna intervallen med okomprimerade data.
-.IP ""
+.IP
 \fIPosterna\fP är en kommaseparerad lista. Varje post består av ett möjligt
 filterkedjenummer mellan 0 och 9 följt av ett kolon (\fB:\fP) och en
 obligatorisk storlek för okomprimerade data. Att utelämna en post (två på
 varandra följande komman) är en kortform för att använda storleken och
 filtren från föregående post.
-.IP ""
+.IP
 Om indatafiler är större än summan av storlekarna i \fIposter\fP repeteras den
 sista posten fram till slutet på filen. Ett speciellt värde \fB0\fP kan
 användas som den sista storleken för att indikera att resten av filen skall
 kodas som ett enda block.
-.IP ""
+.IP
 En alternativ filterkedja för varje block kan anges i kombinaton med
 flaggorna \fB\-\-filters1=\fP\fIfilter\fP \&…\& \fB\-\-filters9=\fP\fIfilter\fP. Dessa
 flaggor definierar filterkedjor med en identifierare mellan
@@ -584,7 +580,7 @@ Standardfilterkedjan och 2 MiB indata
 .IP \(bu 3
 Standardfilterkedjan och 4 MiB indata för varje block till slutet av indata.
 .RE
-.IP ""
+.IP
 Om man anger en storlek som överskrider kodarens blockstorlek (antingen
 standardvärdet i trådat läge eller värdet som anges med
 \fB\-\-block\-size=\fP\fIstorlek\fP) kommer kodaren skapa ytterligare block med
@@ -592,7 +588,7 @@ hänsyn taget till gränserna som anges i \fIposter\fP. Till exempel, om man
 anger \fB\-\-block\-size=10MiB\fP \fB\-\-block\-list=5MiB,10MiB,8MiB,12MiB,24MiB\fP och
 indatafilen är 80 MiB kommer man få 11 block: 5, 10, 8, 10, 2, 10, 10, 4,
 10, 10 och 1 MiB.
-.IP ""
+.IP
 I multitrådat läge lagras storleken på blocken i blockhuvudena. Detta görs
 inte i enkeltrådat läge, så den kodade utdatan kommer inte vara identisk med
 den från det multitrådade läget.
@@ -605,13 +601,13 @@ utdataströmmen. Detta kan vara användbart om \fBxz\fP används för att
 komprimera data som strömmas över ett nätverk.  Små värden på \fItidsgräns\fP
 gör data tillgänglig vid den mottagande änden med en liten fördröjning, men
 större värden på \fItidsgräns\fP ger bättre komprimeringsförhållande.
-.IP ""
+.IP
 Denna funktion är avaktiverad som standard. Om denna flagga anges mer än en
 gång gäller den sista. Dett speciella värdet \fB0\fP på \fItidsgräns\fP kan
 användas för att uttryckligen avaktivera denna funktion.
-.IP ""
+.IP
 Denna funktion är inte tillgänglig på icke\-POSIX\-system.
-.IP ""
+.IP
 .\" FIXME
 \fBDenna funktion är fortfarande experimentell.\fP För närvarande är \fBxz\fP
 olämplig för dekomprimering av strömmen i realtid på grund av hur \fBxz\fP
@@ -624,30 +620,30 @@ dekomprimering av många små filer. Dock, om systemet kraschar snart efter
 raderingen är det möjligt att målfilen inte skrevs till lagringsenheten men
 att raderingen gjordes det. I det fallet är varken originalkällfilen eller
 målfilen tillgänglig.
-.IP ""
+.IP
 Denna flagga har bara någon effekt när \fBxz\fP kommer att ta bort källfilen. I
 andra fall görs aldrig någon synkronisering.
-.IP ""
+.IP
 Synkroniseringen och \fB\-\-no\-sync\fP lades till i \fBxz\fP 5.7.1alpha.
 .TP 
 \fB\-\-memlimit\-compress=\fP\fIgräns\fP
 Sätt en gräns på minnesanvändningen för komprimeringen. Om denna flaggan
 anges flera gånger gäller den sista.
-.IP ""
+.IP
 Om komprimeringsinställnigarna överskrider \fIgränsen\fP kommer \fBxz\fP försöka
 justera inställningarna neråt så att gränsen inte längre överskrids och visa
 en notis om att en automatisk justering gjorts. Justeringen görs i denna
 ordning: reducera antalet trådar, byta till enkeltrådat läge om även en tråd
 i multitrådat läge överskrider \fIgränsen\fP och slutligen reducera
 LZMA2\-lexikonstorleken.
-.IP ""
+.IP
 Vid komprimering med \fB\-\-format=raw\fP eller om \fB\-\-no\-adjust\fP har angetts kan
 endast antalet trådar reduceras eftersom det kan göras utan att påverka den
 komprimerade utdatan.
-.IP ""
+.IP
 Om \fIgränsen\fP inte kan uppfyllas ens med justeringarna som beskrivs ovan
 visas ett felmeddelande och \fBxz\fP kommer avsluta med slutstatus 1.
-.IP ""
+.IP
 \fIGränsen\fP kan anges på flera sätt:
 .RS
 .IP \(bu 3
@@ -664,14 +660,14 @@ minne. Exempel: \fB\-\-memlimit\-compress=70%\fP
 den till \fB0\fP. Detta är för närvarande ekvivalent med att sätta \fIgränsen\fP
 till \fBmax\fP (ingen gräns på minnesanvändning).
 .RE
-.IP ""
+.IP
 För 32\-bitars \fBxz\fP finns det ett specialfall: om \fIgränsen\fP skulle vara
 över \fB4020\ MiB\fP sätts \fIgränsen\fP till \fB4020\ MiB\fP. På MIPS32 används
 \fB2000\ MiB\fP istället. (Värdena \fB0\fP och \fBmax\fP påverkas inte av detta. En
 liknande funktion finns inte för dekomprimering.) Detta kan hjälpa till när
 ett 32\-bitarsprogram har tillgång till 4\ GiB adressrymd (2 GiB på MIPS32)
 förhoppningsvis utan att göra någon skada i andra situationer.
-.IP ""
+.IP
 Se även avsnittet \fBMinnesanvändning\fP.
 .TP 
 \fB\-\-memlimit\-decompress=\fP\fIgräns\fP
@@ -690,12 +686,12 @@ läge. Observera att om även \fB\-\-memlimit\-decompress\fP används kommer det
 alltid att gälla både enkeltrådat och multitrådat läge, och därmed kommer
 den gällande \fIgränsen\fP för multitrådning aldrig vara högre än gränsen som
 sätts med \fB\-\-memlimit\-decompress\fP.
-.IP ""
+.IP
 Till skillnad mot de andra flaggorna för gränser för minnesanvändning har
 \fB\-\-memlimit\-mt\-decompress=\fP\fIgräns\fP en systemspecifik
 standard\fIgräns\fP. \fBxz \-\-info\-memory\fP kan användas för att se det aktuella
 värdet.
-.IP ""
+.IP
 Denna flagga och dess standardvärde finns för att utan någon gräns skulle
 den trådade dekomprimeraren kunna allokera en vansinnig mängd minne med
 några indatafiler. Om standard\fIgränsen\fP är för låg på ditt system, öka då
@@ -703,7 +699,7 @@ gärna \fIgränsen\fP men sätt den aldrig till ett större värde än mängden
 användbart RAM eftersom att med passande indatafiler kommer \fBxz\fP försöka
 använda den mängden av minne även med ett lågt antal trådar. Att få slut på
 minne ller växling kommer inte förbättra dekomprimeringsprestandan.
-.IP ""
+.IP
 Se \fB\-\-memlimit\-compress=\fP\fIgräns\fP för möjliga sätt att ange \fIgränsen\fP. Att
 sätta \fIgräns\fP till \fB0\fP återställer \fIgränsen\fP till sdet systemspecifika
 standardvärdet.
@@ -720,7 +716,7 @@ enkeltrådat läge och från att den reducerar  LZMA2\-lexikonets storlek. Även
 när denna flagga används kan antalet trådar reduceras för att möta gränsen
 för minnesanvändning eftersom det inte kommer påverka den komprimerade
 utdatan.
-.IP ""
+.IP
 Automatisk justering är alltid avaktiverat när råa strömmar skapas
 (\fB\-\-format=raw\fP).
 .TP 
@@ -731,7 +727,7 @@ på systemet stödjer. Det aktuella antalet trådar kan vara färre än \fItråd
 om indatafilen inte är stor nog för trådning med de givna inställningarna
 eller om användning av fler trådar skulle överkrida gränsen för
 minnesanvändning.
-.IP ""
+.IP
 De enkeltrådade och multitrådade komprimerarna producerar olika utdata. Den
 enkeltrådade komprimeraren kommer ge den minsta filstorleken men endast
 utdata från den multitrådade komprimeraren kan dekomprimeras med flera
@@ -739,13 +735,13 @@ trådar. Att sätta \fItrådar\fP till \fB1\fP kommer använda enkeltrådat läg
 sätta \fItrådar\fP till något annat värde, inklusive \fB0\fP, kommer använda den
 multitrådade komprimeraren även om systemet endast stödjer en hårdvarutråd.
 (\fBxz\fP 5.2.x använde enkeltrådat läge i denna situation.)
-.IP ""
+.IP
 För att använda multitrådat läge med endast en tråd, sätt \fItrådar\fP till
 \fB+1\fP. Prefixet \fB+\fP har ingen påvrekan för andra värden än \fB1\fP. En gräns
 för minnesanvändning kan fortfarande göra att \fBxz\fP byter till enkeltrådat
 läge såvida inte \fB\-\-no\-adjust\fP används. Stöd för prefixet \fB+\fP lades till i
 \fBxz\fP 5.4.0.
-.IP ""
+.IP
 Om ett automatiskt antal trådar har begärts och ingen gräns för
 minnesanvändning har angivits, då kommer en systemspecifik mjuk
 standardgräns användas för att möjligen begränsa antalet trådar. Det är en
@@ -754,18 +750,18 @@ alltså kommer en mjuk gräns aldrig hindra \fBxz\fP från att komprimera eller
 dekomprimera. Denna mjuka standardgräns kommer inte göra att \fBxz\fP byter
 från multitrådat läge till enkeltrådat läge. De aktiva gränserna kan ses med
 \fBxz \-\-info\-memory\fP.
-.IP ""
+.IP
 För närvarande är den enda trådningsmetoden att dela indata i block och
 komprimera dem oberoende av varandra. Standardstorleken på block beror på
 komprimeringsnivån och kan åsidosättas med flaggan
 \fB\-\-block\-size=\fP\fIstorlek\fP.
-.IP ""
+.IP
 Trådad dekomprimering fungerar bara på filer som innehåller flera block med
 storleksinformation i blockhuvuden. Alla tillräckligt stora filer
 komprimeras i multitrådat läge för att uppfylla detta villkor, men filer
 komprimerade i enkeltrådat läge gör det inte ens om
 \fB\-\-block\-size=\fP\fIstorlek\fP har använts.
-.IP ""
+.IP
 Standardvärdet på \fItrådar\fP är \fB0\fP. I \fBxz\fP 5.4.x och tidigare är
 standardvärdet \fB1\fP.
 .
@@ -825,7 +821,7 @@ flaggor som \fB\-\-extreme\fP.
 \fB\-\-filters1\fP=\fIfilter\fP … \fB\-\-filters9\fP=\fIfilter\fP
 Ange upp till nio ytterligare filterkedjor som kan användas med
 \fB\-\-block\-list\fP.
-.IP ""
+.IP
 Till exempel, vid komprimering av ett arkiv med körbara filer följt av
 textfiler skulle den körbara delen kunna använda en filterkedja med ett
 BCJ\-filter och endast textdelen med LZMA2\-filtret.
@@ -842,14 +838,14 @@ anpassade filterkedjor i flaggorna \fB\-\-filters\fP och \fB\-\-filters1=\fP\fIf
 .PD
 Lägg till LZMA1\- eller LZMA2\-filter till filterkedjan. Dessa filter kan
 endast användas som det sista filtret i kedjan.
-.IP ""
+.IP
 LZMA1 är ett föråldrat filter, vilket stödjs nästan enbart på grund av det
 föråldrade filformatet \fB.lzma\fP, vilket bara stödjer LZMA1. LZMA2 är en
 uppdaterad version av LZMA1 för att lösa några praktiska problem med
 LZMA1. Formatet \fB.xz\fP använder LZMA2 och stödjer inte LZMA1
 alls. Komprimeringshastigheten och förhållandena för LZMA1 är LZMA2 är
 praktiskt taget desamma.
-.IP ""
+.IP
 LZMA1 och LZMA2 delar samma uppättning \fIflaggor\fP:
 .RS
 .TP 
@@ -876,9 +872,9 @@ lexikonet. Ju större lexikon, desto högre är sannolikheten att hitta en
 matchning. Att öka lexikonets \fIstorlek\fP förbättrar alltså vanligen
 komprimeringsförhållandet, men ett lexikon som är större än den
 okomprimerade filen är ett slöseri med minne.
-.IP ""
+.IP
 En typisk \fIstorlek\fP på lexikon är från 64\ KiB till 64\ MiB. Minimum är 4\ KiB. Det maximala för komprimering är för närvarande 1,5\ GiB (1536\ MiB). Dekomprimeraren stödjer redan lexikon upp till en byte mindre än 4\ GiB, vilket är det maximala för strömformaten LZMA1 och LZMA2.
-.IP ""
+.IP
 Lexikon\fIstorlek\fP och matchhittaren (\fImf\fP) avgör tillsammans
 minnesanvändningen för LZMA1\- eller LZMA2\-kodaren. Ett lika \fIstort\fP (eller
 större) lexikon behövs för dekomprimering som det som användes vid
@@ -892,10 +888,10 @@ avrundas uppåt när de lagras i huvuden i \fB.xz\fP.
 Ange antalet literala kontextbitar. Minimum är 0 och maximum är 4;
 standardvärdet är 3. Dessutom får inte summan av \fIlk\fP och \fIlp\fP överskrida
 4.
-.IP ""
+.IP
 Alla byte som inte kan kodas som matchningar kodas som literaler. Det vill
 säga, literaler är helt enkelt 8\-bits byte som kodas en åt gången.
-.IP ""
+.IP
 Den literala kodningen gör antagandet att de högsta \fIlk\fP bitarna av den
 föregående okomprimerade byten korrelerar med nästa byte. Till exempel, i
 typisk engelsk text följs ofta en versal bokstav av en gemen bokstav, och en
@@ -903,7 +899,7 @@ gemen bokstav följs vanligen av en annan gemen bokstav. I
 teckenuppsättningen US\-ASCII är de högsta tre bitarna 010 för versala
 bokstäver och 011 för gemena bokstäver. När \fIlk\fP är åtminstone 3 kan den
 literala kodningen dra nytta av denna egenskap i den okomprimerade datan.
-.IP ""
+.IP
 Standardvärdet (3) är normalt bra. Om man vill ha maximal komprimering,
 prova \fBlc=4\fP. Ibland hjälper det lite, och ibland gör det komprimeringen
 sämre. Om det gör den sämre, testa också \fBlc=2\fP.
@@ -911,24 +907,24 @@ sämre. Om det gör den sämre, testa också \fBlc=2\fP.
 \fBlp=\fP\fIlp\fP
 Ange antalet literala positionsbitar. Minimum är 0 och maximum är 4;
 standardvärdet är 0.
-.IP ""
+.IP
 \fILp\fP påverkar vilken sorts justering i den okomprimerade datan som antas
 vid kodning av literaler. Se \fIpb\fP nedan för mer information om justering.
 .TP 
 \fBpb=\fP\fIpb\fP
 Ange antalet positionsbitar. Minimum är 0 och maximum är 4; standardvärdet
 är 2.
-.IP ""
+.IP
 \fIPb\fP påverkar vilken sort justering i den okomprimerade datan som antas i
 allmänhet. Standardvärdet betyder fyrbytejustering (2^\fIpb\fP=2^2=4), vilket
 ofta är ett bra val när det inte finns någon bättre gissning.
-.IP ""
+.IP
 När justeringen är känd kan en inställning av \fIpb\fP därefter reducera
 filstorleken något. Till exempel, med textfiler som har en\-byte\-justering
 (US\-ASCII, ISO\-8859\-*, UTF\-8) kan att sätta \fBpb=0\fP förbättra komprimeringen
 något. För UTF\-16\-text är \fBpb=1\fP ett bra val. Om justeringen är ett udda
 tal som 3 byte kan \fBpb=0\fP vara det bästa valet.
-.IP ""
+.IP
 Även om den antagna justeringen kan anpassas med \fIpb\fP och \fIlp\fP föredrar
 LZMA1 och LZMA2 ändå något 16\-byte\-justering. Det kan vara värt att ta med i
 beräkningen vid design av filformat som sannolikt ofta kan komma att
@@ -939,7 +935,7 @@ Matchsökaren har en stor poverkan på kodarens hastighet, minnesanvändning
 och komprimeringsförhållande. Vanligen är Hashkedje\-matchsökare snabbare än
 Binärträdsmatchsökare. Standardvärdet beror på \fIföinställningen\fP: 0
 använder \fBhc3\fP, 1\(en3 använder \fBhc4\fP, och resten använder \fBbt4\fP.
-.IP ""
+.IP
 Följande matchsökare stödjs. Formlerna för minnesanvändning nedan är grova
 uppskattningar, vilka är närmast sanningen när \fIdict\fP är en tvåpotens.
 .RS
@@ -1001,7 +997,7 @@ Komprimerings\fIläget\fP anger metoden som används för att analysera data
 skapade av matchsökaren. De \fIlägen\fP som stödjs är \fBfast\fP och
 \fBnormal\fP. Standardvärdet är \fBfast\fP för \fIförinställningarna\fP 0\(en3 och
 \fBnormal\fP för \fIförinställningarna\fP 4\(en9
-.IP ""
+.IP
 Vanligen används \fBfast\fP med Hashkedjematchsökare och \fBnormal\fP med
 Binärträdsmatchsökare. Detta är även vad \fIförinställningarna\fP gör.
 .TP 
@@ -1009,7 +1005,7 @@ Binärträdsmatchsökare. Detta är även vad \fIförinställningarna\fP gör.
 Ange vad som anses vara en lagom längt på en matchning. När en matchning på
 åtminstone \fIlagom\fP byte hittats slutar algoritmen söka efter möjliga bättre
 matchningar.
-.IP ""
+.IP
 \fILagom\fP kan vara 2\(en273 byte. Högre värden tenderar att ge bättre
 komprimeringsförhållande på bekostnad av tid. Standardvärdet beror på
 \fIförinställningen\fP.
@@ -1018,13 +1014,13 @@ komprimeringsförhållande på bekostnad av tid. Standardvärdet beror på
 Ange det maximala sökdjupet i matchsökaren. Standardvärdet är specialvärdet
 0, vilket får komprimeraren att avgöra ett lämpligt \fIdjup\fP från \fImf\fP och
 \fInice\fP.
-.IP ""
+.IP
 Lämpligt \fIdjup\fP för Hashkedjor är 4\(en100 och 16\(en1000 för
 Binärträd. Att använda väldigt höga värden på \fIdjup\fP kan göra kodaren
 extremt långsam för vissa filer. Undvik att sätta \fIdjup\fP över 1000 såvida
 du inte är beredd att avbryta komprimeringen om den tar för lång tid.
 .RE
-.IP ""
+.IP
 Vid avkodning av råa strömmar (\fB\-\-format=raw\fP) behöver LZMA2 endast
 lexikonets \fIstorlek\fP. LZMA1 behöver även \fIlc\fP, \fIlp\fP och \fIpb\fP.
 .TP 
@@ -1048,7 +1044,7 @@ lexikonets \fIstorlek\fP. LZMA1 behöver även \fIlc\fP, \fIlp\fP och \fIpb\fP.
 Lägg till gren/anrop/hopp\-filter (branch/call/jump, BCJ) till
 filterkedjan. Dessa filter kan inte användas som det sista filtret i
 filterkedjan.
-.IP ""
+.IP
 Ett BCJ\-filter konverterar relativa adresser i maskinkod till deras absoluta
 motsvarigheter. Detta ändrar inte storleken på datan men det ökar
 redundansen, vilket kan hjälpa LZMA2 att skapa 0\(en15\ % mindre
@@ -1056,7 +1052,7 @@ redundansen, vilket kan hjälpa LZMA2 att skapa 0\(en15\ % mindre
 BCJ\-filter för fel sorts data orsakar inte någon dataförlust, men det kan
 göra komprimeringsförhållandet något sämre.  BCJ\-filtren är mycket snabba
 och använder en obetydling mängd minne.
-.IP ""
+.IP
 Dessa BCJ\-filter har kända problem kopplade till komprimeringsförhållandet:
 .RS
 .IP \(bu 3
@@ -1074,11 +1070,10 @@ kompressionen sämre. Innehållet i icke körbara filer i samma arkiv kan också
 spela en roll. I praktiken måste man prova med och utan ett BCJ\-filter för
 att se vilket som är det bästa i varje situation.
 .RE
-.IP ""
+.IP
 Olika instruktionsuppsättningar har olika justering: den körbara filen måste
 vara justerad till en multipel av detta värde i indata för att filtret skall
 fungera.
-.RS
 .RS
 .PP
 .TS
@@ -1089,15 +1084,14 @@ Filter;Justering;Kommentarer
 x86;1;32\-bitars eller 64\-bitars x86
 ARM;4;
 ARM\-Thumb;2;
-ARM64;4;4096\-bytesjustering är bäst
+ARM64;4;4096\-bytesjustering ä\&r bä\&st
 PowerPC;4;Endast rak byteordning
 IA\-64;16;Itanium
 SPARC;4;
 RISC\-V;2;
 .TE
 .RE
-.RE
-.IP ""
+.IP
 Eftersom BCJ\-filtrerad data vanligen komprimeras med LZMA2 kan
 komprimeringsförhållandet förbättras något om LZMA2\-flaggorna sätts till att
 matcha justeringen hos det valda BCJ\-filtret.  Exempel:
@@ -1118,7 +1112,7 @@ ARM64 är alltid 4\-bytejusterad så \fBpb=2,lp=2,lc=2\fP är bäst.
 Filtret x86 är ett undantag. Det är normalt bra att hålla sig till LZMA2:s
 standardvärden (\fBpb=2,lp=0,lc=3\fP) när körbar x86 komprimeras.
 .RE
-.IP ""
+.IP
 Alla BCJ\-filter stödjer samma \fIflaggor\fP:
 .RS
 .TP 
@@ -1132,21 +1126,21 @@ bra; det är nästan aldrig användbart att ange ett anpassat \fIavstånd\fP.
 \fB\-\-delta\fP[\fB=\fP\fIflaggor\fP]
 Lägg till Deltafiltret till filterkedjan. Deltafiltret kan inte användas som
 det sista filtret i filterkedjan.
-.IP ""
+.IP
 För närvarande stödjs bara enkel byte\-vis deltaberäkning. Det kan vara
 användbart vid komprimering, till exempel av okomprimerade
 bitavbildningsbilder eller okomprimerad PCM\-audio. Dock kan algoritmer för
 särskilda ändamål ge betydligt bättre resultat än Delta + LZMA2. Detta är
 särskilt sant med audio, vilket komprimerar snabbare och bättre med till
 exempel \fBflac\fP(1).
-.IP ""
+.IP
 Stödda \fIflaggor\fP:
 .RS
 .TP 
 \fBdist=\fP\fIavstånd\fP
 Ange \fIavståndet\fP för deltaberäkningen i byte. \fIAvstånd\fP måste varea
 1\(en256. Standardvärdet är 1.
-.IP ""
+.IP
 Till exempel, med \fBdist=2\fP och åtta byte indata A1 B1 A2 B3 A3 B5 A4 B7,
 kommer utdata vara A1 B1 01 02 01 02 01 02.
 .RE
@@ -1163,7 +1157,7 @@ slutstatusen fortfarandeindikera att en varning gavs.
 Var utförlig. Om standard fel är kopplat till en terminal kommer \fBxz\fP visa
 en förloppsmätare. Att ange \fB\-\-verbose\fP två gånger kommer ge än mer
 utförlig utmatning.
-.IP ""
+.IP
 Förloppsmätaren visar följande information:
 .RS
 .IP \(bu 3
@@ -1192,7 +1186,7 @@ och några sekunder redan gått efter att \fBxz\fP började bearbeta filen. Tide
 visas i ett mindre precist format vilket aldrig har några kolon, till
 exempel, 2 min 30 s.
 .RE
-.IP ""
+.IP
 När standard fel inte är en terminal kommer \fB\-\-verbose\fP göra att \fBxz\fP
 skriver filnamnet, komprimerad storlek, okomprimerad storlek,
 komprimeringsförhållande och möjligen även hastigheten och den förlupna
@@ -1568,7 +1562,7 @@ av ett skript eller verktyg, till exempel, GNU \fBtar\fP(1):
 .fi
 .RE
 .RE
-.IP ""
+.IP
 Skript kan använda \fBXZ_OPT\fP, till exempel, för att sätta skriptspecifika
 standardflaggor för komprimering. Det rekommenderas fortfarande att tillåta
 användaren att åsidosätta \fBXZ_OPT\fP om det är rimligt. Till exempel, i
@@ -1601,7 +1595,7 @@ med dekomprimerarens minnesanvändning.
 tab(;);
 c c c
 c n n.
-Nivå;xz;LZMA Utils
+Nivå\&;xz;LZMA Utils
 \-0;256 KiB;N/A
 \-1;1 MiB;64 KiB
 \-2;2 MiB;1 MiB
@@ -1624,7 +1618,7 @@ gör skillnaden ännu större:
 tab(;);
 c c c
 c n n.
-Nivå;xz;LZMA Utils 4.32.x
+Nivå\&;xz;LZMA Utils 4.32.x
 \-0;3 MiB;N/A
 \-1;9 MiB;2 MiB
 \-2;17 MiB;12 MiB
@@ -1832,7 +1826,7 @@ tabeller:
 tab(;);
 c c
 n n.
-Förinställning;KompCPU
+Fö\&rinstä\&llning;KompCPU
 \-0;0
 \-1;1
 \-2;2

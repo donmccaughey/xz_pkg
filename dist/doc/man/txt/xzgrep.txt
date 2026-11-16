@@ -24,23 +24,23 @@ DESCRIPTION
      Most  options of grep(1) are supported.  However, the following options are
      not supported:
 
-         -r, --recursive
+            -r, --recursive
 
-         -R, --dereference-recursive
+            -R, --dereference-recursive
 
-         -d, --directories=action
+            -d, --directories=action
 
-         -Z, --null
+            -Z, --null
 
-         -z, --null-data
+            -z, --null-data
 
-         --include=glob
+            --include=glob
 
-         --exclude=glob
+            --exclude=glob
 
-         --exclude-from=file
+            --exclude-from=file
 
-         --exclude-dir=glob
+            --exclude-dir=glob
 
      xzegrep is an alias for xzgrep -E.  xzfgrep is an alias for xzgrep -F.
 

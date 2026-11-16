@@ -8,9 +8,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: xz 5.8.3\n"
+"Project-Id-Version: xz 5.8.4\n"
 "Report-Msgid-Bugs-To: xz@tukaani.org\n"
-"POT-Creation-Date: 2026-03-27 18:13+0200\n"
+"POT-Creation-Date: 2026-08-15 19:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -556,6 +556,10 @@ msgstr ""
 
 #: src/xz/list.c
 msgid "Minimum XZ Utils version:"
+msgstr ""
+
+#: src/xz/list.c
+msgid "Error: The total compressed or uncompressed size of the files is too large"
 msgstr ""
 
 #. TRANSLATORS: %s is an integer. Only the plural form of this

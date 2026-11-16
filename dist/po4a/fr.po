@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: XZ Utils 5.2.5\n"
-"POT-Creation-Date: 2026-03-31 18:27+0300\n"
+"POT-Creation-Date: 2025-10-31 13:23+0200\n"
 "PO-Revision-Date: 2021-12-01 15:17+0100\n"
 "Last-Translator: bubu <bubub@no-log.org> \n"
 "Language-Team: French <debian-l10n-french@lists.debian.org> \n"
@@ -1043,7 +1043,7 @@ msgstr "Utilisez un variant plus lent que les préréglages (B<-0> à B<-9>) pou
 #. type: Plain text
 #: ../src/xz/xz.1
 msgid "Since there are two presets with dictionary sizes 4\\ MiB and 8\\ MiB, the presets B<-3e> and B<-5e> use slightly faster settings (lower CompCPU) than B<-4e> and B<-6e>, respectively.  That way no two presets are identical."
-msgstr "Depuis qu'il y a deux préréglages avec des tailles de dictionnaire de 4\\ Mio et 8 \\Mio, les préréglages B<-3e> et B<-5e> utilisent des réglages légèrement plus rapides que B<-4e> et B<-6e>, respectivement. De cette manière, il n'y a pas deux préréglages identiques."
+msgstr "Depuis qu'il y a deux préréglages avec des tailles de dictionnaire de 4\\ Mio et 8\\ Mio, les préréglages B<-3e> et B<-5e> utilisent des réglages légèrement plus rapides que B<-4e> et B<-6e>, respectivement. De cette manière, il n'y a pas deux préréglages identiques."
 
 #. type: tbl table
 #: ../src/xz/xz.1
